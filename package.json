@@ -1,0 +1,27 @@
+{
+  "name": "provenance",
+  "version": "1.0.0",
+  "description": "Paste a furniture link, get the real product: maker, provenance, and where to buy it for less.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lookup": "tsx src/cli.ts lookup",
+    "refresh": "tsx src/cli.ts refresh",
+    "render": "tsx src/cli.ts render"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.13.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.1"
+  },
+  "type": "module"
+}

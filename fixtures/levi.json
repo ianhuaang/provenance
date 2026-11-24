@@ -1,0 +1,212 @@
+{
+  "id": "crosley-cf4229-ml",
+  "version": 1,
+  "createdAt": "2026-11-24T14:50:00Z",
+  "checkedAt": "2026-11-24T14:50:00Z",
+  "input": {
+    "url": "https://go.shopmy.us/p-109879172",
+    "resolvedUrl": "https://www.urbanoutfitters.com/shop/crosley-levi-burl-tone-storage-sideboard",
+    "retailer": "Urban Outfitters",
+    "listingName": "Crosley Levi Burl Tone Storage Sideboard"
+  },
+  "identity": {
+    "canonicalName": "Crosley Furniture Levi Sideboard in Maple",
+    "shortName": "Crosley Levi Sideboard",
+    "maker": "Crosley Furniture",
+    "makerLocation": "Louisville, KY",
+    "modelNumber": "CF4229-ML",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 489
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Brand-designed, mass-market",
+    "verdictNote": "No credited designer. Every listing below is the same factory product.",
+    "summary": "A real, original product from a known brand, designed by an internal team rather than a named designer. There are no replicas to watch for, since there's no protected original to copy.",
+    "designer": { "name": null, "credited": false, "note": "None credited; Crosley in-house product team" },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    { "label": "Size", "value": "58.13 in W × 15 in D × 30 in H" },
+    { "label": "Weight", "value": "80.3 lb" },
+    { "label": "Materials", "value": "MDF, melamine, rubberwood. The burl is a surface finish, not solid burl." },
+    { "label": "Storage", "value": "2 doors, 2 adjustable shelves (15 lb each), cord cutouts" },
+    { "label": "Made in", "value": "Imported" },
+    { "label": "Warranty", "value": "90-day limited" },
+    { "label": "Assembly", "value": "Required" }
+  ],
+  "match": null,
+  "quality": [
+    "The look is a warm burl finish on a clean, flat-front case. Beveled door edges act as hidden pulls, the two doors open onto two adjustable shelves (15 lb each), and cord cutouts in the back let it double as a media console for TVs up to 65\".",
+    "Construction is engineered wood with rubberwood parts, flat-packed for home assembly, with a 90-day warranty. Expect typical big-box quality for the price; solid wood or real burl veneer costs considerably more."
+  ],
+  "retailers": [
+    {
+      "retailer": "Urban Outfitters",
+      "label": "Via a ShopMy affiliate link",
+      "url": "https://www.urbanoutfitters.com/shop/crosley-levi-burl-tone-storage-sideboard",
+      "kind": "retail",
+      "displayedPrice": 489,
+      "promo": {
+        "description": "UO Rewards Early Access: 40% off sitewide, applied in cart",
+        "percentOff": 40,
+        "amountOff": null,
+        "requires": "free-membership",
+        "code": null,
+        "inCart": true,
+        "endsAt": null
+      },
+      "exclusions": "Price as Marked. Discounts Do Not Apply.",
+      "shippingCost": 0,
+      "notes": "Reached through a ShopMy affiliate link, which pays the person who shared it.",
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "HomeSquare",
+      "label": "Online retailer",
+      "url": "https://www.homesquare.com/Crosley-Furniture-Levi-Sideboard-in-Maple-CF4229-ML.htm",
+      "kind": "retail",
+      "displayedPrice": 345.75,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "In stock, ships in 1 to 2 business days. Free shipping over $300.",
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "Bush Furniture Collection",
+      "label": "Online retailer",
+      "url": "https://www.bushfurniturecollection.com/Crosley-Furniture-Levi-Sideboard-in-Maple-CF4229-ML.htm",
+      "kind": "retail",
+      "displayedPrice": 365.02,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Free FedEx shipping, ships in 1 to 2 business days.",
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "Kohl's",
+      "label": "Department store",
+      "url": "https://www.kohls.com/product/prd-8273812/crosley-levi-sideboard-with-storage-cabinets.jsp",
+      "kind": "retail",
+      "displayedPrice": 391.99,
+      "promo": null,
+      "exclusions": "This product is not eligible for coupons.",
+      "shippingCost": null,
+      "notes": "Sale price, regular $489.99. Earns Kohl's Cash.",
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "Overstock",
+      "label": "Online retailer",
+      "url": "https://www.overstock.com/Home-Garden/Levi-Sideboard/43357429/product.html",
+      "kind": "retail",
+      "displayedPrice": 415.51,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Black Friday sale price. Free shipping over $49.99.",
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "Target",
+      "label": "Mass retailer",
+      "url": "https://www.target.com/p/levi-sideboard-maple/-/A-1011407374",
+      "kind": "retail",
+      "displayedPrice": 509.99,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Store returns.",
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "Walmart",
+      "label": "Mass retailer",
+      "url": "https://www.walmart.com/search?q=Crosley%20Levi%20Sideboard%20CF4229-ML",
+      "kind": "retail",
+      "displayedPrice": 314,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Prices across listings ranged $314 to $345 and the seller varies.",
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    },
+    {
+      "retailer": "AptDeco",
+      "label": "Resale, new in box",
+      "url": "https://www.aptdeco.com/product/boxed-crosley-levi-burl-tone-sideboard-storage",
+      "kind": "resale",
+      "displayedPrice": 334,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "One unit from an individual seller.",
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T14:50:00Z"
+    }
+  ],
+  "names": [
+    { "source": "Crosley", "name": "Levi Sideboard in Maple, CF4229-ML", "likely": false },
+    { "source": "Urban Outfitters", "name": "Crosley Levi Burl Tone Storage Sideboard", "likely": false },
+    { "source": "Target", "name": "Levi Sideboard - Maple", "likely": false },
+    { "source": "Kohl's", "name": "Crosley Levi Sideboard with Storage Cabinets", "likely": false },
+    { "source": "Overstock", "name": "Crosley Levi Sideboard", "likely": false },
+    { "source": "Walmart", "name": "Crosley Furniture Levi Sideboard In Maple", "likely": false }
+  ],
+  "maker": {
+    "name": "Crosley",
+    "paragraphs": [
+      "Crosley is best known for retro record players and radios. The furniture line launched in 2009 out of Louisville, Kentucky, and now sells through big-box and online retailers including Target, Walmart, Kohl's, Overstock and Urban Outfitters. Products are developed by an internal team rather than credited designers.",
+      "The name traces to Powel Crosley's Cincinnati radio company of the 1920s. Today two separate companies sell under the Crosley name: Crosley Brands in Louisville (record players and this furniture) and the Crosley Corporation in North Carolina."
+    ],
+    "timeline": [
+      { "when": "1921", "what": "Crosley Radio founded" },
+      { "when": "2009", "what": "Crosley Furniture launched" },
+      { "when": "2018", "what": "Senior product development lead hired" },
+      { "when": "Today", "what": "Sold mainly through big-box retailers" }
+    ]
+  },
+  "photo": null,
+  "sources": [
+    { "title": "Kohl's: Crosley Levi Sideboard", "url": "https://www.kohls.com/product/prd-8273812/crosley-levi-sideboard-with-storage-cabinets.jsp" },
+    { "title": "Overstock: Crosley Levi Sideboard", "url": "https://www.overstock.com/Home-Garden/Levi-Sideboard/43357429/product.html" },
+    { "title": "Home News Now: Crosley Furniture debuts at High Point", "url": "https://homenewsnow.com/?p=34027" },
+    { "title": "Cincinnati Magazine: The Crosley brand", "url": "https://www.cincinnatimagazine.com/article/the-crosley-brand-will-be-with-us-for-years-to-come/" },
+    { "title": "Furniture World: Crosley Brands adds Kim Elonich", "url": "https://www.furninfo.com/furniture-industry-news/9673" }
+  ]
+}
