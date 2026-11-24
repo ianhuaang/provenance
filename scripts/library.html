@@ -114,6 +114,36 @@ textarea{width:100%;min-height:64px;padding:8px 10px;border:1px solid var(--rule
 .brand .links .linkish{margin-left:auto;padding:0;min-height:0}
 .brand .items{font-size:14px;color:var(--mute)}
 .brand .items a{color:var(--ink)}
+.cmpbox{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--mute);cursor:pointer;align-self:flex-start}
+.cmpbox input{width:16px;height:16px;accent-color:var(--walnut)}
+.cmpbox.on{color:var(--ink)}
+.cmptray{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:20;display:flex;align-items:center;gap:10px;flex-wrap:wrap;max-width:calc(100vw - 32px);padding:10px 12px;background:var(--bg);border:1px solid var(--rule);border-radius:12px;box-shadow:0 8px 28px rgba(40,25,10,.18)}
+.cmpthumbs{display:flex;gap:8px;flex-wrap:wrap}
+.cmpitem{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;border:1px solid var(--rule);border-radius:8px;padding:3px 4px 3px 3px}
+.cmpitem img{width:28px;height:28px;object-fit:cover;border-radius:5px}
+.x{border:0;background:none;font-size:18px;line-height:1;color:var(--mute);cursor:pointer;padding:2px 6px;min-height:0}
+.x:hover{color:var(--ink)}
+.cmphint{font-size:13px;color:var(--mute)}
+.cmpwrap{min-width:0}
+.cmpsticky{position:sticky;top:0;z-index:3;background:var(--bg);padding:8px 0 10px;border-bottom:1px solid var(--rule);margin-bottom:14px}
+.cmpbar{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.cmprow{display:grid;gap:20px;min-width:min-content}
+.cmphead{display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.cmppick{display:flex;gap:4px;align-items:center;width:100%}
+.cmppick select{flex:1;min-width:0}
+.cmpimg{display:flex;align-items:center;justify-content:center;width:100%;height:220px;background:var(--panel);border-radius:10px;overflow:hidden;color:var(--mute);font-size:14px;text-decoration:none}
+.cmpimg img{max-width:100%;max-height:100%;object-fit:contain}
+.cmphead h4{font-family:Archivo,Inter,sans-serif;font-size:20px;font-weight:600;margin:0;letter-spacing:-.01em}
+.cmpprice{display:flex;align-items:baseline;justify-content:center;gap:6px;flex-wrap:wrap}.cmpprice b{font-size:18px}.cmpprice span{font-size:13px;color:var(--mute)}
+.cmplink{font-size:14px;font-weight:600;color:var(--accent)}
+.cmpsec{margin-top:26px}.cmpsec>h3{font-size:22px;margin:0 0 4px}
+.cmpattr{border-top:1px solid var(--rule);padding:12px 0}
+.cmplabel{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--wood2);margin-bottom:6px}
+.cmpcell{font-size:15px;line-height:1.45}
+.cmpcell .none{color:var(--mute)}
+.cmpstores{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px}
+.cmpstores li{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.cmpnote{font-size:13px;color:var(--mute);margin-top:18px}
 @media(max-width:820px){.main{grid-template-columns:minmax(0,1fr)}nav ul{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px}nav li{flex:none}nav a{border:1px solid var(--rule);white-space:nowrap;gap:10px}}
 </style>
 </head>
@@ -177,6 +207,18 @@ function view() {
 }
 const removedView = () => location.hash === "#removed";
 const brandsView = () => location.hash === "#brands";
+const compareView = () => location.hash === "#compare";
+let compareIds = (() => { try { return JSON.parse(localStorage.getItem("compare") || "[]").filter((x) => typeof x === "string").slice(0, 3); } catch { return []; } })();
+function setCompare(ids) {
+  compareIds = ids.slice(0, 3);
+  try { localStorage.setItem("compare", JSON.stringify(compareIds)); } catch {}
+  render();
+}
+function toggleCompare(id) {
+  if (compareIds.includes(id)) setCompare(compareIds.filter((x) => x !== id));
+  else if (compareIds.length >= 3) banner("You can compare up to 3 at a time. Remove one first.", true);
+  else setCompare([...compareIds, id]);
+}
 function banner(text, err, action) {
   const b = $("banner");
   b.replaceChildren(document.createTextNode(text || ""), action ? document.createTextNode(" ") : "", action || "");
@@ -228,13 +270,15 @@ function render() {
   );
 
   $("nav").replaceChildren(...[
-    h("li", {}, h("a", { href: "#all", "aria-current": current || showRemoved || brandsView() ? null : "page" }, h("span", { text: "All profiles" }), h("small", { text: String(allIds.length) }))),
+    h("li", {}, h("a", { href: "#all", "aria-current": current || showRemoved || brandsView() || compareView() ? null : "page" }, h("span", { text: "All profiles" }), h("small", { text: String(allIds.length) }))),
     ...collections.map((c) => h("li", {}, h("a", { href: "#c-" + c.id, "aria-current": current && current.id === c.id ? "page" : null }, h("span", { text: c.name }), h("small", { text: String(c.items.filter((i) => !hidden.has(i.id)).length) })))),
     h("li", {}, h("a", { href: "#brands", "aria-current": brandsView() ? "page" : null }, h("span", { text: "Brands" }), h("small", { text: String(yourBrands().length) }))),
     hidden.size ? h("li", {}, h("a", { href: "#removed", "aria-current": showRemoved ? "page" : null }, h("span", { text: "Removed" }), h("small", { text: String(hidden.size) }))) : null,
   ].filter(Boolean));
 
+  renderTray();
   if (brandsView()) { renderBrands(); return; }
+  if (compareView()) { renderCompare(); return; }
   $("total").style.display = "";
   const ids = showRemoved
     ? [...hidden].filter((id) => catalog.some((p) => p.id === id))
@@ -340,6 +384,89 @@ function renderBrands() {
   ));
 }
 
+const TIER_NAME = { designer: "Designer piece", "brand-designed": "Brand-designed", generic: "Generic design", replica: "Replica" };
+function renderTray() {
+  let tray = $("cmptray");
+  const items = compareIds.map((id) => catalog.find((p) => p.id === id)).filter(Boolean);
+  if (!items.length || compareView()) { if (tray) tray.remove(); return; }
+  if (!tray) { tray = h("div", { id: "cmptray", class: "cmptray", role: "region", "aria-label": "Compare tray" }); document.body.append(tray); }
+  tray.replaceChildren(
+    h("div", { class: "cmpthumbs" }, ...items.map((p) => h("span", { class: "cmpitem" },
+      p.photo ? h("img", { src: p.photo, alt: "" }) : null,
+      h("span", { text: p.short || p.name }),
+      h("button", { class: "x", "aria-label": "Remove " + p.name + " from compare", onclick: () => toggleCompare(p.id), text: "×" })))),
+    h("span", { class: "cmphint", text: items.length < 2 ? "Pick one more to compare" : "" }),
+    h("button", { class: "btn ghost small", onclick: () => setCompare([]), text: "Clear" }),
+    h("button", { class: "btn small", disabled: items.length < 2 ? "" : null, onclick: () => { location.hash = "compare"; }, text: `Compare ${items.length}` }),
+  );
+}
+function cmpCell(content) { return h("div", { class: "cmpcell" }, content == null || content === "" ? h("span", { class: "none", text: "—" }) : typeof content === "string" ? document.createTextNode(content) : content); }
+function renderCompare() {
+  $("title").textContent = "Compare";
+  $("total").style.display = "none";
+  $("actions").replaceChildren(
+    h("button", { class: "btn ghost small", onclick: () => { location.hash = "all"; }, text: "Back to profiles" }),
+    compareIds.length < 3 ? h("button", { class: "btn ghost small", onclick: () => setCompare([...compareIds, ""]), text: "Add a column" }) : null,
+  );
+  const pool = live();
+  let cols = compareIds.slice();
+  while (cols.length < 2) cols.push("");
+  const items = cols.map((id) => catalog.find((p) => p.id === id) || null);
+  const n = cols.length;
+  const grid = (cells) => h("div", { class: "cmprow", style: `grid-template-columns:repeat(${n},minmax(8.5rem,1fr))` }, ...cells);
+  const row = (label, f) => {
+    const vals = items.map((p) => (p ? f(p) : null));
+    return h("div", { class: "cmpattr" }, h("div", { class: "cmplabel", text: label }), grid(vals.map(cmpCell)));
+  };
+  const section = (name, rows) => h("section", { class: "cmpsec" }, h("h3", { text: name }), ...rows);
+  const pick = (i) => {
+    const sel = h("select", { "aria-label": "Item in column " + (i + 1) },
+      h("option", { value: "", text: "Choose a profile…" }),
+      ...pool.map((p) => h("option", { value: p.id, disabled: cols.includes(p.id) && cols[i] !== p.id, text: p.short || p.name })));
+    sel.value = cols[i] || "";
+    sel.addEventListener("change", () => { const next = cols.slice(); next[i] = sel.value; setCompare(next.filter((x, j) => x || j < 2)); });
+    return sel;
+  };
+  const bar = grid(items.map((p, i) => h("div", { class: "cmpbar" },
+    h("div", { class: "cmppick" }, pick(i), n > 2 ? h("button", { class: "x", "aria-label": "Remove column", onclick: () => setCompare(cols.filter((_, j) => j !== i)), text: "×" }) : null),
+    p ? h("div", { class: "cmpprice" }, h("b", { text: p.best ? usd(p.best.price) : "No confirmed price" }), p.best ? h("span", { text: "at " + p.best.retailer }) : null) : null,
+  )));
+  const hero = grid(items.map((p) => h("div", { class: "cmphead" },
+    p ? h("a", { href: "p/" + encodeURIComponent(p.id) + ".html", class: "cmpimg" }, p.photo ? h("img", { src: p.photo, alt: "" }) : h("span", { text: "No photo" })) : h("div", { class: "cmpimg empty" }, h("span", { text: "Choose a profile above" })),
+    p ? h("h4", { text: p.short || p.name }) : null,
+    p ? h("span", { class: "chip", text: TIER_NAME[p.tier] || p.tier }) : null,
+    p ? h("a", { class: "cmplink", href: "p/" + encodeURIComponent(p.id) + ".html", text: "Full profile" }) : null,
+  )));
+  const specLabels = [];
+  items.forEach((p) => (p && Array.isArray(p.specs) ? p.specs : []).forEach((sp) => { if (!specLabels.includes(sp.label)) specLabels.push(sp.label); }));
+  const specOf = (p, label) => { const sp = (p.specs || []).find((x) => x.label === label); return sp ? sp.value : null; };
+  const storeList = (p) => {
+    const st = Array.isArray(p.stores) ? p.stores : [];
+    if (!st.length) return null;
+    return h("ul", { class: "cmpstores" }, ...st.map((x) => h("li", {},
+      h("span", { text: x.retailer + (x.input ? " (your link)" : "") }),
+      h("span", { class: x.confirmed ? "" : "none", text: x.price == null ? "no price" : usd(x.price) + (x.confirmed ? "" : "*") }))));
+  };
+  $("grid").replaceChildren(h("div", { class: "cmpwrap", style: "grid-column:1/-1" },
+    h("div", { class: "cmpsticky" }, bar),
+    hero,
+    section("What it is", [
+      row("Verdict", (p) => p.verdict),
+      row("Made by", (p) => p.maker),
+      row("Designer", (p) => p.designer),
+      row("Renamed by the store?", (p) => (p.renamed ? "Yes, sold under another name" : "No")),
+      row("You found it as", (p) => p.listed),
+    ]),
+    section("Price", [
+      row("Cheapest confirmed", (p) => (p.best ? usd(p.best.price) + " at " + p.best.retailer : "None confirmed")),
+      row("Where it's sold", storeList),
+    ]),
+    specLabels.length ? section("Specs", specLabels.map((l) => row(l, (p) => specOf(p, l)))) : null,
+    section("In short", [row("Summary", (p) => p.summary)]),
+    h("p", { class: "cmpnote", text: "* Not a confirmed price: from a search result, a likely match, resale or sold out. Prices as last checked on each profile." }),
+  ));
+}
+
 function card(p, current, inCollections, isRemoved) {
   const href = "p/" + encodeURIComponent(p.id) + ".html";
   const photo = typeof p.photo === "string" && /^img\/[a-z0-9-]+\.jpg$/.test(p.photo) ? p.photo : null;
@@ -349,6 +476,12 @@ function card(p, current, inCollections, isRemoved) {
     h("h3", {}, h("a", { href, text: p.name })),
     h("div", { class: "chips" }, h("span", { class: "chip", text: p.verdict }), !current && !inCollections.has(p.id) ? h("span", { class: "chip alt", text: "Not in a collection" }) : null),
   ];
+  if (!isRemoved) {
+    const cb = h("input", { type: "checkbox", "aria-label": "Compare " + p.name });
+    cb.checked = compareIds.includes(p.id);
+    cb.addEventListener("change", () => toggleCompare(p.id));
+    kids.splice(1, 0, h("label", { class: "cmpbox" + (cb.checked ? " on" : "") }, cb, h("span", { text: "Compare" })));
+  }
 
   if (current && canWrite) {
     const item = current.items.find((i) => i.id === p.id);

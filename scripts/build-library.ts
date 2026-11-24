@@ -39,6 +39,16 @@ const catalog = records.map((r) => {
     best: s.best && s.best.youPay !== null ? { price: s.best.youPay, retailer: s.best.retailer, url: s.best.url } : null,
     checkedAt: r.checkedAt,
     photo: r.photo && !/^(https:|data:)/.test(r.photo.url) ? r.photo.url : null,
+    // Extra fields for the side-by-side compare view.
+    short: r.identity.shortName,
+    verdictNote: r.classification.verdictNote,
+    designer: r.classification.designer.name
+      ? r.classification.designer.name + (r.classification.designer.note ? ` (${r.classification.designer.note})` : "")
+      : r.classification.designer.note || "None credited",
+    renamed: r.classification.renamedByRetailer,
+    summary: r.classification.summary,
+    specs: r.specs,
+    stores: s.rows.map((x) => ({ retailer: x.retailer, price: x.youPay, url: x.url, confirmed: x.eligibleForBest, input: x.isInputLink })),
   };
 });
 writeFileSync(`${OUT}/catalog.json`, JSON.stringify(catalog, null, 2));
