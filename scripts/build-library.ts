@@ -3,6 +3,7 @@
  *   index.html   library and collections (collections persist via the artifact db)
  *   catalog.json one entry per profile, read by index.html
  *   p/<id>.html  each full profile page
+ *   brands.json  brands in the library and brands to explore (from data/brands.json)
  * Every fixtures/*.json record is included, newest first. To add a profile, add its JSON file and rebuild.
  */
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -42,4 +43,5 @@ const catalog = records.map((r) => {
 });
 writeFileSync(`${OUT}/catalog.json`, JSON.stringify(catalog, null, 2));
 copyFileSync("scripts/library.html", `${OUT}/index.html`);
+copyFileSync("data/brands.json", `${OUT}/brands.json`);
 console.log(`Library written to ${OUT}/ with ${catalog.length} profiles`);
