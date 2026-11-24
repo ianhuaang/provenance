@@ -142,7 +142,7 @@ p{margin:0 0 12px;max-width:70ch}a{color:var(--accent)}
 .verdict small{display:block;font-size:13px;opacity:.78}.verdict strong{font-family:Archivo,sans-serif;font-size:22px;font-weight:600}
 .hero{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;align-items:start}
 .photo{background:var(--panel);border-radius:8px;min-height:360px;display:grid;place-items:center;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:contain}
+.photo img{display:block;width:100%;height:100%;max-height:620px;object-fit:contain}
 .tag{padding:32px;text-align:left;width:100%}
 .tag .mk{color:var(--mute)}.tag .model{font-family:Archivo,sans-serif;font-size:clamp(40px,6vw,64px);font-weight:600;letter-spacing:-.03em;line-height:1;margin:10px 0 16px;overflow-wrap:anywhere}
 .tag small{display:block;color:var(--mute);font-size:13px;margin-top:18px}

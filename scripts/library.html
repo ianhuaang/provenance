@@ -49,6 +49,9 @@ form.new input{flex:1;padding:9px 10px;border:1px solid var(--rule);border-radiu
 .total span{color:var(--mute);font-size:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:14px}
 .card{border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.thumb{display:block;margin:-16px -16px 4px;height:260px;background:var(--panel);border-radius:10px 10px 0 0;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:contain;display:block}
+.thumb.none{display:grid;place-items:center;color:var(--mute);font-size:13px}
 .card small{color:var(--mute);font-size:13px}
 .card h3{font-size:19px}
 .card h3 a{color:var(--ink);text-decoration:none}
@@ -173,7 +176,9 @@ function render() {
 
 function card(p, current, inCollections) {
   const href = "p/" + encodeURIComponent(p.id) + ".html";
+  const photo = typeof p.photo === "string" && /^img\/[a-z0-9-]+\.jpg$/.test(p.photo) ? p.photo : null;
   const kids = [
+    h("a", { href, class: "thumb" + (photo ? "" : " none"), "aria-hidden": "true", tabindex: "-1" }, photo ? h("img", { src: photo, alt: "", loading: "lazy" }) : document.createTextNode("Photo pending")),
     h("small", { text: p.listed }),
     h("h3", {}, h("a", { href, text: p.name })),
     h("div", { class: "chips" }, h("span", { class: "chip", text: p.verdict }), !current && !inCollections.has(p.id) ? h("span", { class: "chip alt", text: "Not in a collection" }) : null),

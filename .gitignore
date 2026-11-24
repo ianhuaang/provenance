@@ -6,3 +6,4 @@ library/*.json
 .next/
 *.tsbuildinfo
 next-env.d.ts
+photos/
