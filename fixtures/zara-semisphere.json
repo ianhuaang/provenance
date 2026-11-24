@@ -1,0 +1,146 @@
+{
+  "id": "zara-home-1308-047-808",
+  "version": 1,
+  "createdAt": "2026-11-24T17:51:00Z",
+  "checkedAt": "2026-11-24T17:51:00Z",
+  "input": {
+    "url": "https://www.zarahome.com/us/semisphere-table-lamp-l41308047%3Fcart%3Dtrue&pelement%3D507795437&colorId%3D808",
+    "resolvedUrl": "https://www.zarahome.com/us/semisphere-table-lamp-l41308047",
+    "retailer": "Zara Home",
+    "listingName": "Semi-Sphere Table Lamp"
+  },
+  "identity": {
+    "canonicalName": "Zara Home Semi-Sphere Table Lamp, Silver",
+    "shortName": "Zara Home Semi-Sphere Lamp",
+    "maker": "Zara Home (Inditex)",
+    "makerLocation": "A Coruña, Spain",
+    "modelNumber": "1308/047/808",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 99.9
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Brand-designed, store exclusive",
+    "verdictNote": "Zara Home's own design, sold only by Zara and Zara Home. It echoes 1970s Italian chrome eyeball lamps.",
+    "summary": "An original Zara Home product with no credited designer, sold only through Zara Home and Zara. The polished steel sphere with a cut-away face recalls 1960s and 1970s Italian space-age lamps, such as Goffredo Reggiani's chrome eyeball lamps, which trade as collectible vintage. It isn't a copy of a specific current product.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; Zara Home's in-house team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "7.1 in H × 7.1 in W × 7.1 in D (18 cm sphere)"
+    },
+    {
+      "label": "Material",
+      "value": "Steel, polished silver outside, black inside"
+    },
+    {
+      "label": "Bulb",
+      "value": "Included, per Zara's description; 7W recommended"
+    },
+    {
+      "label": "Cord",
+      "value": "About 150 cm (59 in), per Zara's description"
+    },
+    {
+      "label": "Reference",
+      "value": "1308/047/808"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A small accent lamp rather than a reading light: a polished steel ball with the face cut away, so the bulb glows from inside a black cup. It throws light in one direction, which makes it good for a shelf, console or floor corner.",
+    "Polished steel shows fingerprints and the finish can scratch. For the look's original, search vintage \"Reggiani eyeball lamp\" on 1stDibs or Pamono, where period pieces cost many times more."
+  ],
+  "retailers": [
+    {
+      "retailer": "Zara Home",
+      "label": "Your link",
+      "url": "https://www.zarahome.com/us/semisphere-table-lamp-l41308047",
+      "kind": "retail",
+      "displayedPrice": 99.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "No sale or promo on the page.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T17:51:00Z"
+    },
+    {
+      "retailer": "Zara",
+      "label": "Same product on zara.com",
+      "url": "https://www.zara.com/us/en/search?searchTerm=semi-sphere%20table%20lamp",
+      "kind": "retail",
+      "displayedPrice": 99.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 4.95,
+      "notes": "Shopping result showed $99.90, in stock, $4.95 delivery, 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T17:51:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Zara Home",
+      "name": "Semi-Sphere Table Lamp (ref. 1308/047/808)",
+      "likely": false
+    },
+    {
+      "source": "Zara",
+      "name": "Semi-Sphere Table Lamp - Silver",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Zara Home",
+    "paragraphs": [
+      "Zara Home is the home decor chain of Inditex, the Spanish group behind Zara. It launched in August 2003, is based in A Coruña, Spain, and sells bedding, tableware, furniture and decor through its own stores and website.",
+      "Like Zara, it follows fast-moving trends with frequent new collections and doesn't credit individual designers on most pieces. The same lamp also appears on zara.com."
+    ],
+    "timeline": [
+      {
+        "when": "2003",
+        "what": "Zara Home launched by Inditex"
+      },
+      {
+        "when": "2007",
+        "what": "Online store opens"
+      },
+      {
+        "when": "2012",
+        "what": "US online store launches"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/zara-home-1308-047-808.jpg",
+    "credit": "Zara Home product photo",
+    "sourceUrl": "https://www.zarahome.com/us/semisphere-table-lamp-l41308047"
+  },
+  "sources": [
+    {
+      "title": "Zara Home: Semi-Sphere Table Lamp",
+      "url": "https://www.zarahome.com/us/semisphere-table-lamp-l41308047"
+    },
+    {
+      "title": "Wikipedia: Zara Home",
+      "url": "https://en.wikipedia.org/wiki/Zara_Home"
+    }
+  ]
+}
