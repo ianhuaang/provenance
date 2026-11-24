@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Provenance Library</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday: a personal catalog you come back to
+   IDEA a collector's ledger: shelf of collections on the left, labelled object cards on the right
+   PICTURE the cards themselves, each an object label with verdict chip and real price
+   COLOUR white ground, walnut band and sidebar accents, ash wood chips, cobalt for actions
+   TYPE Archivo 600 display + Inter text
+   LAYOUT walnut header with counts; sidebar of collections beside a card grid; on phone, collections become a scrolling chip row */
+:root{color-scheme:light dark;--bg:light-dark(#fff,#141210);--ink:light-dark(#16130f,#f1ece6);--mute:light-dark(#6a6259,#a99f94);--rule:light-dark(#e7e1d9,#38312b);--panel:light-dark(#f8f4ee,#1d1915);--wood:light-dark(#dcbc8e,#cfae80);--wood2:light-dark(#b38a58,#a07b4c);--walnut:light-dark(#3a2a1c,#2a1e14);--walnut-ink:#f6eee4;--accent:light-dark(#2346d6,#7d97ff);--bad:light-dark(#b3261e,#ff8a80)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;font-weight:600;letter-spacing:-.02em;line-height:1.05;margin:0;text-wrap:balance}
+button,input,select,textarea{font:inherit;font-size:16px}
+.top{background:var(--walnut);color:var(--walnut-ink);padding:clamp(24px,4vw,44px) max(5vw,16px) clamp(20px,3vw,32px)}
+.top .wrap,.main{max-width:1200px;margin:0 auto}
+.top h1{font-size:clamp(32px,5vw,48px)}
+.top p{margin:8px 0 0;color:#e2d3c2;max-width:46em}
+.stats{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:18px}
+.stats div b{display:block;font-family:Archivo,sans-serif;font-size:28px;font-weight:600;color:#fff}
+.stats div span{font-size:14px;color:#d8c6b2}
+.main{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:28px;padding:28px max(5vw,16px) 48px}
+nav h2{font-size:14px;font-family:Inter,sans-serif;font-weight:600;color:var(--mute);letter-spacing:0;margin:0 0 8px}
+nav ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+nav a{display:flex;justify-content:space-between;gap:8px;padding:9px 12px;border-radius:7px;color:var(--ink);text-decoration:none;min-height:44px;align-items:center}
+nav a:hover{background:var(--panel)}
+nav a[aria-current=page]{background:var(--walnut);color:var(--walnut-ink)}
+nav a small{color:inherit;opacity:.7;font-variant-numeric:tabular-nums}
+form.new{display:flex;gap:6px;margin-top:12px}
+form.new input{flex:1;padding:9px 10px;border:1px solid var(--rule);border-radius:7px;background:var(--bg);color:var(--ink);min-height:44px}
+.btn{border:0;border-radius:7px;padding:0 14px;min-height:44px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--rule)}
+.btn.ghost:hover{border-color:var(--ink)}
+.btn.small{min-height:36px;padding:0 10px;font-size:14px}
+.btn:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px 24px;margin-bottom:6px}
+.head h2{font-size:clamp(26px,3.5vw,36px)}
+.head .actions{display:flex;gap:8px;flex-wrap:wrap}
+.total{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:10px 0 20px;padding:14px 18px;border-radius:8px;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--accent)}
+.total b{font-family:Archivo,sans-serif;font-size:32px;font-weight:600;font-variant-numeric:tabular-nums}
+.total span{color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:14px}
+.card{border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.card small{color:var(--mute);font-size:13px}
+.card h3{font-size:19px}
+.card h3 a{color:var(--ink);text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;font-weight:600;background:var(--wood);color:#1c140b;border-radius:12px;padding:1px 9px}
+.chip.alt{background:var(--panel);color:var(--mute);border:1px solid var(--rule)}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-top:1px solid var(--rule);padding-top:8px;margin-top:auto}
+.price b{font-size:20px;font-variant-numeric:tabular-nums}
+.price span{color:var(--mute);font-size:13px;text-align:right}
+.price a{color:var(--accent);font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+select{padding:6px 8px;border-radius:7px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);min-height:36px;font-size:14px;max-width:100%}
+textarea{width:100%;min-height:64px;padding:8px 10px;border:1px solid var(--rule);border-radius:7px;background:var(--panel);color:var(--ink);font-size:15px;resize:vertical}
+.saved{font-size:12px;color:var(--mute);min-height:1em}
+.empty{border:1.5px dashed var(--rule);border-radius:10px;padding:28px;color:var(--mute);text-align:center}
+.banner{margin:0 0 16px;padding:10px 14px;border-radius:8px;background:var(--panel);border:1px solid var(--rule);font-size:14px;color:var(--mute);display:none}
+.banner.err{color:var(--bad)}
+@media(max-width:820px){.main{grid-template-columns:minmax(0,1fr)}nav ul{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px}nav li{flex:none}nav a{border:1px solid var(--rule);white-space:nowrap;gap:10px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>Provenance Library</h1>
+  <p>Every item you've profiled, and the collections you're furnishing. Totals use the cheapest confirmed price for each item.</p>
+  <div class="stats" id="stats"></div>
+</div></header>
+<div class="main">
+  <nav aria-label="Collections">
+    <h2>Collections</h2>
+    <ul id="nav"></ul>
+    <form class="new" id="newForm"><input id="newName" placeholder="New collection" aria-label="New collection name" maxlength="60"><button class="btn" type="submit">Add</button></form>
+  </nav>
+  <section>
+    <div class="banner" id="banner" role="status"></div>
+    <div class="head"><h2 id="title">All profiles</h2><div class="actions" id="actions"></div></div>
+    <div class="total" id="total"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+</div>
+<script>
+{
+const $ = (id) => document.getElementById(id);
+const h = (tag, attrs = {}, ...kids) => {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else if (k === "text") el.textContent = v;
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of kids.flat()) if (c != null) el.append(c);
+  return el;
+};
+const usd = (n) => "$" + (Number.isInteger(n) ? n.toLocaleString("en-US") : n.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }));
+const safeUrl = (u) => (typeof u === "string" && u.startsWith("https://") ? u : null);
+
+let catalog = [];
+let collections = []; // [{id, name, items:[{id, note}], createdAt}]
+let db = null;
+let canWrite = false;
+const noteTimers = {};
+
+function view() {
+  const hash = location.hash.slice(1);
+  return hash.startsWith("c-") ? collections.find((c) => c.id === hash.slice(2)) ?? null : null;
+}
+function banner(text, err) {
+  const b = $("banner");
+  b.textContent = text || "";
+  b.className = "banner" + (err ? " err" : "");
+  b.style.display = text ? "block" : "none";
+}
+function totalOf(ids) {
+  let sum = 0, missing = 0;
+  for (const id of ids) {
+    const p = catalog.find((x) => x.id === id);
+    if (p && p.best) sum += p.best.price; else missing++;
+  }
+  return { sum: Math.round(sum * 100) / 100, missing };
+}
+
+function render() {
+  const current = view();
+  const allIds = catalog.map((p) => p.id);
+  const inCollections = new Set(collections.flatMap((c) => c.items.map((i) => i.id)));
+
+  $("stats").replaceChildren(
+    h("div", {}, h("b", { text: String(catalog.length) }), h("span", { text: "profiles" })),
+    h("div", {}, h("b", { text: String(collections.length) }), h("span", { text: "collections" })),
+    h("div", {}, h("b", { text: String(catalog.filter((p) => p.tier === "designer").length) }), h("span", { text: "designer pieces" })),
+    h("div", {}, h("b", { text: String(catalog.filter((p) => p.tier === "generic").length) }), h("span", { text: "generic items" })),
+  );
+
+  $("nav").replaceChildren(
+    h("li", {}, h("a", { href: "#all", "aria-current": current ? null : "page" }, h("span", { text: "All profiles" }), h("small", { text: String(catalog.length) }))),
+    ...collections.map((c) => h("li", {}, h("a", { href: "#c-" + c.id, "aria-current": current && current.id === c.id ? "page" : null }, h("span", { text: c.name }), h("small", { text: String(c.items.length) })))),
+  );
+
+  const ids = current ? current.items.map((i) => i.id).filter((id) => catalog.some((p) => p.id === id)) : allIds;
+  $("title").textContent = current ? current.name : "All profiles";
+  const t = totalOf(ids);
+  $("total").replaceChildren(
+    h("b", { text: usd(t.sum) }),
+    h("span", { text: `${ids.length} item${ids.length === 1 ? "" : "s"} at their cheapest confirmed price` + (t.missing ? ` · ${t.missing} without a confirmed price, not counted` : "") }),
+  );
+
+  const actions = [];
+  if (current && canWrite) {
+    actions.push(h("button", { class: "btn ghost small", onclick: () => renameCollection(current) , text: "Rename" }));
+    actions.push(h("button", { class: "btn ghost small", onclick: () => deleteCollection(current), text: "Delete collection" }));
+  }
+  $("actions").replaceChildren(...actions);
+
+  if (!ids.length) {
+    $("grid").replaceChildren(h("div", { class: "empty", text: current ? "Nothing here yet. Go to All profiles and add items to this collection." : "No profiles yet. Paste a product link to Claude and ask it to profile the item." }));
+    return;
+  }
+
+  $("grid").replaceChildren(...ids.map((id) => card(catalog.find((p) => p.id === id), current, inCollections)));
+}
+
+function card(p, current, inCollections) {
+  const href = "p/" + encodeURIComponent(p.id) + ".html";
+  const kids = [
+    h("small", { text: p.listed }),
+    h("h3", {}, h("a", { href, text: p.name })),
+    h("div", { class: "chips" }, h("span", { class: "chip", text: p.verdict }), !current && !inCollections.has(p.id) ? h("span", { class: "chip alt", text: "Not in a collection" }) : null),
+  ];
+
+  if (current && canWrite) {
+    const item = current.items.find((i) => i.id === p.id);
+    const status = h("div", { class: "saved", "aria-live": "polite" });
+    const ta = h("textarea", { "aria-label": "Note for " + p.name, placeholder: "Notes: measurements, colorway, where it goes…", maxlength: "500" });
+    ta.value = item && item.note ? item.note : "";
+    ta.addEventListener("input", () => {
+      status.textContent = "Saving…";
+      clearTimeout(noteTimers[current.id]);
+      noteTimers[current.id] = setTimeout(async () => {
+        const c = collections.find((x) => x.id === current.id);
+        if (!c) return;
+        const items = c.items.map((i) => (i.id === p.id ? { ...i, note: ta.value.slice(0, 500) } : i));
+        status.textContent = (await save(c.id, { items })) ? "Saved" : "Couldn't save";
+      }, 800);
+    });
+    ta.addEventListener("blur", () => setTimeout(render, 1000));
+    kids.push(ta, status, h("div", { class: "row" }, h("button", { class: "btn ghost small", onclick: () => removeItem(current, p.id), text: "Remove from collection" })));
+  } else if (current && !canWrite) {
+    const item = current.items.find((i) => i.id === p.id);
+    if (item && item.note) kids.push(h("p", { style: "margin:0;font-size:14px;color:var(--mute)", text: item.note }));
+  } else if (canWrite && collections.length) {
+    const sel = h("select", { "aria-label": "Add " + p.name + " to a collection" },
+      h("option", { value: "", text: "Add to collection…" }),
+      ...collections.map((c) => h("option", { value: c.id, disabled: c.items.some((i) => i.id === p.id), text: c.name + (c.items.some((i) => i.id === p.id) ? " (added)" : "") })));
+    sel.addEventListener("change", async () => {
+      const c = collections.find((x) => x.id === sel.value);
+      sel.value = "";
+      if (c) await addItem(c, p.id);
+    });
+    kids.push(h("div", { class: "row" }, sel));
+  }
+
+  const best = p.best;
+  const shop = best && safeUrl(best.url);
+  kids.push(h("div", { class: "price" },
+    best ? h("b", { text: usd(best.price) }) : h("b", { text: "No confirmed price" }),
+    h("span", {}, best ? document.createTextNode("at " + best.retailer + " ") : null, shop ? h("a", { href: shop, target: "_blank", rel: "noopener nofollow", text: "View →" }) : null),
+  ));
+  return h("article", { class: "card" }, ...kids);
+}
+
+async function save(id, patch) {
+  if (!db) return false;
+  try { await db.doc("collections/" + id).update(patch); return true; }
+  catch (e) { if (e && e.code === "invalid_argument") { canWrite = false; render(); } banner("Couldn't save that change. " + (e && e.message ? e.message : ""), true); return false; }
+}
+async function addItem(c, pid) {
+  if (c.items.some((i) => i.id === pid)) return;
+  const items = [...c.items, { id: pid, note: "" }];
+  if (await save(c.id, { items })) banner(`Added to ${c.name}.`);
+}
+async function removeItem(c, pid) {
+  await save(c.id, { items: c.items.filter((i) => i.id !== pid) });
+}
+async function renameCollection(c) {
+  const input = h("input", { value: c.name, "aria-label": "Collection name", maxlength: "60", style: "padding:6px 10px;border-radius:7px;border:1px solid var(--rule);min-height:44px;background:var(--bg);color:var(--ink)" });
+  const done = async (e) => { e.preventDefault(); const name = input.value.trim(); if (name && name !== c.name) await save(c.id, { name }); else render(); };
+  $("title").replaceChildren(h("form", { onsubmit: done, class: "row" }, input, h("button", { class: "btn small", type: "submit", text: "Save" })));
+  input.focus();
+}
+async function deleteCollection(c) {
+  const confirmRow = h("div", { class: "row" },
+    h("span", { text: `Delete "${c.name}"? Its notes go too; the profiles stay in your library.` }),
+    h("button", { class: "btn small", style: "background:var(--bad)", onclick: async () => { try { await db.doc("collections/" + c.id).delete(); location.hash = "all"; } catch (e) { banner("Couldn't delete it.", true); } }, text: "Delete" }),
+    h("button", { class: "btn ghost small", onclick: render, text: "Keep it" }));
+  $("actions").replaceChildren(confirmRow);
+}
+
+$("newForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = $("newName").value.trim();
+  if (!name) return;
+  if (!db || !canWrite) { banner("Collections can't be saved in this view.", true); return; }
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) + "-" + Date.now().toString(36);
+  try {
+    await db.doc("collections/" + id).set({ name: name.slice(0, 60), items: [], createdAt: new Date().toISOString() });
+    $("newName").value = "";
+    location.hash = "c-" + id;
+  } catch (err) {
+    banner(err && err.code === "quota_exceeded" ? "The library is full; delete a collection first." : "Couldn't create the collection.", true);
+  }
+});
+
+window.addEventListener("hashchange", () => { banner(""); render(); });
+
+async function start() {
+  try {
+    const res = await fetch("catalog.json");
+    catalog = await res.json();
+  } catch {
+    banner("Couldn't load the profiles.", true);
+  }
+  render();
+
+  db = window.claude ? await window.claude.use("db").catch(() => null) : null;
+  if (!db) { banner("Collections need you signed in to claude.ai. Profiles are still viewable."); return; }
+  const user = await window.claude.use("user").catch(() => null);
+  const can = user && user.can ? await user.can("data.write").catch(() => null) : null;
+  canWrite = can !== false;
+
+  const timer = setTimeout(() => banner("Collections are taking a while to load; they may be out of date."), 10000);
+  db.collection("collections").orderBy("createdAt").onSnapshot(
+    (snap) => {
+      if (!snap.metadata.fromCache) { clearTimeout(timer); if ($("banner").textContent.startsWith("Collections are taking")) banner(""); }
+      collections = snap.docs.map((d) => {
+        const v = d.data() || {};
+        return { id: d.id, name: typeof v.name === "string" ? v.name : "Untitled", createdAt: v.createdAt, items: Array.isArray(v.items) ? v.items.filter((i) => i && typeof i.id === "string").map((i) => ({ id: i.id, note: typeof i.note === "string" ? i.note : "" })) : [] };
+      });
+      const active = document.activeElement;
+      if (active && active.tagName === "TEXTAREA") return; // don't clobber typing; next change re-renders
+      render();
+    },
+    () => { clearTimeout(timer); banner("Collections couldn't be loaded right now.", true); },
+  );
+}
+start();
+}
+</script>
+</body>
+</html>

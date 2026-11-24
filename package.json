@@ -12,7 +12,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preview": "tsx scripts/build-preview.ts"
+    "preview": "tsx scripts/build-preview.ts",
+    "library": "tsx scripts/build-library.ts"
   },
   "keywords": [],
   "author": "",
