@@ -67,6 +67,9 @@ form.new input{flex:1;padding:9px 10px;border:1px solid var(--rule);border-radiu
 select{padding:6px 8px;border-radius:7px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);min-height:36px;font-size:14px;max-width:100%}
 textarea{width:100%;min-height:64px;padding:8px 10px;border:1px solid var(--rule);border-radius:7px;background:var(--panel);color:var(--ink);font-size:15px;resize:vertical}
 .saved{font-size:12px;color:var(--mute);min-height:1em}
+.linkish{background:none;border:0;padding:6px 0;color:var(--mute);font-size:14px;text-decoration:underline;cursor:pointer;min-height:36px}
+.linkish:hover{color:var(--bad)}
+.banner .linkish{color:var(--accent);padding:0;min-height:0}
 .empty{border:1.5px dashed var(--rule);border-radius:10px;padding:28px;color:var(--mute);text-align:center}
 .banner{margin:0 0 16px;padding:10px 14px;border-radius:8px;background:var(--panel);border:1px solid var(--rule);font-size:14px;color:var(--mute);display:none}
 .banner.err{color:var(--bad)}
@@ -111,6 +114,8 @@ const safeUrl = (u) => (typeof u === "string" && u.startsWith("https://") ? u : 
 
 let catalog = [];
 let collections = []; // [{id, name, items:[{id, note}], createdAt}]
+let hidden = new Set(); // profiles removed from the library (restorable)
+const live = () => catalog.filter((p) => !hidden.has(p.id));
 let db = null;
 let canWrite = false;
 const noteTimers = {};
@@ -119,9 +124,10 @@ function view() {
   const hash = location.hash.slice(1);
   return hash.startsWith("c-") ? collections.find((c) => c.id === hash.slice(2)) ?? null : null;
 }
-function banner(text, err) {
+const removedView = () => location.hash === "#removed";
+function banner(text, err, action) {
   const b = $("banner");
-  b.textContent = text || "";
+  b.replaceChildren(document.createTextNode(text || ""), action ? document.createTextNode(" ") : "", action || "");
   b.className = "banner" + (err ? " err" : "");
   b.style.display = text ? "block" : "none";
 }
@@ -136,23 +142,30 @@ function totalOf(ids) {
 
 function render() {
   const current = view();
-  const allIds = catalog.map((p) => p.id);
+  const showRemoved = removedView() && hidden.size > 0;
+  const allIds = live().map((p) => p.id);
   const inCollections = new Set(collections.flatMap((c) => c.items.map((i) => i.id)));
 
   $("stats").replaceChildren(
-    h("div", {}, h("b", { text: String(catalog.length) }), h("span", { text: "profiles" })),
+    h("div", {}, h("b", { text: String(live().length) }), h("span", { text: "profiles" })),
     h("div", {}, h("b", { text: String(collections.length) }), h("span", { text: "collections" })),
-    h("div", {}, h("b", { text: String(catalog.filter((p) => p.tier === "designer").length) }), h("span", { text: "designer pieces" })),
-    h("div", {}, h("b", { text: String(catalog.filter((p) => p.tier === "generic").length) }), h("span", { text: "generic items" })),
+    h("div", {}, h("b", { text: String(live().filter((p) => p.tier === "designer").length) }), h("span", { text: "designer pieces" })),
+    h("div", {}, h("b", { text: String(live().filter((p) => p.tier === "generic").length) }), h("span", { text: "generic items" })),
   );
 
-  $("nav").replaceChildren(
-    h("li", {}, h("a", { href: "#all", "aria-current": current ? null : "page" }, h("span", { text: "All profiles" }), h("small", { text: String(catalog.length) }))),
-    ...collections.map((c) => h("li", {}, h("a", { href: "#c-" + c.id, "aria-current": current && current.id === c.id ? "page" : null }, h("span", { text: c.name }), h("small", { text: String(c.items.length) })))),
-  );
+  $("nav").replaceChildren(...[
+    h("li", {}, h("a", { href: "#all", "aria-current": current || showRemoved ? null : "page" }, h("span", { text: "All profiles" }), h("small", { text: String(allIds.length) }))),
+    ...collections.map((c) => h("li", {}, h("a", { href: "#c-" + c.id, "aria-current": current && current.id === c.id ? "page" : null }, h("span", { text: c.name }), h("small", { text: String(c.items.filter((i) => !hidden.has(i.id)).length) })))),
+    hidden.size ? h("li", {}, h("a", { href: "#removed", "aria-current": showRemoved ? "page" : null }, h("span", { text: "Removed" }), h("small", { text: String(hidden.size) }))) : null,
+  ].filter(Boolean));
 
-  const ids = current ? current.items.map((i) => i.id).filter((id) => catalog.some((p) => p.id === id)) : allIds;
-  $("title").textContent = current ? current.name : "All profiles";
+  const ids = showRemoved
+    ? [...hidden].filter((id) => catalog.some((p) => p.id === id))
+    : current
+      ? current.items.map((i) => i.id).filter((id) => !hidden.has(id) && catalog.some((p) => p.id === id))
+      : allIds;
+  $("title").textContent = showRemoved ? "Removed" : current ? current.name : "All profiles";
+  $("total").style.display = showRemoved ? "none" : "";
   const t = totalOf(ids);
   $("total").replaceChildren(
     h("b", { text: usd(t.sum) }),
@@ -171,10 +184,10 @@ function render() {
     return;
   }
 
-  $("grid").replaceChildren(...ids.map((id) => card(catalog.find((p) => p.id === id), current, inCollections)));
+  $("grid").replaceChildren(...ids.map((id) => card(catalog.find((p) => p.id === id), current, inCollections, showRemoved)));
 }
 
-function card(p, current, inCollections) {
+function card(p, current, inCollections, isRemoved) {
   const href = "p/" + encodeURIComponent(p.id) + ".html";
   const photo = typeof p.photo === "string" && /^img\/[a-z0-9-]+\.jpg$/.test(p.photo) ? p.photo : null;
   const kids = [
@@ -204,7 +217,7 @@ function card(p, current, inCollections) {
   } else if (current && !canWrite) {
     const item = current.items.find((i) => i.id === p.id);
     if (item && item.note) kids.push(h("p", { style: "margin:0;font-size:14px;color:var(--mute)", text: item.note }));
-  } else if (canWrite && collections.length) {
+  } else if (canWrite && collections.length && !isRemoved) {
     const sel = h("select", { "aria-label": "Add " + p.name + " to a collection" },
       h("option", { value: "", text: "Add to collection…" }),
       ...collections.map((c) => h("option", { value: c.id, disabled: c.items.some((i) => i.id === p.id), text: c.name + (c.items.some((i) => i.id === p.id) ? " (added)" : "") })));
@@ -214,6 +227,19 @@ function card(p, current, inCollections) {
       if (c) await addItem(c, p.id);
     });
     kids.push(h("div", { class: "row" }, sel));
+  }
+
+  if (canWrite && isRemoved) {
+    kids.push(h("div", { class: "row" }, h("button", { class: "btn small", onclick: () => setHidden(p, false), text: "Restore to library" })));
+  } else if (canWrite && !current) {
+    const slot = h("div", { class: "row" });
+    const ask = () => slot.replaceChildren(
+      h("span", { style: "font-size:14px", text: "Remove from your library?" }),
+      h("button", { class: "btn small", style: "background:var(--bad)", onclick: () => setHidden(p, true), text: "Remove" }),
+      h("button", { class: "btn ghost small", onclick: () => slot.replaceChildren(btn), text: "Cancel" }));
+    const btn = h("button", { class: "linkish", onclick: ask, text: "Remove from library" });
+    slot.append(btn);
+    kids.push(slot);
   }
 
   const best = p.best;
@@ -229,6 +255,18 @@ async function save(id, patch) {
   if (!db) return false;
   try { await db.doc("collections/" + id).update(patch); return true; }
   catch (e) { if (e && e.code === "invalid_argument") { canWrite = false; render(); } banner("Couldn't save that change. " + (e && e.message ? e.message : ""), true); return false; }
+}
+async function setHidden(p, on) {
+  if (!db) return;
+  const next = new Set(hidden);
+  if (on) next.add(p.id); else next.delete(p.id);
+  try {
+    await db.doc("settings/library").set({ hidden: [...next] });
+    if (on) banner(`Removed ${p.name}.`, false, h("button", { class: "linkish", onclick: () => setHidden(p, false), text: "Undo" }));
+    else banner(`Restored ${p.name}.`);
+  } catch (e) {
+    banner("Couldn't save that change.", true);
+  }
 }
 async function addItem(c, pid) {
   if (c.items.some((i) => i.id === pid)) return;
@@ -284,6 +322,16 @@ async function start() {
   const can = user && user.can ? await user.can("data.write").catch(() => null) : null;
   canWrite = can !== false;
 
+  db.doc("settings/library").onSnapshot(
+    (d) => {
+      const v = d.exists ? d.data() : null;
+      hidden = new Set(v && Array.isArray(v.hidden) ? v.hidden.filter((x) => typeof x === "string") : []);
+      if (removedView() && !hidden.size) location.hash = "all";
+      const active = document.activeElement;
+      if (!(active && active.tagName === "TEXTAREA")) render();
+    },
+    () => {},
+  );
   const timer = setTimeout(() => banner("Collections are taking a while to load; they may be out of date."), 10000);
   db.collection("collections").orderBy("createdAt").onSnapshot(
     (snap) => {
