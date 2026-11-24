@@ -188,5 +188,21 @@
       "title": "Honest Brand Reviews: Brightech",
       "url": "https://www.honestbrandreviews.com/reviews/brightech-review/"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes: marble, brass-finish metal and glass for $139, the same price everywhere.",
+    "price": {
+      "score": 2,
+      "note": "$139 at Brightech, $139.99 at Target and UO. No one is marking it up."
+    },
+    "design": {
+      "score": 1,
+      "note": "Brightech's own design; a common arc-and-globe look done cleanly."
+    },
+    "materials": {
+      "score": 2,
+      "note": "Real marble base, glass globe, 20.6 lb. Heavy and solid for the money."
+    }
+  }
 }

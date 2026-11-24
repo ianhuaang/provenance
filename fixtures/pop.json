@@ -261,5 +261,21 @@
       "title": "Pinlighting: Marxel Layered Cordless Table Lamp",
       "url": "https://pinlighting.com/products/marxel-layered-cordless-table-lamp"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Only at the lowest price: the same factory lamp sells under many names.",
+    "price": {
+      "score": 1,
+      "note": "The identical lamp ranges from about $120 to over $200 depending on the label; buy the cheapest with good returns."
+    },
+    "design": {
+      "score": 0,
+      "note": "A stock factory design with no brand behind it."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Real glass and enamel metal, but the built-in battery wears out over a few years."
+    }
+  }
 }

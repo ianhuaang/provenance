@@ -24,19 +24,47 @@
     "verdict": "Credited collaboration, West Elm only",
     "verdictNote": "Designed by Emma Chamberlain with West Elm's in-house team. A limited edition sold only at West Elm.",
     "summary": "A credited design from West Elm's 2026 collaboration with creator Emma Chamberlain, her first full home collection, developed with West Elm's in-house design team. It's an original, limited-edition piece sold only by West Elm, so there's nowhere else to buy it new. Chamberlain is a style figure rather than a lighting designer, so the name adds story more than design pedigree.",
-    "designer": { "name": "Emma Chamberlain", "credited": true, "note": "With West Elm's in-house design team" },
+    "designer": {
+      "name": "Emma Chamberlain",
+      "credited": true,
+      "note": "With West Elm's in-house design team"
+    },
     "renamedByRetailer": false,
     "originalIfReplica": null
   },
   "specs": [
-    { "label": "Size", "value": "13.25 in dia × 18.15 in H" },
-    { "label": "Shade", "value": "White linen, pleated and scalloped with red trim, 13.25 in dia × 7.4 in H" },
-    { "label": "Base", "value": "Steel in chrome finish, 6.15 in dia" },
-    { "label": "Bulb", "value": "One E12 (small candelabra) socket, 40W max or LED equivalent; not included; works with dimming smart bulbs" },
-    { "label": "Switch", "value": "In-line on/off" },
-    { "label": "Cord", "value": "8 ft" },
-    { "label": "Weight", "value": "3.1 lb" },
-    { "label": "Made in", "value": "Imported" }
+    {
+      "label": "Size",
+      "value": "13.25 in dia × 18.15 in H"
+    },
+    {
+      "label": "Shade",
+      "value": "White linen, pleated and scalloped with red trim, 13.25 in dia × 7.4 in H"
+    },
+    {
+      "label": "Base",
+      "value": "Steel in chrome finish, 6.15 in dia"
+    },
+    {
+      "label": "Bulb",
+      "value": "One E12 (small candelabra) socket, 40W max or LED equivalent; not included; works with dimming smart bulbs"
+    },
+    {
+      "label": "Switch",
+      "value": "In-line on/off"
+    },
+    {
+      "label": "Cord",
+      "value": "8 ft"
+    },
+    {
+      "label": "Weight",
+      "value": "3.1 lb"
+    },
+    {
+      "label": "Made in",
+      "value": "Imported"
+    }
   ],
   "match": null,
   "quality": [
@@ -63,7 +91,11 @@
     }
   ],
   "names": [
-    { "source": "West Elm", "name": "Emma Chamberlain Pleated Table Lamp (18\")", "likely": false }
+    {
+      "source": "West Elm",
+      "name": "Emma Chamberlain Pleated Table Lamp (18\")",
+      "likely": false
+    }
   ],
   "maker": {
     "name": "West Elm × Emma Chamberlain",
@@ -72,18 +104,65 @@
       "Emma Chamberlain, the creator and entrepreneur, launched her first full home collection with West Elm on March 30, 2026. It was designed with West Elm's in-house team and mixes mid-century and postmodern shapes with her personal motifs, and it's sold while supplies last."
     ],
     "timeline": [
-      { "when": "2002", "what": "West Elm launches in Brooklyn" },
-      { "when": "2015", "what": "Opens its Brooklyn design studio" },
-      { "when": "Mar 2026", "what": "Emma Chamberlain collection launches" }
+      {
+        "when": "2002",
+        "what": "West Elm launches in Brooklyn"
+      },
+      {
+        "when": "2015",
+        "what": "Opens its Brooklyn design studio"
+      },
+      {
+        "when": "Mar 2026",
+        "what": "Emma Chamberlain collection launches"
+      }
     ]
   },
-  "photo": { "url": "img/west-elm-f837.jpg", "credit": "West Elm product photo", "sourceUrl": "https://www.westelm.com/products/emma-chamberlain-pleated-table-lamp-18-f837/" },
+  "photo": {
+    "url": "img/west-elm-f837.jpg",
+    "credit": "West Elm product photo",
+    "sourceUrl": "https://www.westelm.com/products/emma-chamberlain-pleated-table-lamp-18-f837/"
+  },
   "sources": [
-    { "title": "West Elm: Emma Chamberlain Pleated Table Lamp", "url": "https://www.westelm.com/products/emma-chamberlain-pleated-table-lamp-18-f837/" },
-    { "title": "Marie Claire: Emma Chamberlain's West Elm collection", "url": "https://www.marieclaire.com/home/emma-chamberlain-west-elm-home-collection/" },
-    { "title": "Fashion Week Daily: Emma Chamberlain x West Elm", "url": "https://fashionweekdaily.com/emma-chamberlain-west-elm/" },
-    { "title": "Furniture News: West Elm partners with Emma Chamberlain", "url": "https://furniturenews.net/news/west-elm-partners-with-defining-gen-z-voice" },
-    { "title": "Wikipedia: West Elm", "url": "https://en.wikipedia.com/wiki/West_Elm" },
-    { "title": "Williams-Sonoma: West Elm Makers Studio", "url": "https://ir.williams-sonomainc.com/investor-information/news-releases/news-release-details/2015/WEST-ELM-OPENS-DESIGN-STUDIO-IN-BROOKLYNS-INDUSTRY-CITY/default.aspx" }
-  ]
+    {
+      "title": "West Elm: Emma Chamberlain Pleated Table Lamp",
+      "url": "https://www.westelm.com/products/emma-chamberlain-pleated-table-lamp-18-f837/"
+    },
+    {
+      "title": "Marie Claire: Emma Chamberlain's West Elm collection",
+      "url": "https://www.marieclaire.com/home/emma-chamberlain-west-elm-home-collection/"
+    },
+    {
+      "title": "Fashion Week Daily: Emma Chamberlain x West Elm",
+      "url": "https://fashionweekdaily.com/emma-chamberlain-west-elm/"
+    },
+    {
+      "title": "Furniture News: West Elm partners with Emma Chamberlain",
+      "url": "https://furniturenews.net/news/west-elm-partners-with-defining-gen-z-voice"
+    },
+    {
+      "title": "Wikipedia: West Elm",
+      "url": "https://en.wikipedia.com/wiki/West_Elm"
+    },
+    {
+      "title": "Williams-Sonoma: West Elm Makers Studio",
+      "url": "https://ir.williams-sonomainc.com/investor-information/news-releases/news-release-details/2015/WEST-ELM-OPENS-DESIGN-STUDIO-IN-BROOKLYNS-INDUSTRY-CITY/default.aspx"
+    }
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Only if you love this exact lamp: you're paying for the collaboration, not the build.",
+    "price": {
+      "score": 1,
+      "note": "West Elm only, so no cheaper source; $159 is high for what it is."
+    },
+    "design": {
+      "score": 2,
+      "note": "A credited, limited-edition design with Emma Chamberlain."
+    },
+    "materials": {
+      "score": 0,
+      "note": "3.1 lb of steel and linen with a small E12 candelabra bulb. Light build for $159."
+    }
+  }
 }

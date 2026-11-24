@@ -132,5 +132,21 @@
       "title": "LampsUSA: How flush mount conversion kits install",
       "url": "https://www.LampsUSA.com/blogs/buyers-guides/installation-of-ceiling-light-cover-conversion-kits"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "At $59.40 with UO Rewards, yes for a rental ceiling light; at $99, no.",
+    "price": {
+      "score": 1,
+      "note": "UO only; the 40% Rewards price is fair, full price is not."
+    },
+    "design": {
+      "score": 1,
+      "note": "UO Home's own take on the paper-lantern look."
+    },
+    "materials": {
+      "score": 0,
+      "note": "Jute fabric on an iron frame, 1.1 lb. Simple to make for $99."
+    }
+  }
 }

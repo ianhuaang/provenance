@@ -142,5 +142,21 @@
       "title": "Wikipedia: Zara Home",
       "url": "https://en.wikipedia.org/wiki/Zara_Home"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes, as an accent: Zara's own design in solid steel for $100.",
+    "price": {
+      "score": 2,
+      "note": "Same $99.90 at Zara Home and Zara, the only places selling it."
+    },
+    "design": {
+      "score": 1,
+      "note": "Zara's own design, borrowing the 1970s Italian eyeball lamp look."
+    },
+    "materials": {
+      "score": 2,
+      "note": "Polished steel sphere with the bulb included. Good for the price."
+    }
+  }
 }

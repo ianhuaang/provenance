@@ -55,6 +55,18 @@ export type RenderOptions = {
   assetBase?: string;
 };
 
+const WORTH_LABEL = { yes: "Worth it", depends: "Depends", no: "Not worth it" } as const;
+const CHECK_NAMES = [["price", "Your link vs other stores"], ["design", "Design"], ["materials", "Materials for the price"]] as const;
+function worthSection(w: NonNullable<ProfileRecord["worth"]>): string {
+  const dots = (n: number) => `<span class="dots" aria-label="${n} of 2">${[0, 1].map((i) => `<i class="${i < n ? "on" : ""}"></i>`).join("")}</span>`;
+  return `<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>Worth it?</h2>
+  <p class="worthline"><span class="wv ${w.verdict}">${WORTH_LABEL[w.verdict]}</span> ${esc(w.line)}</p>
+  <div class="checks">${CHECK_NAMES.map(([k, label]) => `<div class="check"><div class="ch"><h3>${label}</h3>${dots(w[k].score)}</div><p>${esc(w[k].note)}</p></div>`).join("")}</div>
+  <p class="checked">My opinion, based on what the listing and sources show. Resale value isn't considered.</p>
+</div></section>`;
+}
+
 export function renderProfile(rec: ProfileRecord, now: Date = new Date(), opts: RenderOptions = {}): string {
   const photoUrl = rec.photo
     ? /^(https:|data:)/.test(rec.photo.url)
@@ -187,6 +199,13 @@ table{border-collapse:collapse;width:100%}
 .go.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .checked{font-size:14px;color:var(--mute);margin-top:16px}.checked.stale{color:var(--ink);font-weight:600}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px}
+.worthline{font-size:18px;margin:10px 0 16px;max-width:none}
+.wv{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:12px;margin-right:6px;vertical-align:2px}
+.wv.yes{background:#dcebd6;color:#25501a}.wv.depends{background:#f3e3bf;color:#6a4a0c}.wv.no{background:#f2d6d2;color:#7a1f16}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:14px}
+.check{border:1px solid var(--rule);border-radius:10px;padding:14px 16px}.check p{margin:6px 0 0;font-size:15px}
+.ch{display:flex;justify-content:space-between;align-items:center;gap:8px}.ch h3{margin:0;font-size:16px}
+.dots{display:inline-flex;gap:4px}.dots i{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink);display:block}.dots i.on{background:var(--ink)}
 .names{list-style:none;padding:0;margin:14px 0 0}.names li{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--rule)}.names li span:first-child{color:var(--mute);font-size:14px}
 .maker{background:var(--walnut);color:var(--walnut-ink)}.maker .mute{color:#d2c1ae}
 .tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(9em,1fr));margin:22px 0 10px;border-top:2px solid #cdb9a6}
@@ -238,6 +257,7 @@ table{border-collapse:collapse;width:100%}
   <p class="checked${stale ? " stale" : ""}">Prices checked ${esc(day(rec.checkedAt))}${stale ? ". These prices are more than a day old and will be re-checked." : "."} "You pay" includes promos anyone can get for free and known shipping; paid memberships and store cards are listed but not counted.</p>
 </div></section>
 
+${rec.worth ? worthSection(rec.worth) : ""}
 <section class="band" style="padding-top:0"><div class="wrap two">
   <div><h2>Names it goes by</h2><p>${
     id.modelNumber

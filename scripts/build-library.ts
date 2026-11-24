@@ -48,6 +48,7 @@ const catalog = records.map((r) => {
     renamed: r.classification.renamedByRetailer,
     summary: r.classification.summary,
     specs: r.specs,
+    worth: r.worth ?? null,
     stores: s.rows.map((x) => ({ retailer: x.retailer, price: x.youPay, url: x.url, confirmed: x.eligibleForBest, input: x.isInputLink })),
   };
 });

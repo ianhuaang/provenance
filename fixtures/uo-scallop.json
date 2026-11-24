@@ -137,5 +137,21 @@
       "title": "LampsUSA: How flush mount conversion kits install",
       "url": "https://www.LampsUSA.com/blogs/buyers-guides/installation-of-ceiling-light-cover-conversion-kits"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "At $59.70 with UO Rewards, yes if you need to cover a dome light; at $99.50, no.",
+    "price": {
+      "score": 1,
+      "note": "UO only; the 40% Rewards price is fair, full price is not."
+    },
+    "design": {
+      "score": 1,
+      "note": "UO Home's own take on the scalloped-shade trend."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Cotton over a stiff styrene backing on an iron frame. Standard lampshade construction."
+    }
+  }
 }

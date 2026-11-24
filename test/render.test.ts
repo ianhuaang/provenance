@@ -63,3 +63,26 @@ describe("relative photos", () => {
     expect(renderProfile(rec, at, { assetBase: "../" })).toContain('<img src="../img/adesso-3932-12.jpg"');
   });
 });
+
+describe("worth section", () => {
+  it("renders the verdict and three checks when present", async () => {
+    const { renderProfile } = await import("../src/render");
+    const { ProfileRecord } = await import("../src/schema");
+    const { readFileSync } = await import("node:fs");
+    const rec = ProfileRecord.parse(JSON.parse(readFileSync("fixtures/wren.json", "utf8")));
+    const html = renderProfile(rec, new Date(rec.checkedAt));
+    expect(html).toContain("Worth it?");
+    expect(html).toContain("Not worth it");
+    expect(html).toContain("Your link vs other stores");
+    expect(html).toContain("Materials for the price");
+  });
+  it("omits the section when a profile has no verdict", async () => {
+    const { renderProfile } = await import("../src/render");
+    const { ProfileRecord } = await import("../src/schema");
+    const { readFileSync } = await import("node:fs");
+    const raw = JSON.parse(readFileSync("fixtures/wren.json", "utf8"));
+    delete raw.worth;
+    const html = renderProfile(ProfileRecord.parse(raw), new Date(raw.checkedAt));
+    expect(html).not.toContain("Worth it?");
+  });
+});

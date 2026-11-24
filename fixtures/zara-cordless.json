@@ -150,5 +150,21 @@
       "title": "Wikipedia: Zara Home",
       "url": "https://en.wikipedia.org/wiki/Zara_Home"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "no",
+    "line": "No: a generic cordless lamp with weak light and a battery you can't replace.",
+    "price": {
+      "score": 1,
+      "note": "No cheaper source for Zara's version, though similar cordless lamps sell for $25 to $80."
+    },
+    "design": {
+      "score": 0,
+      "note": "A stock factory shape also sold by Mango and many online shops."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Solid iron, but the built-in LED and battery limit its life."
+    }
+  }
 }

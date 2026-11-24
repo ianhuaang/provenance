@@ -107,6 +107,21 @@ export const Photo = z.object({
   sourceUrl: z.url(),
 });
 
+const WorthCheck = z.object({
+  score: z.number().int().min(0).max(2).describe("2 good, 1 mixed, 0 poor"),
+  note: z.string().describe("One plain sentence explaining the score"),
+});
+export const Worth = z
+  .object({
+    verdict: z.enum(["yes", "depends", "no"]),
+    line: z.string().describe("One-sentence bottom line, e.g. 'Yes with UO Rewards: solid wood and linen at $269.'"),
+    price: WorthCheck.describe("Your link vs other stores: 2 your link is the cheapest or the price is the same everywhere; 1 cheaper elsewhere, buy there; 0 the same item sells for far less elsewhere"),
+    design: WorthCheck.describe("Design: 2 credited designer or a distinctive original; 1 the brand's own take on a common look; 0 generic factory design"),
+    materials: WorthCheck.describe("Materials for the price: 2 solid materials for the money; 1 standard for the price; 0 cheap materials or short-lived parts for the price"),
+  })
+  .describe("Claude's opinion on whether it's worth buying. Resale value is not considered.");
+export type Worth = z.infer<typeof Worth>;
+
 export const ProfileRecord = z.object({
   id: z.string().describe("Stable slug, e.g. 'adesso-3932-12'"),
   version: z.literal(1),
@@ -135,5 +150,6 @@ export const ProfileRecord = z.object({
   maker: Maker,
   photo: Photo.nullable(),
   sources: z.array(Source),
+  worth: Worth.optional(),
 });
 export type ProfileRecord = z.infer<typeof ProfileRecord>;

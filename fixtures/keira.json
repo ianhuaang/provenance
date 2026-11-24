@@ -246,5 +246,21 @@
       "title": "Walmart: Livabliss seller profile",
       "url": "https://www.walmart.com/global/seller/102482321"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Probably not: a renamed wholesale arc lamp I couldn't fully confirm.",
+    "price": {
+      "score": 1,
+      "note": "$229 at AllModern; a cheaper Overstock listing at $191 is unconfirmed."
+    },
+    "design": {
+      "score": 1,
+      "note": "Surya's own design under its Livabliss label, renamed Keira by AllModern."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Plated iron and a linen shade, but 18 lb is light for an arc lamp, so stability is a question."
+    }
+  }
 }

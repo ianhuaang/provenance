@@ -300,5 +300,21 @@
       "title": "Architonic: ADS360",
       "url": "https://www.architonic.com/en/b/ads360/3104987"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes, at UO with the free Rewards discount: solid wood and linen for $269.",
+    "price": {
+      "score": 2,
+      "note": "Your UO link with free UO Rewards ($269.40) beats Target ($320.99) for the same Adesso lamp."
+    },
+    "design": {
+      "score": 1,
+      "note": "Adesso's own design; the stacked bobbin stem is a classic turned-wood form, not a new idea."
+    },
+    "materials": {
+      "score": 2,
+      "note": "Natural wood stem and base, linen shade, 10.7 lb. Solid for the money."
+    }
+  }
 }

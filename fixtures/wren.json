@@ -24,18 +24,43 @@
     "verdict": "Brand-designed, mass-market",
     "verdictNote": "JONATHAN Y's own design, sold under its own name across many big retailers. The wood look is a printed finish on resin.",
     "summary": "An original product from JONATHAN Y, a lighting and rug brand that sells through Target, Overstock, Kohl's, Walmart and others. No individual designer is credited. The stacked bobbin stem is a classic turned-wood form; here it is cast in resin and finished to look like light oak.",
-    "designer": { "name": null, "credited": false, "note": "None credited; JONATHAN Y's in-house team" },
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; JONATHAN Y's in-house team"
+    },
     "renamedByRetailer": false,
     "originalIfReplica": null
   },
   "specs": [
-    { "label": "Size", "value": "61.5 in H × 17 in W × 17 in D" },
-    { "label": "Shade", "value": "Pleated paper in natural straw color, 12 in H, 7 in top and 17 in bottom" },
-    { "label": "Base", "value": "Resin with a light oak wood-grain finish; base 10 in wide" },
-    { "label": "Weight", "value": "10.56 lb" },
-    { "label": "Bulb", "value": "9W LED included (800 lumens, 2700K); E26 socket, 60W max" },
-    { "label": "Switch", "value": "Listed as both a pull chain and a rotary switch on Target's page" },
-    { "label": "Cord", "value": "6 ft" }
+    {
+      "label": "Size",
+      "value": "61.5 in H × 17 in W × 17 in D"
+    },
+    {
+      "label": "Shade",
+      "value": "Pleated paper in natural straw color, 12 in H, 7 in top and 17 in bottom"
+    },
+    {
+      "label": "Base",
+      "value": "Resin with a light oak wood-grain finish; base 10 in wide"
+    },
+    {
+      "label": "Weight",
+      "value": "10.56 lb"
+    },
+    {
+      "label": "Bulb",
+      "value": "9W LED included (800 lumens, 2700K); E26 socket, 60W max"
+    },
+    {
+      "label": "Switch",
+      "value": "Listed as both a pull chain and a rotary switch on Target's page"
+    },
+    {
+      "label": "Cord",
+      "value": "6 ft"
+    }
   ],
   "match": null,
   "quality": [
@@ -104,10 +129,26 @@
     }
   ],
   "names": [
-    { "source": "Target", "name": "JONATHAN Y Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp", "likely": false },
-    { "source": "Overstock", "name": "Wren 61.5\" Pleated Paper Shade/Resin LED Floor Lamp", "likely": false },
-    { "source": "Kohl's", "name": "Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp", "likely": false },
-    { "source": "Pier 1", "name": "Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp", "likely": false }
+    {
+      "source": "Target",
+      "name": "JONATHAN Y Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Overstock",
+      "name": "Wren 61.5\" Pleated Paper Shade/Resin LED Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Kohl's",
+      "name": "Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Pier 1",
+      "name": "Wren 61.5\" Modern Rustic Bobbin Pleated Paper Shade/Resin LED Floor Lamp",
+      "likely": false
+    }
   ],
   "maker": {
     "name": "JONATHAN Y",
@@ -116,16 +157,57 @@
       "It doesn't credit individual designers. Many of its lamps reinterpret popular looks (bobbin, rattan, Tiffany-style, mid-century) in resin, iron and paper to hit the price."
     ],
     "timeline": [
-      { "when": "2015", "what": "happimess trademark filed" },
-      { "when": "2017", "what": "JONATHAN Y lamp and furniture trademarks filed" },
-      { "when": "Today", "what": "Sold across major US retail marketplaces" }
+      {
+        "when": "2015",
+        "what": "happimess trademark filed"
+      },
+      {
+        "when": "2017",
+        "what": "JONATHAN Y lamp and furniture trademarks filed"
+      },
+      {
+        "when": "Today",
+        "what": "Sold across major US retail marketplaces"
+      }
     ]
   },
-  "photo": { "url": "img/jonathan-y-wren-61-5-floor-lamp.jpg", "credit": "Target product photo", "sourceUrl": "https://www.target.com/p/jonathan-y-wren-61-5-modern-rustic-bobbin-pleated-paper-shade-resin-led-floor-lamp-brown-wood-finish-light-brown/-/A-1006140733" },
+  "photo": {
+    "url": "img/jonathan-y-wren-61-5-floor-lamp.jpg",
+    "credit": "Target product photo",
+    "sourceUrl": "https://www.target.com/p/jonathan-y-wren-61-5-modern-rustic-bobbin-pleated-paper-shade-resin-led-floor-lamp-brown-wood-finish-light-brown/-/A-1006140733"
+  },
   "sources": [
-    { "title": "Target: JONATHAN Y Wren floor lamp", "url": "https://www.target.com/p/jonathan-y-wren-61-5-modern-rustic-bobbin-pleated-paper-shade-resin-led-floor-lamp-brown-wood-finish-light-brown/-/A-1006140733" },
-    { "title": "Overstock: Wren floor lamp", "url": "https://www.overstock.com/Lighting-Ceiling-Fans/Wren-61.5-Pleated-Paper-Shade-Resin-LED-Floor-Lamp/43368573/product.html" },
-    { "title": "Kohl's: Wren floor lamp", "url": "https://www.kohls.com/product/prd-7950800/wren-615-modern-rustic-bobbin-pleated-paper-shaderesin-led-floor-lamp.jsp" },
-    { "title": "Justia: JONATHAN Y Designs, Inc. trademarks", "url": "https://trademarks.justia.com/owners/jonathan-y-designs-inc-3730291" }
-  ]
+    {
+      "title": "Target: JONATHAN Y Wren floor lamp",
+      "url": "https://www.target.com/p/jonathan-y-wren-61-5-modern-rustic-bobbin-pleated-paper-shade-resin-led-floor-lamp-brown-wood-finish-light-brown/-/A-1006140733"
+    },
+    {
+      "title": "Overstock: Wren floor lamp",
+      "url": "https://www.overstock.com/Lighting-Ceiling-Fans/Wren-61.5-Pleated-Paper-Shade-Resin-LED-Floor-Lamp/43368573/product.html"
+    },
+    {
+      "title": "Kohl's: Wren floor lamp",
+      "url": "https://www.kohls.com/product/prd-7950800/wren-615-modern-rustic-bobbin-pleated-paper-shaderesin-led-floor-lamp.jsp"
+    },
+    {
+      "title": "Justia: JONATHAN Y Designs, Inc. trademarks",
+      "url": "https://trademarks.justia.com/owners/jonathan-y-designs-inc-3730291"
+    }
+  ],
+  "worth": {
+    "verdict": "no",
+    "line": "No: the same bobbin look comes in real wood for about $130 more, and at $141 you get resin.",
+    "price": {
+      "score": 1,
+      "note": "Your Target link is $219.99; Overstock has it for $141.21 with code ACCESS10."
+    },
+    "design": {
+      "score": 1,
+      "note": "JONATHAN Y's own take on the bobbin floor lamp, a look many brands sell."
+    },
+    "materials": {
+      "score": 0,
+      "note": "Resin printed to look like oak, with a paper shade. Lighter and less durable than wood."
+    }
+  }
 }

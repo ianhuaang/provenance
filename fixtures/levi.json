@@ -296,5 +296,21 @@
       "title": "Furniture World: Crosley Brands adds Kim Elonich",
       "url": "https://www.furninfo.com/furniture-industry-news/9673"
     }
-  ]
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Only at the lowest price: fine big-box furniture, but never worth a markup.",
+    "price": {
+      "score": 1,
+      "note": "Sold by many stores at very different prices; HomeSquare at $345.75 was the lowest confirmed."
+    },
+    "design": {
+      "score": 1,
+      "note": "Crosley's own design; the burl look is a printed surface finish."
+    },
+    "materials": {
+      "score": 1,
+      "note": "MDF and melamine with rubberwood, flat-packed, 90-day warranty. Standard for the price."
+    }
+  }
 }
