@@ -1,0 +1,154 @@
+{
+  "id": "zara-home-6174-047-808",
+  "version": 1,
+  "createdAt": "2026-11-24T18:10:00Z",
+  "checkedAt": "2026-11-24T18:10:00Z",
+  "input": {
+    "url": "https://www.zarahome.com/us/monocolour-cordless-table-lamp-l46174047?cart=true&pelement=507772356&colorId=808",
+    "resolvedUrl": "https://www.zarahome.com/us/monocolour-cordless-table-lamp-l46174047?colorId=808",
+    "retailer": "Zara Home",
+    "listingName": "Monocolour Cordless Table Lamp"
+  },
+  "identity": {
+    "canonicalName": "Zara Home Monocolour Cordless Table Lamp, Silver",
+    "shortName": "Zara Home Cordless Lamp",
+    "maker": "Zara Home (Inditex)",
+    "makerLocation": "A Coruña, Spain",
+    "modelNumber": "6174/047/808",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 59.9
+  },
+  "classification": {
+    "tier": "generic",
+    "verdict": "Common factory design, Zara's version",
+    "verdictNote": "A widely made cordless mushroom lamp. Zara's is well finished, but the design isn't Zara's own.",
+    "summary": "The rechargeable metal mushroom lamp is one of the most copied shapes in lighting right now. A reverse image search turns up near-identical versions at Mango, Amazon, Walmart and many small online shops, mostly made in China like this one. Zara Home and Zara sell this exact version; the others differ in size and finish, so they aren't listed as the same product.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; a stock factory design"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "8.1 in H × 6.1 in W × 6.1 in D"
+    },
+    {
+      "label": "Material",
+      "value": "Iron base and shade, brushed silver"
+    },
+    {
+      "label": "Weight",
+      "value": "900 g (2 lb)"
+    },
+    {
+      "label": "Light",
+      "value": "Built-in 1W LED, 160 lumens, 3000K; not replaceable"
+    },
+    {
+      "label": "Battery",
+      "value": "Rechargeable lithium, USB cable included; 1.5 to 2 hours to charge, 4.5 to 24 hours of light depending on brightness"
+    },
+    {
+      "label": "Controls",
+      "value": "Touch the top; three brightness levels"
+    },
+    {
+      "label": "Made in",
+      "value": "China"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A small, heavy-ish metal lamp you can move anywhere, which is the appeal. At 160 lumens it's mood light for a table or shelf, about a quarter of a standard bulb, not reading light.",
+    "The LED and battery are built in and can't be replaced, so the lamp's life is the battery's life. Similar cordless dome lamps sell for $25 to $80 elsewhere; Zara's price sits in the middle for a solid metal one."
+  ],
+  "retailers": [
+    {
+      "retailer": "Zara Home",
+      "label": "Your link",
+      "url": "https://www.zarahome.com/us/monocolour-cordless-table-lamp-l46174047?colorId=808",
+      "kind": "retail",
+      "displayedPrice": 59.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "No promo on the page.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    },
+    {
+      "retailer": "Zara",
+      "label": "Same lamp on zara.com",
+      "url": "https://www.zara.com/us/en/search?searchTerm=monocolour%20cordless%20table%20lamp",
+      "kind": "retail",
+      "displayedPrice": 59.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 4.95,
+      "notes": "Shopping result showed $59.90 (gold shown), in stock, $4.95 delivery, 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Zara Home",
+      "name": "Monocolour Cordless Table Lamp (ref. 6174/047/808)",
+      "likely": false
+    },
+    {
+      "source": "Zara",
+      "name": "Monocolour Cordless Table Lamp",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Zara Home",
+    "paragraphs": [
+      "Zara Home is the home decor chain of Inditex, the Spanish group behind Zara. It launched in 2003, is based in A Coruña, Spain, and sells bedding, tableware, furniture and decor through its own stores and website.",
+      "Like Zara, it follows fast-moving trends with frequent new collections, and many pieces come from the same factories that supply other brands. It doesn't credit designers on most items."
+    ],
+    "timeline": [
+      {
+        "when": "2003",
+        "what": "Zara Home launched by Inditex"
+      },
+      {
+        "when": "2007",
+        "what": "Online store opens"
+      },
+      {
+        "when": "2012",
+        "what": "US online store launches"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/zara-home-6174-047-808.jpg",
+    "credit": "Zara Home product photo",
+    "sourceUrl": "https://www.zarahome.com/us/monocolour-cordless-table-lamp-l46174047?colorId=808"
+  },
+  "sources": [
+    {
+      "title": "Zara Home: Monocolour Cordless Table Lamp",
+      "url": "https://www.zarahome.com/us/monocolour-cordless-table-lamp-l46174047?colorId=808"
+    },
+    {
+      "title": "Wikipedia: Zara Home",
+      "url": "https://en.wikipedia.org/wiki/Zara_Home"
+    }
+  ]
+}

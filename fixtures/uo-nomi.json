@@ -1,0 +1,136 @@
+{
+  "id": "uo-nomi-flush-mount-kit",
+  "version": 1,
+  "createdAt": "2026-11-24T18:10:00Z",
+  "checkedAt": "2026-11-24T18:10:00Z",
+  "input": {
+    "url": "https://www.urbanoutfitters.com/shop/nomi-flush-mount-conversion-kit",
+    "resolvedUrl": "https://www.urbanoutfitters.com/shop/nomi-flush-mount-conversion-kit",
+    "retailer": "Urban Outfitters",
+    "listingName": "Nomi Flush Mount Conversion Kit"
+  },
+  "identity": {
+    "canonicalName": "UO Home Nomi Flush Mount Conversion Kit, White",
+    "shortName": "UO Nomi Conversion Kit",
+    "maker": "UO Home (Urban Outfitters)",
+    "makerLocation": "Philadelphia, PA",
+    "modelNumber": "111282489",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 99
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Store exclusive, Urban Outfitters only",
+    "verdictNote": "UO Home's own design. A shade that bolts over an existing dome ceiling light.",
+    "summary": "An Urban Outfitters exclusive from its in-house UO Home line, with no credited designer. The ribbed lantern shape borrows from Japanese paper lanterns (Isamu Noguchi's Akari lamps are the famous version), but it isn't a copy of a specific product. A reverse image search found no other store selling it.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; UO Home's in-house team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "17.3 in dia × 11 in H"
+    },
+    {
+      "label": "Material",
+      "value": "Iron frame, jute fabric"
+    },
+    {
+      "label": "Weight",
+      "value": "1.1 lb"
+    },
+    {
+      "label": "Bulb",
+      "value": "Uses your existing fixture; 60W max"
+    },
+    {
+      "label": "Fits",
+      "value": "Dome ceiling lights with a center post"
+    },
+    {
+      "label": "Reference",
+      "value": "UO SKU 111282489"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A pleated, ribbed lantern shade in jute over an iron frame that clips over your existing ceiling light, so there's no wiring. It's light and inexpensive to make; the price is mostly UO's design and the convenience.",
+    "These only work on a dome (\"boob\") light with a center post or threaded rod; check your fixture before buying. The 60W bulb limit matters because fabric and paper sit close to the bulb, so use LEDs."
+  ],
+  "retailers": [
+    {
+      "retailer": "Urban Outfitters",
+      "label": "Your link",
+      "url": "https://www.urbanoutfitters.com/shop/nomi-flush-mount-conversion-kit",
+      "kind": "retail",
+      "displayedPrice": 99,
+      "promo": {
+        "description": "40% off in cart for UO Rewards members (free to join)",
+        "percentOff": 40,
+        "amountOff": null,
+        "requires": "free-membership",
+        "code": null,
+        "inCart": true,
+        "endsAt": null
+      },
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "After the 40% off, the order lands just under UO's $60 free-shipping minimum, so add something or pay shipping. Ships in 7 to 10 business days.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Urban Outfitters",
+      "name": "Nomi Flush Mount Conversion Kit",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "UO Home (Urban Outfitters)",
+    "paragraphs": [
+      "UO Home is the home line of Urban Outfitters, the Philadelphia retailer founded in 1970 and owned by URBN, which also runs Anthropologie and Free People. Pieces marked \"UO exclusive\" are designed or specified by UO's in-house team and made by overseas factories.",
+      "UO sells a whole family of these flush mount conversion kits (Scallop, Nomi, Odette, Dakota, Maura). The category itself is older: Home Concept's Moderne kits, sold through LampsUSA and Amazon, use the same idea of a shade and diffuser that bolt onto an existing dome light's center post."
+    ],
+    "timeline": [
+      {
+        "when": "1970",
+        "what": "Urban Outfitters opens in Philadelphia"
+      },
+      {
+        "when": "Today",
+        "what": "UO Home sells a range of exclusive conversion kits"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/uo-nomi-flush-mount-kit.jpg",
+    "credit": "Urban Outfitters product photo",
+    "sourceUrl": "https://www.urbanoutfitters.com/shop/nomi-flush-mount-conversion-kit"
+  },
+  "sources": [
+    {
+      "title": "Urban Outfitters: Nomi Flush Mount Conversion Kit",
+      "url": "https://www.urbanoutfitters.com/shop/nomi-flush-mount-conversion-kit"
+    },
+    {
+      "title": "Wikipedia: Urban Outfitters",
+      "url": "https://en.wikipedia.org/wiki/Urban_Outfitters"
+    },
+    {
+      "title": "LampsUSA: How flush mount conversion kits install",
+      "url": "https://www.LampsUSA.com/blogs/buyers-guides/installation-of-ceiling-light-cover-conversion-kits"
+    }
+  ]
+}

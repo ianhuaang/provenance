@@ -1,0 +1,141 @@
+{
+  "id": "uo-scallop-flush-mount-kit",
+  "version": 1,
+  "createdAt": "2026-11-24T18:10:00Z",
+  "checkedAt": "2026-11-24T18:10:00Z",
+  "input": {
+    "url": "https://www.urbanoutfitters.com/shop/scallop-flush-mount-conversion-kit?color=069&type=REGULAR&size=ONE+SIZE&quantity=1",
+    "resolvedUrl": "https://www.urbanoutfitters.com/shop/scallop-flush-mount-conversion-kit?color=069",
+    "retailer": "Urban Outfitters",
+    "listingName": "Scallop Flush Mount Conversion Kit (Red Trim)"
+  },
+  "identity": {
+    "canonicalName": "UO Home Scallop Flush Mount Conversion Kit, Red Trim",
+    "shortName": "UO Scallop Conversion Kit",
+    "maker": "UO Home (Urban Outfitters)",
+    "makerLocation": "Philadelphia, PA",
+    "modelNumber": "111281481",
+    "otherModelNumbers": [
+      {
+        "model": "94733060",
+        "note": "Earlier UO SKU for the same kit"
+      }
+    ],
+    "upc": null,
+    "listPrice": 99.5
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Store exclusive, Urban Outfitters only",
+    "verdictNote": "UO Home's own design. A shade that bolts over an existing dome ceiling light.",
+    "summary": "An Urban Outfitters exclusive from UO Home, with no credited designer. Scalloped shades with contrast trim are a broad trend right now (World Market, West Elm and many small makers sell their own), but a reverse image search found this exact kit only at UO and resellers. UO also sells an extra-large version.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; UO Home's in-house team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "14 in × 11 in × 9 in H"
+    },
+    {
+      "label": "Material",
+      "value": "Iron frame, styrene, cotton"
+    },
+    {
+      "label": "Weight",
+      "value": "1.6 lb"
+    },
+    {
+      "label": "Bulb",
+      "value": "Uses your existing fixture; 60W max"
+    },
+    {
+      "label": "Fits",
+      "value": "Dome ceiling lights up to 13.25 in across"
+    },
+    {
+      "label": "Colors",
+      "value": "Several trims and prints; this is Red Trim"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A cotton drum shade with a scalloped hem and red piping that bolts over an existing dome light, with a diffuser underneath. Styrene-backed cotton is the standard lampshade build: stiff, light, spot-clean only.",
+    "These only work on a dome (\"boob\") light with a center post or threaded rod; check your fixture before buying. The 60W bulb limit matters because fabric and paper sit close to the bulb, so use LEDs. Measure your current fixture: this one only fits domes up to 13.25 in wide."
+  ],
+  "retailers": [
+    {
+      "retailer": "Urban Outfitters",
+      "label": "Your link",
+      "url": "https://www.urbanoutfitters.com/shop/scallop-flush-mount-conversion-kit?color=069",
+      "kind": "retail",
+      "displayedPrice": 99.5,
+      "promo": {
+        "description": "40% off in cart for UO Rewards members (free to join)",
+        "percentOff": 40,
+        "amountOff": null,
+        "requires": "free-membership",
+        "code": null,
+        "inCart": true,
+        "endsAt": null
+      },
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Selling fast, per the page. After the 40% off, the order lands just under UO's $60 free-shipping minimum, so add something or pay shipping. Ships in 7 to 10 business days.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Urban Outfitters",
+      "name": "Scallop Flush Mount Conversion Kit",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "UO Home (Urban Outfitters)",
+    "paragraphs": [
+      "UO Home is the home line of Urban Outfitters, the Philadelphia retailer founded in 1970 and owned by URBN, which also runs Anthropologie and Free People. Pieces marked \"UO exclusive\" are designed or specified by UO's in-house team and made by overseas factories.",
+      "UO sells a whole family of these flush mount conversion kits (Scallop, Nomi, Odette, Dakota, Maura). The category itself is older: Home Concept's Moderne kits, sold through LampsUSA and Amazon, use the same idea of a shade and diffuser that bolt onto an existing dome light's center post."
+    ],
+    "timeline": [
+      {
+        "when": "1970",
+        "what": "Urban Outfitters opens in Philadelphia"
+      },
+      {
+        "when": "Today",
+        "what": "UO Home sells a range of exclusive conversion kits"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/uo-scallop-flush-mount-kit.jpg",
+    "credit": "Urban Outfitters product photo",
+    "sourceUrl": "https://www.urbanoutfitters.com/shop/scallop-flush-mount-conversion-kit?color=069"
+  },
+  "sources": [
+    {
+      "title": "Urban Outfitters: Scallop Flush Mount Conversion Kit",
+      "url": "https://www.urbanoutfitters.com/shop/scallop-flush-mount-conversion-kit?color=069"
+    },
+    {
+      "title": "Wikipedia: Urban Outfitters",
+      "url": "https://en.wikipedia.org/wiki/Urban_Outfitters"
+    },
+    {
+      "title": "LampsUSA: How flush mount conversion kits install",
+      "url": "https://www.LampsUSA.com/blogs/buyers-guides/installation-of-ceiling-light-cover-conversion-kits"
+    }
+  ]
+}

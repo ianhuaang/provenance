@@ -1,0 +1,192 @@
+{
+  "id": "brightech-luna-drop",
+  "version": 1,
+  "createdAt": "2026-11-24T18:10:00Z",
+  "checkedAt": "2026-11-24T18:10:00Z",
+  "input": {
+    "url": "https://www.urbanoutfitters.com/shop/brightech-luna-drop-led-marble-base-arc-floor-lamp?color=070&recommendation=pdp-pdpTop-DYrectray-Tab%201%20-%20Visually%20Similar",
+    "resolvedUrl": "https://www.urbanoutfitters.com/shop/brightech-luna-drop-led-marble-base-arc-floor-lamp?color=070",
+    "retailer": "Urban Outfitters",
+    "listingName": "Brightech Luna Drop LED Marble Base Arc Floor Lamp"
+  },
+  "identity": {
+    "canonicalName": "Brightech Luna Drop 66\" LED Arc Floor Lamp, Antiqued Brass",
+    "shortName": "Brightech Luna Drop",
+    "maker": "Brightech",
+    "makerLocation": "Los Angeles, CA",
+    "modelNumber": null,
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 200
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Brand-designed, sold under its own name",
+    "verdictNote": "Brightech's own design. Urban Outfitters sells it through its marketplace, shipped by Brightech.",
+    "summary": "An original Brightech product, described by Brightech as the sister to its best-selling Luna lamp. No individual designer is credited. On Urban Outfitters it's a UO MRKT listing, meaning Brightech sells and ships it and UO takes a cut; the name is unchanged.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; Brightech's in-house team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "66 in H × 14.5 in W × 10 in D"
+    },
+    {
+      "label": "Shade",
+      "value": "Frosted white glass globe, 10 in"
+    },
+    {
+      "label": "Body",
+      "value": "Antiqued brass metal arc"
+    },
+    {
+      "label": "Base",
+      "value": "White marble, 10 in across, 1.25 in H"
+    },
+    {
+      "label": "Weight",
+      "value": "20.61 lb"
+    },
+    {
+      "label": "Bulb",
+      "value": "LED bulb included, E26 socket. UO lists a 3-way 16W, 1600 lumen bulb; Brightech lists 9.5W, 800 lumens"
+    },
+    {
+      "label": "Switch",
+      "value": "Foot switch on the cord"
+    },
+    {
+      "label": "Cord",
+      "value": "6.5 ft"
+    },
+    {
+      "label": "Warranty",
+      "value": "5 years at brightech.com; UO lists 3 years"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A slim brass arc that drops a frosted glass globe, anchored by a real marble base. At 20 lb it's stable, and the glass gives a soft all-around glow rather than reading light.",
+    "Brightech sells direct-to-consumer and through big marketplaces, which keeps the price low. The listings disagree on which bulb comes in the box; Brightech's own page says 800 lumens (about a 60W bulb), so plan on a brighter bulb if this is your main light."
+  ],
+  "retailers": [
+    {
+      "retailer": "Brightech",
+      "label": "Maker's own store",
+      "url": "https://brightech.com/products/luna-drop-floor-lamp",
+      "kind": "retail",
+      "displayedPrice": 139,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Sale from $200. Free shipping on $99+, free 30-day returns, 5-year warranty.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    },
+    {
+      "retailer": "Target",
+      "label": "Same lamp",
+      "url": "https://www.target.com/p/-/A-92357099",
+      "kind": "retail",
+      "displayedPrice": 139.99,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Ships free. 90-day returns by mail or in store.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    },
+    {
+      "retailer": "Urban Outfitters",
+      "label": "UO MRKT, sold and shipped by Brightech",
+      "url": "https://www.urbanoutfitters.com/shop/brightech-luna-drop-led-marble-base-arc-floor-lamp?color=070",
+      "kind": "retail",
+      "displayedPrice": 139.99,
+      "promo": null,
+      "exclusions": "Price as Marked. Discounts Do Not Apply. This item is excluded from all promotions.",
+      "shippingCost": 0,
+      "notes": "Not available for in-store pickup.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T18:10:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Brightech",
+      "name": "Luna Drop Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Target",
+      "name": "Brightech Luna Drop Mid-Century Marble Base Arc Floor Lamp Antiqued Brass",
+      "likely": false
+    },
+    {
+      "source": "Urban Outfitters",
+      "name": "Brightech Luna Drop LED Marble Base Arc Floor Lamp",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Brightech",
+    "paragraphs": [
+      "Brightech is a Los Angeles lighting company founded in 2013 by Ardy Zara. Its pitch is designer-looking lamps at mass-market prices, sold on its own site and through Amazon, Target, Home Depot and others.",
+      "It uses LED bulbs throughout and works with overseas factories rather than making lamps itself. Products are credited to the brand, not to individual designers."
+    ],
+    "timeline": [
+      {
+        "when": "2013",
+        "what": "Founded in Los Angeles by Ardy Zara"
+      },
+      {
+        "when": "Today",
+        "what": "Sells direct and through major US retailers"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/brightech-luna-drop.jpg",
+    "credit": "Urban Outfitters product photo",
+    "sourceUrl": "https://www.urbanoutfitters.com/shop/brightech-luna-drop-led-marble-base-arc-floor-lamp?color=070"
+  },
+  "sources": [
+    {
+      "title": "Brightech: Luna Drop Floor Lamp",
+      "url": "https://brightech.com/products/luna-drop-floor-lamp"
+    },
+    {
+      "title": "Target: Brightech Luna Drop",
+      "url": "https://www.target.com/p/-/A-92357099"
+    },
+    {
+      "title": "Urban Outfitters: Brightech Luna Drop",
+      "url": "https://www.urbanoutfitters.com/shop/brightech-luna-drop-led-marble-base-arc-floor-lamp?color=070"
+    },
+    {
+      "title": "DTC etc: Brightech",
+      "url": "https://www.dtcetc.com/brand/brightech"
+    },
+    {
+      "title": "Honest Brand Reviews: Brightech",
+      "url": "https://www.honestbrandreviews.com/reviews/brightech-review/"
+    }
+  ]
+}
