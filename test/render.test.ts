@@ -7,11 +7,11 @@ const load = (name: string) => ProfileRecord.parse(JSON.parse(readFileSync(new U
 const at = new Date("2026-11-24T18:00:00Z");
 
 describe("renderProfile", () => {
-  it("renders the Otto profile with the renamed headline, match table and best price", () => {
+  it("renders the Otto profile with the renamed headline, best price, no match table", () => {
     const html = renderProfile(load("otto"), at);
     expect(html).toContain("Otto Floor Lamp is the Adesso Orchard");
     expect(html).toContain("Urban Outfitters&#39; name for");
-    expect(html).toContain("How we know it");
+    expect(html).not.toContain("How we know it");
     expect(html).toContain("$269.40");
     expect(html).toContain("About $52 below Target");
     expect(html).not.toMatch(/undefined|NaN|\[object/);
@@ -39,7 +39,7 @@ describe("renderProfile", () => {
   it("renders the Keira as a likely renamed Livabliss lamp, cheapest verified at AllModern", () => {
     const html = renderProfile(load("keira"), at);
     expect(html).toContain("AllModern Keira 76&quot; Floor Lamp is the Livabliss Desota");
-    expect(html).toContain("Treat this as a likely match");
+    expect(html).toContain("Likely the same product, not yet confirmed");
     expect(html).toContain("Cheapest right now: AllModern");
     expect(html).toContain("Overstock lists it for $191");
   });

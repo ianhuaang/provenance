@@ -162,9 +162,8 @@ p{margin:0 0 12px;max-width:70ch}a{color:var(--accent)}
 .card{border:1px solid var(--rule);border-radius:8px;padding:4px 18px}.card dl{margin:0}
 .card div{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--rule)}.card div:last-child{border-bottom:0}
 .card dt{color:var(--mute);font-size:14px}.card dd{margin:0;font-weight:500}
-.match{border:1px solid var(--rule);border-radius:8px;overflow:hidden}.match h3{padding:14px 18px 4px}.match p{padding:0 18px;font-size:14px;color:var(--mute);margin:0 0 8px}
-table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;padding:8px 12px;border-top:1px solid var(--rule);font-size:14px;vertical-align:top}
-.match th{font-weight:600;color:var(--mute);background:var(--panel)}.match td:first-child{color:var(--mute)}
+.likely{font-size:14px;color:var(--mute);margin:10px 2px 0}
+table{border-collapse:collapse;width:100%}
 .ok{color:var(--good);font-weight:600}.no{color:var(--mute)}
 .scale{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:22px 0 10px}
 .step{padding:14px 14px 16px;border-radius:6px;background:var(--panel);border:1px solid var(--rule);position:relative}
@@ -196,7 +195,7 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
 .src{font-size:14px;color:var(--mute)}.src li{margin-bottom:4px}.src a{overflow-wrap:anywhere}
 @media(max-width:900px){.hero,.two{grid-template-columns:minmax(0,1fr)}.scale{grid-template-columns:repeat(2,minmax(0,1fr))}.photo{min-height:240px}}
 @media(max-width:700px){.row{grid-template-columns:minmax(0,1fr) auto auto}.rowhead{display:none}.row .track{grid-column:1/-1;order:5}.row .num.dim{display:none}.cond{grid-column:1/-1;order:6;margin-top:0}}
-@media(max-width:600px){.head{grid-template-columns:minmax(0,1fr)}.verdict{max-width:none}.card div,.names li{grid-template-columns:7em minmax(0,1fr)}.best{grid-template-columns:minmax(0,1fr)}.match th,.match td{padding:7px 8px}}
+@media(max-width:600px){.head{grid-template-columns:minmax(0,1fr)}.verdict{max-width:none}.card div,.names li{grid-template-columns:7em minmax(0,1fr)}.best{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:420px){.scale{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
@@ -217,10 +216,8 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
     <div class="side">
       <div class="card"><dl>${card.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div>
       ${
-        rec.match && rec.match.rows.length
-          ? `<div class="match"><h3>How we know it's the same product</h3><p>${esc(rec.match.basis)}.${rec.match.confidence === "likely" ? " Treat this as a likely match." : ""}</p><div style="overflow-x:auto"><table><thead><tr><th>Spec</th><th>${esc(rec.input.retailer)}</th><th>${esc(id.shortName)}</th><th></th></tr></thead><tbody>${rec.match.rows
-              .map((m) => `<tr><td>${esc(m.spec)}</td><td>${esc(m.listing)}</td><td>${esc(m.canonical)}</td><td class="${m.matches ? "ok" : "no"}">${m.matches ? "✓" : "≠"}</td></tr>`)
-              .join("")}</tbody></table></div></div>`
+        rec.match && rec.match.confidence === "likely"
+          ? `<p class="likely">Likely the same product, not yet confirmed: ${esc(rec.match.basis)}.</p>`
           : ""
       }
     </div>
