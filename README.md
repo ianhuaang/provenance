@@ -9,8 +9,7 @@ This is **phase 1: the lookup engine**. It runs from the command line, saves eac
 1. Install Node 22 or later.
 2. `npm install`
 3. Create an API key at [console.anthropic.com](https://console.anthropic.com) (Settings > API keys) with billing set up.
-4. Copy `.env.example` to `.env` and paste the key there. Never commit `.env` or share the key in chat.
-5. Load it in your terminal: `export $(cat .env | xargs)`
+4. Copy `.env.example` to `.env` and paste the key there. Never commit `.env` or share the key in chat. The CLI reads `.env` automatically.
 
 ## Use
 

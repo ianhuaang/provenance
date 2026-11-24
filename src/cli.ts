@@ -6,6 +6,13 @@ import { FileLibrary } from "./library.js";
 import { renderProfile } from "./render.js";
 import { ProfileRecord } from "./schema.js";
 
+// Load .env automatically so there's no separate export step.
+try {
+  process.loadEnvFile(".env");
+} catch {
+  // No .env file; fall back to the shell environment.
+}
+
 const LIBRARY_DIR = resolve(process.env.LIBRARY_DIR ?? "library");
 const OUT_DIR = resolve(process.env.OUT_DIR ?? "out");
 
@@ -23,7 +30,9 @@ async function writePage(record: ProfileRecord, out?: string) {
 
 function client() {
   if (!process.env.ANTHROPIC_API_KEY) {
-    console.error("Set ANTHROPIC_API_KEY first (see README). Live lookups call the Claude API.");
+    console.error(
+      "No API key found. Open .env in this folder (open -e .env), put your key right after ANTHROPIC_API_KEY= with no spaces or quotes, save, and run the command again.",
+    );
     process.exit(1);
   }
   return new Anthropic();
