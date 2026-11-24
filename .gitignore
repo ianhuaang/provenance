@@ -3,3 +3,6 @@ node_modules
 out/
 library/*.json
 !library/.gitkeep
+.next/
+*.tsbuildinfo
+next-env.d.ts

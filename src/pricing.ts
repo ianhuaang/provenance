@@ -1,4 +1,4 @@
-import type { ProfileRecord, RetailerListing } from "./schema.js";
+import type { ProfileRecord, RetailerListing } from "./schema";
 
 /** Promo requirements a typical shopper can meet for free. Paid ones are shown but never used for ranking. */
 const FREE_REQUIREMENTS = new Set(["none", "free-membership", "code", "minimum-spend"]);

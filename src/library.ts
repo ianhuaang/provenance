@@ -1,6 +1,6 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { ProfileRecord } from "./schema.js";
+import { ProfileRecord } from "./schema";
 
 /**
  * The shared profile library. Phase 1 stores one JSON file per product in a folder;
@@ -75,5 +75,31 @@ export class FileLibrary implements Library {
   async save(record: ProfileRecord) {
     await mkdir(this.dir, { recursive: true });
     await writeFile(join(this.dir, `${record.id}.json`), JSON.stringify(ProfileRecord.parse(record), null, 2) + "\n");
+  }
+}
+
+/** In-memory library for the website until a database is connected. Survives only while a server instance is warm. */
+export class MemoryLibrary implements Library {
+  private records = new Map<string, ProfileRecord>();
+  constructor(seed: ProfileRecord[] = []) {
+    for (const r of seed) this.records.set(r.id, r);
+  }
+  async get(id: string) {
+    return this.records.get(id) ?? null;
+  }
+  async findByModel(maker: string, modelNumber: string) {
+    const m = slug(modelNumber);
+    const mk = slug(maker).split("-")[0] ?? "";
+    for (const r of this.records.values()) {
+      if ((r.identity.modelNumber && slug(r.identity.modelNumber) === m && slug(r.identity.maker).startsWith(mk)) || r.identity.otherModelNumbers.some((o) => slug(o.model) === m)) return r;
+    }
+    return null;
+  }
+  async findByUrl(url: string) {
+    for (const r of this.records.values()) if (sameUrl(r.input.resolvedUrl, url) || r.retailers.some((l) => !l.isSearchLink && sameUrl(l.url, url))) return r;
+    return null;
+  }
+  async save(record: ProfileRecord) {
+    this.records.set(record.id, ProfileRecord.parse(record));
   }
 }

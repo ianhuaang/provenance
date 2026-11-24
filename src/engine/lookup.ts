@@ -1,10 +1,10 @@
 import { z } from "zod";
-import { Classification, Identity, Maker, MatchRow, ProfileRecord, RetailerListing, Source, Spec, Confidence } from "../schema.js";
-import { recordId, type Library } from "../library.js";
-import { runAgent, type MessagesClient } from "./agent.js";
-import { addCosts, type CostLine } from "./costs.js";
-import { IDENTIFY, PRICE, READ_LISTING, REFRESH, SYSTEM } from "./prompts.js";
-import { resolveLink, cleanUrl, type BrowserAdapter } from "./resolve.js";
+import { Classification, Identity, Maker, MatchRow, ProfileRecord, RetailerListing, Source, Spec, Confidence } from "../schema";
+import { recordId, type Library } from "../library";
+import { runAgent, type MessagesClient } from "./agent";
+import { addCosts, type CostLine } from "./costs";
+import { IDENTIFY, PRICE, READ_LISTING, REFRESH, SYSTEM } from "./prompts";
+import { resolveLink, cleanUrl, type BrowserAdapter } from "./resolve";
 
 export const MODELS = {
   /** Judgment-heavy steps: identity, classification, retailer search. */

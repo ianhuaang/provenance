@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { ProfileRecord, type RetailerListing } from "../src/schema.js";
-import { priceListing, summarizePrices, isStale, formatUsd } from "../src/pricing.js";
+import { ProfileRecord, type RetailerListing } from "../src/schema";
+import { priceListing, summarizePrices, isStale, formatUsd } from "../src/pricing";
 
 const load = (name: string) => ProfileRecord.parse(JSON.parse(readFileSync(new URL(`../fixtures/${name}.json`, import.meta.url), "utf8")));
 

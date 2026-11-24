@@ -1,5 +1,5 @@
-import type { ProfileRecord, Tier } from "./schema.js";
-import { formatUsd, isStale, summarizePrices, type PricedListing } from "./pricing.js";
+import type { ProfileRecord, Tier } from "./schema";
+import { formatUsd, isStale, summarizePrices, type PricedListing } from "./pricing";
 
 /** Renders any profile record as one self-contained HTML page in the Levi/Otto house style. */
 

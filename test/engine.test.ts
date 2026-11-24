@@ -4,11 +4,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
-import { runAgent, AgentError, type MessagesClient } from "../src/engine/agent.js";
-import { lookup, refresh, IdentifyResult, type ListingFacts } from "../src/engine/lookup.js";
-import { cleanUrl, resolveLink } from "../src/engine/resolve.js";
-import { FileLibrary } from "../src/library.js";
-import { ProfileRecord } from "../src/schema.js";
+import { runAgent, AgentError, type MessagesClient } from "../src/engine/agent";
+import { lookup, refresh, IdentifyResult, type ListingFacts } from "../src/engine/lookup";
+import { cleanUrl, resolveLink } from "../src/engine/resolve";
+import { FileLibrary } from "../src/library";
+import { ProfileRecord } from "../src/schema";
 
 const usage = (over: Partial<Anthropic.Usage> = {}): Anthropic.Usage =>
   ({ input_tokens: 1000, output_tokens: 100, cache_read_input_tokens: 0, cache_creation_input_tokens: 0, server_tool_use: { web_search_requests: 0, web_fetch_requests: 0 }, ...over }) as Anthropic.Usage;

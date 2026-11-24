@@ -11,7 +11,18 @@ This is **phase 1: the lookup engine**. It runs from the command line, saves eac
 3. Create an API key at [console.anthropic.com](https://console.anthropic.com) (Settings > API keys) with billing set up.
 4. Copy `.env.example` to `.env` and paste the key there. Never commit `.env` or share the key in chat. The CLI reads `.env` automatically.
 
-## Use
+## Website
+
+`npm run dev` starts the site at http://localhost:3000: a paste box, live progress, and the profile page. `npm run build` checks it the way Vercel will.
+
+Deploy on Vercel: import this repo at vercel.com/new, then add two environment variables before the first deploy:
+
+- `ANTHROPIC_API_KEY`: your Claude API key.
+- `SITE_ACCESS_CODE`: any word you choose. Only people with it can run new lookups, so strangers can't spend your API budget. Example profiles are open to everyone.
+
+Lookups can take up to 3 minutes; the API route allows 300 seconds. Profiles are kept in memory for now and reset when the server restarts; a database comes next.
+
+## Use from the command line
 
 ```bash
 npm run lookup -- "https://www.urbanoutfitters.com/shop/otto-floor-lamp"

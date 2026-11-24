@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { ProfileRecord } from "../src/schema.js";
-import { renderProfile } from "../src/render.js";
+import { ProfileRecord } from "../src/schema";
+import { renderProfile } from "../src/render";
 
 const load = (name: string) => ProfileRecord.parse(JSON.parse(readFileSync(new URL(`../fixtures/${name}.json`, import.meta.url), "utf8")));
 const at = new Date("2026-11-24T18:00:00Z");

@@ -1,10 +1,10 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
-import { lookup, refresh } from "./engine/lookup.js";
-import { FileLibrary } from "./library.js";
-import { renderProfile } from "./render.js";
-import { ProfileRecord } from "./schema.js";
+import { lookup, refresh } from "./engine/lookup";
+import { FileLibrary } from "./library";
+import { renderProfile } from "./render";
+import { ProfileRecord } from "./schema";
 
 // Load .env automatically so there's no separate export step.
 try {

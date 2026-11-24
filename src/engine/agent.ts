@@ -1,6 +1,6 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
-import { costOf, type CostLine, type ModelId } from "./costs.js";
+import { costOf, type CostLine, type ModelId } from "./costs";
 
 /** The slice of the Anthropic client the engine uses, so tests can pass a fake. */
 export type MessagesClient = {
