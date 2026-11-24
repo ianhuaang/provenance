@@ -85,16 +85,33 @@ textarea{width:100%;min-height:64px;padding:8px 10px;border:1px solid var(--rule
 .empty{border:1.5px dashed var(--rule);border-radius:10px;padding:28px;color:var(--mute);text-align:center}
 .banner{margin:0 0 16px;padding:10px 14px;border-radius:8px;background:var(--panel);border:1px solid var(--rule);font-size:14px;color:var(--mute);display:none}
 .banner.err{color:var(--bad)}
-.bsec{margin:0 0 28px}.bsec>h3{font-size:22px;margin:0 0 4px}.bsec>p{margin:0 0 14px;color:var(--mute);font-size:15px;max-width:46em}
+.bintro{margin:0 0 16px;color:var(--mute);max-width:52em}
+.bmap{border:1px solid var(--rule);border-radius:10px;overflow-x:auto;margin:0 0 32px}
+.bm-row{display:grid;grid-template-columns:11rem repeat(4,minmax(9rem,1fr));min-width:47rem;border-top:1px solid var(--rule)}
+.bm-headrow{border-top:0;background:var(--panel)}
+.bm-col{padding:10px 12px;font-size:13px;font-weight:600;color:var(--mute)}
+.bm-kind{padding:12px;display:flex;flex-direction:column;gap:2px;border-right:1px solid var(--rule);background:var(--panel)}
+.bm-kind b{font-family:Archivo,Inter,sans-serif;font-size:16px;font-weight:600}
+.role{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--wood2)}
+.bm-cell{padding:10px;display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;border-right:1px solid var(--rule)}
+.bm-cell:last-child{border-right:0}
+.bchip{font-size:13px;font-weight:500;color:var(--ink);text-decoration:none;border:1.5px solid var(--rule);border-radius:14px;padding:3px 10px;line-height:1.3}
+.bchip:hover{border-color:var(--ink)}
+.bchip.mine{background:var(--walnut);border-color:var(--walnut);color:var(--walnut-ink)}
+.bsec{margin:0 0 30px}.bsec>h3{font-size:22px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}.bsec>p{margin:0 0 14px;color:var(--mute);font-size:15px;max-width:46em}
 .bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19rem,1fr));gap:14px}
-.brand{border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.brand{border:1px solid var(--rule);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;transition:box-shadow .3s}
+.brand.mine{border-color:var(--wood2)}
+.brand.flash{box-shadow:0 0 0 3px var(--accent)}
+.bhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .brand h4{font-family:Archivo,Inter,sans-serif;font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}
+.tier{font-weight:600;color:var(--mute);font-variant-numeric:tabular-nums}
 .brand .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .brand p{margin:0;font-size:15px}
 .brand .watch{font-size:14px;color:var(--mute);border-left:3px solid var(--wood);padding-left:10px}
 .brand .links{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:auto;padding-top:8px;border-top:1px solid var(--rule);align-items:center}
 .brand .links a{color:var(--accent);font-size:14px;font-weight:600}
-.brand .links .linkish{margin-left:auto}
+.brand .links .linkish{margin-left:auto;padding:0;min-height:0}
 .brand .items{font-size:14px;color:var(--mute)}
 .brand .items a{color:var(--ink)}
 @media(max-width:820px){.main{grid-template-columns:minmax(0,1fr)}nav ul{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px}nav li{flex:none}nav a{border:1px solid var(--rule);white-space:nowrap;gap:10px}}
@@ -147,7 +164,7 @@ let catalog = [];
 let collections = []; // [{id, name, items:[{id, note}], createdAt}]
 let hidden = new Set(); // profiles removed from the library (restorable)
 let brands = []; // data/brands.json
-let savedBrands = new Set(); // explore brands added to "Your brands" (db settings/brands)
+let savedBrands = new Set(); // brands marked Saved (db settings/brands)
 let queue = []; // [{id, url, collectionId, status, addedAt, profileId, message}]
 const live = () => catalog.filter((p) => !hidden.has(p.id));
 let db = null;
@@ -252,8 +269,18 @@ function brandItems(b) {
   let re; try { re = new RegExp(b.match, "i"); } catch { return []; }
   return live().filter((p) => re.test(p.maker || ""));
 }
-const yourBrands = () => brands.filter((b) => brandItems(b).length || savedBrands.has(b.id));
+const isMine = (b) => brandItems(b).length > 0 || !!b.own || savedBrands.has(b.id);
+const yourBrands = () => brands.filter(isMine);
 const searchUrl = (b, what) => "https://www.google.com/search?q=" + encodeURIComponent(`site:${b.domain} ${what}`);
+const TYPES = [
+  { id: "design-brand", name: "Design brands", role: "Make", line: "Design and make their own lamps, sell them direct and through design shops. Pieces are credited to a studio or a named designer." },
+  { id: "store-label", name: "Store labels", role: "Make + sell", line: "A store selling its own designs, only in its own stores. Same business model at every price; the tier is what differs." },
+  { id: "wholesale", name: "Wholesale brands", role: "Make", line: "Design catalogs for other stores to sell, often under new names. You rarely buy from them directly." },
+  { id: "curator", name: "Curators", role: "Sell", line: "Shops that pick and vouch for other brands' products, mostly authorized design brands." },
+  { id: "marketplace", name: "Marketplaces", role: "Sell", line: "Sell almost anything, including renamed wholesale and generic items. Good for price, not for provenance." },
+];
+const TIERS = ["$ · under ~$150", "$$ · ~$150–400", "$$$ · ~$400–1,000", "$$$$ · $1,000+"];
+const tierShort = (t) => "$".repeat(t);
 async function toggleSaved(b) {
   if (!db || !canWrite) { banner("Saving brands needs you signed in to claude.ai.", true); return; }
   const next = new Set(savedBrands);
@@ -261,42 +288,55 @@ async function toggleSaved(b) {
   try { await db.doc("settings/brands").set({ saved: [...next] }); }
   catch { banner("Couldn't save that.", true); }
 }
-function brandCard(b, mine) {
+function brandCard(b) {
   const items = brandItems(b);
   const url = safeUrl(b.url);
-  return h("article", { class: "brand" },
-    h("h4", { text: b.name }),
-    h("div", { class: "meta" }, h("span", { class: "chip", text: b.kind }), h("span", { class: "chip alt", text: "Price " + b.price })),
+  const mine = isMine(b);
+  return h("article", { class: "brand" + (mine ? " mine" : ""), id: "b-" + b.id },
+    h("div", { class: "bhead" }, h("h4", { text: b.name }), h("span", { class: "tier", title: TIERS[b.tier - 1], text: tierShort(b.tier) })),
+    h("div", { class: "meta" }, h("span", { class: "chip alt", text: b.tag }), mine ? h("span", { class: "chip", text: b.own || (items.length ? "In your library" : "Saved") }) : null),
     h("p", { text: b.why }),
     h("p", { class: "items", text: b.sells }),
-    items.length ? h("p", { class: "items" }, document.createTextNode("In your library: "), ...items.flatMap((p, i) => [i ? document.createTextNode(", ") : null, h("a", { href: "p/" + encodeURIComponent(p.id) + ".html", text: p.name })])) : null,
+    items.length ? h("p", { class: "items" }, document.createTextNode("Profiled: "), ...items.flatMap((p, i) => [i ? document.createTextNode(", ") : null, h("a", { href: "p/" + encodeURIComponent(p.id) + ".html", text: p.name })])) : null,
     h("p", { class: "watch", text: b.watch }),
     h("div", { class: "links" },
       url ? h("a", { href: url, target: "_blank", rel: "noopener", text: "Visit" }) : null,
       h("a", { href: searchUrl(b, "lamp"), target: "_blank", rel: "noopener", text: "Search lamps" }),
-      h("a", { href: searchUrl(b, "lighting"), target: "_blank", rel: "noopener", text: "Search lighting" }),
-      b.explore && canWrite ? h("button", { class: "linkish", onclick: () => toggleSaved(b), text: mine ? "Remove from my brands" : "Add to my brands" }) : null,
+      !items.length && !b.own && canWrite ? h("button", { class: "linkish", onclick: () => toggleSaved(b), text: savedBrands.has(b.id) ? "Unsave" : "Save" }) : null,
     ),
+  );
+}
+function brandMap() {
+  const jump = (b) => (e) => { e.preventDefault(); const el = document.getElementById("b-" + b.id); if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.classList.add("flash"); setTimeout(() => el.classList.remove("flash"), 1200); } };
+  return h("div", { class: "bmap", role: "table", "aria-label": "Brands by kind of business and price tier" },
+    h("div", { class: "bm-row bm-headrow", role: "row" },
+      h("div", { class: "bm-kind", role: "columnheader", text: "" }),
+      ...TIERS.map((t) => h("div", { class: "bm-col", role: "columnheader", text: t })),
+    ),
+    ...TYPES.map((t) => h("div", { class: "bm-row", role: "row" },
+      h("div", { class: "bm-kind", role: "rowheader" }, h("span", { class: "role", text: t.role }), h("b", { text: t.name })),
+      ...TIERS.map((_, i) => h("div", { class: "bm-cell", role: "cell", "data-tier": TIERS[i] },
+        ...brands.filter((b) => b.type === t.id && b.tier === i + 1).map((b) => h("a", { href: "#b-" + b.id, class: "bchip" + (isMine(b) ? " mine" : ""), onclick: jump(b), text: b.name })),
+      )),
+    )),
   );
 }
 function renderBrands() {
   $("title").textContent = "Brands";
   $("total").style.display = "none";
   $("actions").replaceChildren();
-  const mine = yourBrands();
-  const explore = brands.filter((b) => b.explore && !mine.includes(b));
   if (!brands.length) { $("grid").replaceChildren(h("div", { class: "empty", text: "Couldn't load the brand list." })); return; }
   $("grid").replaceChildren(h("div", { style: "grid-column:1/-1" },
-    h("section", { class: "bsec" },
-      h("h3", { text: "Your brands" }),
-      h("p", { text: "Brands behind the items you've profiled, plus any you've added. Most design their own pieces; the notes say what to check before buying." }),
-      h("div", { class: "bgrid" }, ...mine.map((b) => brandCard(b, savedBrands.has(b.id)))),
-    ),
-    explore.length ? h("section", { class: "bsec" },
-      h("h3", { text: "Brands to explore" }),
-      h("p", { text: "Similar look, and they design their own pieces or credit named designers rather than relabeling generic factory stock." }),
-      h("div", { class: "bgrid" }, ...explore.map((b) => brandCard(b, false))),
-    ) : null,
+    h("p", { class: "bintro", text: "Every name you shop from is one of five kinds of business. Makers design the lamp; sellers decide where you can buy it; store labels do both. Price tier is a separate question, which is why Urban Outfitters and West Elm sit in the same row but different columns. Filled names are yours." }),
+    brandMap(),
+    ...TYPES.map((t) => {
+      const list = brands.filter((b) => b.type === t.id).sort((x, y) => (isMine(y) - isMine(x)) || x.tier - y.tier);
+      return list.length ? h("section", { class: "bsec" },
+        h("h3", {}, document.createTextNode(t.name), h("span", { class: "role", text: t.role })),
+        h("p", { text: t.line }),
+        h("div", { class: "bgrid" }, ...list.map(brandCard)),
+      ) : null;
+    }),
   ));
 }
 
