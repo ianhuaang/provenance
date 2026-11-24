@@ -24,27 +24,74 @@
     "verdict": "Generic, sold under many names",
     "verdictNote": "No seller names a maker or designer. The same lamp is sold by at least eight online stores under different names.",
     "summary": "The same 18 × 34 cm cordless lamp, with a clear glass saucer shade, ball finial, thin brass-tone stem and glossy enamel dome base, appears as the Oria, Marxel, Zaviera, Portia and Sorcha, among others. None of the sellers credits a designer or manufacturer. The look borrows from Memphis and Bauhaus styles, but we found no single designer original it copies.",
-    "designer": { "name": null, "credited": false, "note": "None credited by any seller" },
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited by any seller"
+    },
     "renamedByRetailer": true,
     "originalIfReplica": null
   },
   "specs": [
-    { "label": "Size", "value": "18 cm dia × 34 cm H (7.1 × 13.4 in)" },
-    { "label": "Materials", "value": "Clear glass shade, metal stem and enamel-finish metal base" },
-    { "label": "Light", "value": "Integrated LED, 3000K to 6000K, dimmable" },
-    { "label": "Power", "value": "Rechargeable; elegalight lists an 1800 mAh battery, 4-hour charge, up to 6 hours of light" },
-    { "label": "Colors", "value": "Butter yellow, forest green, powder blue, pearl white, chestnut red, blush pink (elegalight's names)" },
-    { "label": "Rating", "value": "IP20, indoor use only" }
+    {
+      "label": "Size",
+      "value": "18 cm dia × 34 cm H (7.1 × 13.4 in)"
+    },
+    {
+      "label": "Materials",
+      "value": "Clear glass shade, metal stem and enamel-finish metal base"
+    },
+    {
+      "label": "Light",
+      "value": "Integrated LED, 3000K to 6000K, dimmable"
+    },
+    {
+      "label": "Power",
+      "value": "Rechargeable; elegalight lists an 1800 mAh battery, 4-hour charge, up to 6 hours of light"
+    },
+    {
+      "label": "Colors",
+      "value": "Butter yellow, forest green, powder blue, pearl white, chestnut red, blush pink (elegalight's names)"
+    },
+    {
+      "label": "Rating",
+      "value": "IP20, indoor use only"
+    }
   ],
   "match": {
     "confidence": "confirmed",
     "basis": "Reverse image search finds the same lamp at many stores; Ember Lamps' Oria lists the identical 18 × 34 cm size and materials",
     "rows": [
-      { "spec": "Size", "listing": "18 cm × 34 cm", "canonical": "18 cm × 34 cm (Ember Oria)", "matches": true },
-      { "spec": "Shade", "listing": "Clear glass", "canonical": "Clear glass", "matches": true },
-      { "spec": "Base", "listing": "Metal, glossy color", "canonical": "Enameled metal", "matches": true },
-      { "spec": "Light", "listing": "3 color temperatures", "canonical": "3000K, 4000K, 6000K, stepless dimming", "matches": true },
-      { "spec": "Power", "listing": "Rechargeable", "canonical": "Rechargeable", "matches": true }
+      {
+        "spec": "Size",
+        "listing": "18 cm × 34 cm",
+        "canonical": "18 cm × 34 cm (Ember Oria)",
+        "matches": true
+      },
+      {
+        "spec": "Shade",
+        "listing": "Clear glass",
+        "canonical": "Clear glass",
+        "matches": true
+      },
+      {
+        "spec": "Base",
+        "listing": "Metal, glossy color",
+        "canonical": "Enameled metal",
+        "matches": true
+      },
+      {
+        "spec": "Light",
+        "listing": "3 color temperatures",
+        "canonical": "3000K, 4000K, 6000K, stepless dimming",
+        "matches": true
+      },
+      {
+        "spec": "Power",
+        "listing": "Rechargeable",
+        "canonical": "Rechargeable",
+        "matches": true
+      }
     ]
   },
   "quality": [
@@ -147,14 +194,46 @@
     }
   ],
   "names": [
-    { "source": "elegalight", "name": "Pop Glass Table Lamp", "likely": false },
-    { "source": "Ember Lamps", "name": "Oria Cordless Glass Table Lamp", "likely": false },
-    { "source": "Pinlighting", "name": "Marxel Layered Cordless Table Lamp", "likely": true },
-    { "source": "Docos", "name": "Zaviera Table Lamp", "likely": true },
-    { "source": "Letifly", "name": "Portia Glass Table Lamp", "likely": true },
-    { "source": "Lucia Living", "name": "Sorcha Modern Bauble Touch Table Lamp", "likely": true },
-    { "source": "At Ease", "name": "Calie Memphis Glass Bauble Touch Table Lamp", "likely": true },
-    { "source": "Homebaa", "name": "Glass Mushroom LED Table Lamp", "likely": true }
+    {
+      "source": "elegalight",
+      "name": "Pop Glass Table Lamp",
+      "likely": false
+    },
+    {
+      "source": "Ember Lamps",
+      "name": "Oria Cordless Glass Table Lamp",
+      "likely": false
+    },
+    {
+      "source": "Pinlighting",
+      "name": "Marxel Layered Cordless Table Lamp",
+      "likely": true
+    },
+    {
+      "source": "Docos",
+      "name": "Zaviera Table Lamp",
+      "likely": true
+    },
+    {
+      "source": "Letifly",
+      "name": "Portia Glass Table Lamp",
+      "likely": true
+    },
+    {
+      "source": "Lucia Living",
+      "name": "Sorcha Modern Bauble Touch Table Lamp",
+      "likely": true
+    },
+    {
+      "source": "At Ease",
+      "name": "Calie Memphis Glass Bauble Touch Table Lamp",
+      "likely": true
+    },
+    {
+      "source": "Homebaa",
+      "name": "Glass Mushroom LED Table Lamp",
+      "likely": true
+    }
   ],
   "maker": {
     "name": "unknown factory",
@@ -164,10 +243,23 @@
     ],
     "timeline": []
   },
-  "photo": null,
+  "photo": {
+    "url": "img/generic-glass-saucer-table-lamp.jpg",
+    "credit": "elegalight product photo",
+    "sourceUrl": "https://elegalight.com/products/pop-glass-table-lamp?sku=18075624236063968507413900&pp=0"
+  },
   "sources": [
-    { "title": "elegalight: Pop Glass Table Lamp", "url": "https://elegalight.com/products/pop-glass-table-lamp" },
-    { "title": "Ember Lamps: Oria Cordless Glass Table Lamp", "url": "https://emberlamps.com/products/oria-glass-table-lamp" },
-    { "title": "Pinlighting: Marxel Layered Cordless Table Lamp", "url": "https://pinlighting.com/products/marxel-layered-cordless-table-lamp" }
+    {
+      "title": "elegalight: Pop Glass Table Lamp",
+      "url": "https://elegalight.com/products/pop-glass-table-lamp"
+    },
+    {
+      "title": "Ember Lamps: Oria Cordless Glass Table Lamp",
+      "url": "https://emberlamps.com/products/oria-glass-table-lamp"
+    },
+    {
+      "title": "Pinlighting: Marxel Layered Cordless Table Lamp",
+      "url": "https://pinlighting.com/products/marxel-layered-cordless-table-lamp"
+    }
   ]
 }

@@ -50,7 +50,19 @@ function flags(r: PricedListing): string {
   return f.map((x) => `<span class="flag">${esc(x)}</span>`).join("");
 }
 
-export function renderProfile(rec: ProfileRecord, now: Date = new Date()): string {
+export type RenderOptions = {
+  /** Prefix for relative asset paths such as "img/<id>.jpg" (e.g. "../" for pages in p/). Relative photos are skipped without it. */
+  assetBase?: string;
+};
+
+export function renderProfile(rec: ProfileRecord, now: Date = new Date(), opts: RenderOptions = {}): string {
+  const photoUrl = rec.photo
+    ? /^(https:|data:)/.test(rec.photo.url)
+      ? rec.photo.url
+      : opts.assetBase !== undefined
+        ? opts.assetBase + rec.photo.url
+        : null
+    : null;
   const s = summarizePrices(rec);
   const id = rec.identity;
   const cls = rec.classification;
@@ -196,8 +208,8 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
   </div>
   <div class="hero">
     <div class="photo">${
-      rec.photo
-        ? `<img src="${esc(rec.photo.url)}" alt="${esc(id.canonicalName)}">`
+      photoUrl
+        ? `<img src="${esc(photoUrl)}" alt="${esc(id.canonicalName)}">`
         : generic
           ? `<div class="tag"><div class="mk">One lamp, many listings</div><div class="model">${nameCount} names</div><div>${esc(rec.names.map((n) => n.name).slice(0, 4).join(" · "))}${nameCount > 4 ? " …" : ""}</div><small>Photo pending</small></div>`
           : `<div class="tag"><div class="mk">${esc(id.maker)}</div><div class="model">${esc(id.modelNumber ?? id.shortName)}</div><div>${esc(id.canonicalName)}</div><small>Photo pending</small></div>`
@@ -248,7 +260,7 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
 <section class="band"><div class="wrap src">
   <h3>Sources</h3>
   <ul>${rec.sources.map((x) => `<li><a href="${esc(x.url)}" rel="noopener nofollow">${esc(x.title)}</a></li>`).join("")}</ul>
-  ${rec.photo ? `<p>Photo: ${esc(rec.photo.credit)}, <a href="${esc(rec.photo.sourceUrl)}">source</a>.</p>` : ""}
+  ${photoUrl && rec.photo ? `<p>Photo: ${esc(rec.photo.credit)}, <a href="${esc(rec.photo.sourceUrl)}">source</a>.</p>` : ""}
 </div></section>
 </body>
 </html>

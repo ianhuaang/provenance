@@ -27,6 +27,18 @@ button,input,select,textarea{font:inherit;font-size:16px}
 .stats{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:18px}
 .stats div b{display:block;font-family:Archivo,sans-serif;font-size:28px;font-weight:600;color:#fff}
 .stats div span{font-size:14px;color:#d8c6b2}
+form.paste{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;background:#fff;border-radius:10px;padding:6px;margin-top:20px;max-width:880px}
+form.paste input{border:0;outline:0;padding:10px 12px;color:#16130f;background:transparent;min-height:46px}
+form.paste select{border:1px solid #e7e1d9;background:#faf6f0;color:#16130f;min-height:46px;font-size:15px}
+.hint{font-size:14px!important;margin-top:8px!important;color:#cdb9a6!important}
+.queue{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px;max-width:880px}
+.queue li{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:#2a1e14;border-radius:8px;padding:8px 12px;font-size:14px;color:#e2d3c2}
+.queue .u{flex:1 1 16rem;overflow-wrap:anywhere;color:#f6eee4}
+.queue .st{font-weight:600;font-size:13px;border-radius:10px;padding:1px 8px;background:#4a3826;color:#f6eee4;white-space:nowrap}
+.queue .st.done{background:#dcbc8e;color:#1c140b}.queue .st.failed{background:#7a2a22;color:#fff}
+.queue a{color:#ffd8a8}
+.queue button{background:none;border:0;color:#cdb9a6;text-decoration:underline;cursor:pointer;font-size:13px;padding:4px}
+@media(max-width:600px){form.paste{grid-template-columns:minmax(0,1fr)}}
 .main{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:28px;padding:28px max(5vw,16px) 48px}
 nav h2{font-size:14px;font-family:Inter,sans-serif;font-weight:600;color:var(--mute);letter-spacing:0;margin:0 0 8px}
 nav ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
@@ -80,6 +92,13 @@ textarea{width:100%;min-height:64px;padding:8px 10px;border:1px solid var(--rule
 <header class="top"><div class="wrap">
   <h1>Provenance Library</h1>
   <p>Every item you've profiled, and the collections you're furnishing. Totals use the cheapest confirmed price for each item.</p>
+  <form class="paste" id="pasteForm">
+    <input id="pasteUrl" type="url" inputmode="url" placeholder="Paste a product link" aria-label="Product link to profile" required>
+    <select id="pasteCol" aria-label="Add to collection"><option value="">No collection</option></select>
+    <button class="btn" type="submit">Profile it</button>
+  </form>
+  <p class="hint">Links are researched on the next scheduled run, a few times a day, and appear here with a photo.</p>
+  <ul class="queue" id="queue" aria-live="polite"></ul>
   <div class="stats" id="stats"></div>
 </div></header>
 <div class="main">
@@ -115,6 +134,7 @@ const safeUrl = (u) => (typeof u === "string" && u.startsWith("https://") ? u : 
 let catalog = [];
 let collections = []; // [{id, name, items:[{id, note}], createdAt}]
 let hidden = new Set(); // profiles removed from the library (restorable)
+let queue = []; // [{id, url, collectionId, status, addedAt, profileId, message}]
 const live = () => catalog.filter((p) => !hidden.has(p.id));
 let db = null;
 let canWrite = false;
@@ -140,7 +160,29 @@ function totalOf(ids) {
   return { sum: Math.round(sum * 100) / 100, missing };
 }
 
+function renderQueue() {
+  const sel = $("pasteCol"), keep = sel.value;
+  sel.replaceChildren(h("option", { value: "", text: "No collection" }), ...collections.map((c) => h("option", { value: c.id, text: c.name })));
+  sel.value = collections.some((c) => c.id === keep) ? keep : "";
+  const fresh = queue.filter((q) => q.status !== "done" || Date.now() - Date.parse(q.doneAt || q.addedAt) < 3 * 864e5);
+  const label = { queued: "Queued", researching: "Researching", done: "Added", failed: "Couldn't profile" };
+  $("queue").replaceChildren(...fresh.map((q) => {
+    const col = collections.find((c) => c.id === q.collectionId);
+    const prof = q.profileId && catalog.find((p) => p.id === q.profileId);
+    return h("li", {},
+      h("span", { class: "st " + (q.status || "queued"), text: label[q.status] || "Queued" }),
+      h("span", { class: "u", text: prof ? prof.name : q.url }),
+      col ? h("span", { text: "→ " + col.name }) : null,
+      q.status === "failed" && q.message ? h("span", { text: q.message }) : null,
+      prof ? h("a", { href: "p/" + encodeURIComponent(prof.id) + ".html", text: "Open" }) : null,
+      canWrite && q.status === "failed" ? h("button", { onclick: () => db.doc("queue/" + q.id).update({ status: "queued", message: "" }).catch(() => banner("Couldn't retry.", true)), text: "Retry" }) : null,
+      canWrite && q.status !== "researching" ? h("button", { onclick: () => db.doc("queue/" + q.id).delete().catch(() => banner("Couldn't remove it.", true)), text: q.status === "done" ? "Dismiss" : "Remove" }) : null,
+    );
+  }));
+}
+
 function render() {
+  renderQueue();
   const current = view();
   const showRemoved = removedView() && hidden.size > 0;
   const allIds = live().map((p) => p.id);
@@ -305,6 +347,22 @@ $("newForm").addEventListener("submit", async (e) => {
   }
 });
 
+$("pasteForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const url = $("pasteUrl").value.trim();
+  if (!/^https:\/\/[^\s]+$/.test(url)) { banner("Paste a full link starting with https://", true); return; }
+  if (!db || !canWrite) { banner("The queue needs you signed in to claude.ai.", true); return; }
+  if (queue.some((q) => q.url === url && q.status !== "done")) { banner("That link is already in the queue."); return; }
+  const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+  try {
+    await db.doc("queue/" + id).set({ url: url.slice(0, 2000), collectionId: $("pasteCol").value || null, status: "queued", addedAt: new Date().toISOString() });
+    $("pasteUrl").value = "";
+    banner("Queued. It'll be researched on the next scheduled run.");
+  } catch (err) {
+    banner("Couldn't add it to the queue.", true);
+  }
+});
+
 window.addEventListener("hashchange", () => { banner(""); render(); });
 
 async function start() {
@@ -322,6 +380,16 @@ async function start() {
   const can = user && user.can ? await user.can("data.write").catch(() => null) : null;
   canWrite = can !== false;
 
+  db.collection("queue").orderBy("addedAt").onSnapshot(
+    (snap) => {
+      queue = snap.docs.map((d) => {
+        const v = d.data() || {};
+        return { id: d.id, url: String(v.url || ""), collectionId: typeof v.collectionId === "string" ? v.collectionId : null, status: String(v.status || "queued"), addedAt: String(v.addedAt || ""), doneAt: typeof v.doneAt === "string" ? v.doneAt : null, profileId: typeof v.profileId === "string" ? v.profileId : null, message: typeof v.message === "string" ? v.message.slice(0, 200) : "" };
+      });
+      renderQueue();
+    },
+    () => {},
+  );
   db.doc("settings/library").onSnapshot(
     (d) => {
       const v = d.exists ? d.data() : null;

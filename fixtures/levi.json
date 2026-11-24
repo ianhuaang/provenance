@@ -270,7 +270,11 @@
       }
     ]
   },
-  "photo": null,
+  "photo": {
+    "url": "img/crosley-cf4229-ml.jpg",
+    "credit": "Urban Outfitters product photo",
+    "sourceUrl": "https://www.urbanoutfitters.com/shop/crosley-levi-burl-tone-storage-sideboard"
+  },
   "sources": [
     {
       "title": "Kohl's: Crosley Levi Sideboard",

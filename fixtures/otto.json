@@ -270,7 +270,11 @@
       }
     ]
   },
-  "photo": null,
+  "photo": {
+    "url": "img/adesso-3932-12.jpg",
+    "credit": "Urban Outfitters product photo",
+    "sourceUrl": "https://www.urbanoutfitters.com/shop/otto-floor-lamp"
+  },
   "sources": [
     {
       "title": "Urban Outfitters: Otto Floor Lamp",

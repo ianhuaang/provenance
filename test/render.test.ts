@@ -54,3 +54,12 @@ describe("renderProfile", () => {
     expect(renderProfile(load("otto"), new Date("2026-11-27T00:00:00Z"))).toContain("more than a day old");
   });
 });
+
+describe("relative photos", () => {
+  it("skips a library-relative photo unless an asset base is given", () => {
+    const rec = load("otto");
+    expect(rec.photo?.url).toBe("img/adesso-3932-12.jpg");
+    expect(renderProfile(rec, at)).not.toContain("<img");
+    expect(renderProfile(rec, at, { assetBase: "../" })).toContain('<img src="../img/adesso-3932-12.jpg"');
+  });
+});
