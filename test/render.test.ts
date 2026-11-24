@@ -26,6 +26,24 @@ describe("renderProfile", () => {
     expect(html).not.toMatch(/undefined|NaN|\[object/);
   });
 
+  it("renders a generic item without a model number and flags a sold-out input link", () => {
+    const html = renderProfile(load("pop"), at);
+    expect(html).toContain("Pop Glass Table Lamp is a generic design");
+    expect(html).toContain("8 names");
+    expect(html).toContain("Cheapest right now: Ember Lamps");
+    expect(html).toContain("shows it sold out");
+    expect(html).toContain("There's no model number");
+    expect(html).not.toMatch(/undefined|NaN|\[object/);
+  });
+
+  it("renders the Keira as a likely renamed Livabliss lamp, cheapest verified at AllModern", () => {
+    const html = renderProfile(load("keira"), at);
+    expect(html).toContain("AllModern Keira 76&quot; Floor Lamp is the Livabliss Desota");
+    expect(html).toContain("Treat this as a likely match");
+    expect(html).toContain("Cheapest right now: AllModern");
+    expect(html).toContain("Overstock lists it for $191");
+  });
+
   it("escapes text from records", () => {
     const rec = load("otto");
     rec.input.listingName = "<script>alert(1)</script>";

@@ -1,0 +1,139 @@
+{
+  "id": "livabliss-des-001",
+  "version": 1,
+  "createdAt": "2026-11-24T16:45:00Z",
+  "checkedAt": "2026-11-24T16:45:00Z",
+  "input": {
+    "url": "https://www.allmodern.com/lighting/pdp/allmodern-keira-floor-lamp-a111545869.html",
+    "resolvedUrl": "https://www.allmodern.com/lighting/pdp/allmodern-keira-floor-lamp-a111545869.html",
+    "retailer": "AllModern",
+    "listingName": "AllModern Keira 76\" Floor Lamp"
+  },
+  "identity": {
+    "canonicalName": "Livabliss Desota Task Floor Lamp (DES-001)",
+    "shortName": "Livabliss Desota",
+    "maker": "Surya (Livabliss brand)",
+    "makerLocation": "White, GA",
+    "modelNumber": "DES-001",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": null
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Brand-designed, renamed",
+    "verdictNote": "Made by Surya under its Livabliss label. AllModern, Wayfair's modern house brand, sells it as the Keira.",
+    "summary": "An original design from Surya, a large Georgia home decor company, with no individual designer credited. AllModern renamed it rather than copying it. The match rests on a reverse image search and identical overall dimensions; we haven't yet seen DES-001 on a Surya page.",
+    "designer": { "name": null, "credited": false, "note": "None credited; Surya's in-house team" },
+    "renamedByRetailer": true,
+    "originalIfReplica": null
+  },
+  "specs": [
+    { "label": "Size", "value": "76 in H × 31 in W × 12 in D" },
+    { "label": "Shade", "value": "8 in H × 12 in W, white linen, rounded scalloped shape" },
+    { "label": "Body", "value": "Iron, plated white matte finish" },
+    { "label": "Weight", "value": "18 lb" },
+    { "label": "Bulb", "value": "One E26, 100W max; not included" },
+    { "label": "Switch", "value": "Foot switch" },
+    { "label": "Warranty", "value": "30-day limited (AllModern)" },
+    { "label": "Made in", "value": "Imported" }
+  ],
+  "match": {
+    "confidence": "likely",
+    "basis": "Reverse image search matches AllModern's photo to Livabliss Desota listings, and the overall size is identical",
+    "rows": [
+      { "spec": "Height", "listing": "76\"", "canonical": "76\"", "matches": true },
+      { "spec": "Width", "listing": "31\"", "canonical": "31\"", "matches": true },
+      { "spec": "Depth", "listing": "12\"", "canonical": "12\"", "matches": true },
+      { "spec": "Body", "listing": "Iron", "canonical": "Iron", "matches": true },
+      { "spec": "Shade", "listing": "Linen", "canonical": "Linen", "matches": true }
+    ]
+  },
+  "quality": [
+    "A tall arc lamp in plated white iron that reaches over a sofa or chair, with a rounded linen shade and a foot switch. At 18 lb it's light for an arc lamp, so check the base's stability before placing it near foot traffic.",
+    "Reviews on AllModern are mostly positive, but several are marked as incentivized, meaning the reviewer got the lamp free. A reviewer of a larger Keira size reported a shade that arrived damaged."
+  ],
+  "retailers": [
+    {
+      "retailer": "AllModern",
+      "label": "As \"Keira 76\" Floor Lamp\"",
+      "url": "https://www.allmodern.com/lighting/pdp/allmodern-keira-floor-lamp-a111545869.html",
+      "kind": "retail",
+      "displayedPrice": 229,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Black Friday sale, regular $279. Free delivery, estimated Nov 29 to Dec 2. 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T16:45:00Z"
+    },
+    {
+      "retailer": "Wayfair",
+      "label": "As \"Keira Iron Arched Floor Lamp\"",
+      "url": "https://www.wayfair.com/lighting/pdp/allmodern-keira-floor-lamp-w112802678.html",
+      "kind": "retail",
+      "displayedPrice": 229,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "The same AllModern product on Wayfair. Shopping result showed $229, was $355.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "shopping-feed",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:45:00Z"
+    },
+    {
+      "retailer": "Overstock",
+      "label": "As \"Livabliss Desota Modern Task Floor Lamp\"",
+      "url": "https://www.overstock.com/search?keywords=Livabliss%20Desota",
+      "kind": "retail",
+      "displayedPrice": 191,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Shopping result listed 76\"H × 31\"W × 12\"D, in stock. Check that the listing shows DES-001 before ordering. Free shipping over $49.99.",
+      "available": true,
+      "confidence": "likely",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:45:00Z"
+    }
+  ],
+  "names": [
+    { "source": "Surya / Livabliss", "name": "Desota Task Floor Lamp, DES-001", "likely": true },
+    { "source": "AllModern", "name": "Keira 76\" Floor Lamp", "likely": false },
+    { "source": "Wayfair", "name": "AllModern Keira Iron Arched Floor Lamp with Linen Shade", "likely": false },
+    { "source": "Overstock", "name": "Livabliss Desota Modern Task Floor Lamp", "likely": true },
+    { "source": "Payless Rugs", "name": "Livabliss Desota DES-001 Task Floor Lamp", "likely": true },
+    { "source": "Hamilton Park Interiors", "name": "Desota", "likely": true }
+  ],
+  "maker": {
+    "name": "Surya",
+    "paragraphs": [
+      "Surya is a home decor company founded in 1976 by Surya Tiwari and led by his son Satya Tiwari, headquartered in White, Georgia, north of Atlanta. Best known for rugs, it also sells lighting, pillows and furniture through retailers and to the design trade.",
+      "Its family of brands includes Livabliss, its consumer label sold through marketplaces like Walmart, Overstock and Wayfair, as well as Global Views and Mitchell Gold + Bob Williams, which it acquired in late 2023."
+    ],
+    "timeline": [
+      { "when": "1976", "what": "Surya founded" },
+      { "when": "2016", "what": "Opens its headquarters near Cartersville, GA" },
+      { "when": "2023", "what": "Acquires Mitchell Gold + Bob Williams" },
+      { "when": "Today", "what": "Lighting sold under Surya and Livabliss names" }
+    ]
+  },
+  "photo": null,
+  "sources": [
+    { "title": "AllModern: Keira 76\" Floor Lamp", "url": "https://www.allmodern.com/lighting/pdp/allmodern-keira-floor-lamp-a111545869.html" },
+    { "title": "Built In: Surya company profile", "url": "https://builtin.com/company/surya" },
+    { "title": "Built In Colorado: Surya family of brands", "url": "https://www.builtincolorado.com/company/surya" },
+    { "title": "Furniture World: Surya headquarters ribbon cutting", "url": "https://www.furninfo.com/furniture-industry-news/6254" },
+    { "title": "High Point Market: Mitchell Gold + Bob Williams returns under Surya", "url": "https://www.highpointmarket.org/download/press/10327" },
+    { "title": "Walmart: Livabliss seller profile", "url": "https://www.walmart.com/global/seller/102482321" }
+  ]
+}

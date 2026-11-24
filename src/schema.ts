@@ -48,6 +48,7 @@ export const RetailerListing = z.object({
     .describe("Fine print that blocks promos for this item, quoted, e.g. 'Price as Marked. Discounts Do Not Apply.'"),
   shippingCost: z.number().min(0).nullable().describe("Shipping cost in USD when stated (0 for free), else null"),
   notes: z.string().describe("Anything else a shopper should know: stock, pre-order, returns, price matching"),
+  available: z.boolean().nullable().describe("False when the page shows sold out or unavailable; null when it doesn't say"),
   confidence: Confidence.describe("'likely' when the listing matches on specs but identity is not fully confirmed"),
   priceSource: z
     .enum(["product-page", "snippet", "shopping-feed"])

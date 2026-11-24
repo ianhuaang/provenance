@@ -15,6 +15,7 @@ const base: RetailerListing = {
   exclusions: null,
   shippingCost: null,
   notes: "",
+  available: null,
   confidence: "confirmed",
   priceSource: "product-page",
   isSearchLink: false,
@@ -74,6 +75,7 @@ describe("priceListing", () => {
     expect(priceListing({ ...base, confidence: "likely" }).eligibleForBest).toBe(false);
     expect(priceListing({ ...base, isSearchLink: true }).eligibleForBest).toBe(false);
     expect(priceListing({ ...base, displayedPrice: null }).eligibleForBest).toBe(false);
+    expect(priceListing({ ...base, available: false }).ineligibleReason).toBe("Sold out");
   });
 });
 

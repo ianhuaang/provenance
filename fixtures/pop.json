@@ -1,0 +1,173 @@
+{
+  "id": "generic-glass-saucer-table-lamp",
+  "version": 1,
+  "createdAt": "2026-11-24T16:40:00Z",
+  "checkedAt": "2026-11-24T16:40:00Z",
+  "input": {
+    "url": "https://elegalight.com/products/pop-glass-table-lamp?sku=18075624236063968507413900&pp=0&epik=dj0yJnU9aE41NlRZdmQ0R1N1dzJGOC1ER1lic05FbzYwTkY5S3MmcD0xJm49VF9aRU1yZ2g0X2NNUU5QM3BqRnRKQSZ0PUFBQUFBR3BnR2g4",
+    "resolvedUrl": "https://elegalight.com/products/pop-glass-table-lamp?sku=18075624236063968507413900&pp=0",
+    "retailer": "elegalight",
+    "listingName": "Pop Glass Table Lamp"
+  },
+  "identity": {
+    "canonicalName": "Cordless glass saucer table lamp (unbranded factory design)",
+    "shortName": "unbranded glass saucer lamp",
+    "maker": "Unknown factory",
+    "makerLocation": null,
+    "modelNumber": null,
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": null
+  },
+  "classification": {
+    "tier": "generic",
+    "verdict": "Generic, sold under many names",
+    "verdictNote": "No seller names a maker or designer. The same lamp is sold by at least eight online stores under different names.",
+    "summary": "The same 18 × 34 cm cordless lamp, with a clear glass saucer shade, ball finial, thin brass-tone stem and glossy enamel dome base, appears as the Oria, Marxel, Zaviera, Portia and Sorcha, among others. None of the sellers credits a designer or manufacturer. The look borrows from Memphis and Bauhaus styles, but we found no single designer original it copies.",
+    "designer": { "name": null, "credited": false, "note": "None credited by any seller" },
+    "renamedByRetailer": true,
+    "originalIfReplica": null
+  },
+  "specs": [
+    { "label": "Size", "value": "18 cm dia × 34 cm H (7.1 × 13.4 in)" },
+    { "label": "Materials", "value": "Clear glass shade, metal stem and enamel-finish metal base" },
+    { "label": "Light", "value": "Integrated LED, 3000K to 6000K, dimmable" },
+    { "label": "Power", "value": "Rechargeable; elegalight lists an 1800 mAh battery, 4-hour charge, up to 6 hours of light" },
+    { "label": "Colors", "value": "Butter yellow, forest green, powder blue, pearl white, chestnut red, blush pink (elegalight's names)" },
+    { "label": "Rating", "value": "IP20, indoor use only" }
+  ],
+  "match": {
+    "confidence": "confirmed",
+    "basis": "Reverse image search finds the same lamp at many stores; Ember Lamps' Oria lists the identical 18 × 34 cm size and materials",
+    "rows": [
+      { "spec": "Size", "listing": "18 cm × 34 cm", "canonical": "18 cm × 34 cm (Ember Oria)", "matches": true },
+      { "spec": "Shade", "listing": "Clear glass", "canonical": "Clear glass", "matches": true },
+      { "spec": "Base", "listing": "Metal, glossy color", "canonical": "Enameled metal", "matches": true },
+      { "spec": "Light", "listing": "3 color temperatures", "canonical": "3000K, 4000K, 6000K, stepless dimming", "matches": true },
+      { "spec": "Power", "listing": "Rechargeable", "canonical": "Rechargeable", "matches": true }
+    ]
+  },
+  "quality": [
+    "A small cordless accent lamp: a clear glass saucer over an LED disc, a thin plated stem, and a glossy enamel dome base that holds the battery, switch and charging port. It gives soft mood light, not reading light.",
+    "Expect mass-produced quality that can vary between seller batches. Rechargeable lamps lose battery capacity over a few years, so check whether the battery can be replaced. Since the lamp is the same everywhere, the seller's return policy and warranty matter more than the name on the listing."
+  ],
+  "retailers": [
+    {
+      "retailer": "elegalight",
+      "label": "As \"Pop Glass Table Lamp\"",
+      "url": "https://elegalight.com/products/pop-glass-table-lamp",
+      "kind": "retail",
+      "displayedPrice": 115,
+      "promo": {
+        "description": "10% off a first purchase for newsletter sign-up",
+        "percentOff": 10,
+        "amountOff": null,
+        "requires": "free-membership",
+        "code": null,
+        "inCart": false,
+        "endsAt": null
+      },
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Page shows \"Sold Out\" next to a stock counter reading \"Only -14 left.\" Lists a Covent Garden, London address, and its two contact emails don't match. Claims free worldwide shipping and a 2-year warranty.",
+      "available": false,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-24T16:40:00Z"
+    },
+    {
+      "retailer": "Ember Lamps",
+      "label": "As \"Oria Cordless Glass Table Lamp\"",
+      "url": "https://emberlamps.com/products/oria-glass-table-lamp",
+      "kind": "retail",
+      "displayedPrice": 124.95,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Sale price, regular $198. Free tracked US shipping, 30-day returns on unused items. Some colors sold out. Operated by AMB Horizon LLC, Atlanta.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:40:00Z"
+    },
+    {
+      "retailer": "Homebaa",
+      "label": "As \"Glass Mushroom LED Table Lamp\"",
+      "url": "https://www.homebaa.com/search?q=glass+mushroom+table+lamp",
+      "kind": "retail",
+      "displayedPrice": 119.99,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Price from a shopping result; the product page didn't load. Listing mentions about 30-day delivery.",
+      "available": null,
+      "confidence": "likely",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:40:00Z"
+    },
+    {
+      "retailer": "Pinlighting",
+      "label": "As \"Marxel Layered Cordless Table Lamp\"",
+      "url": "https://pinlighting.com/products/marxel-layered-cordless-table-lamp",
+      "kind": "retail",
+      "displayedPrice": 145,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Standard shipping 4 to 6 weeks by ocean freight; expedited 1 to 3 weeks. Ships only to the US, EU, Japan and Australia.",
+      "available": null,
+      "confidence": "likely",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:40:00Z"
+    },
+    {
+      "retailer": "Letifly",
+      "label": "As \"Portia Glass Table Lamp\"",
+      "url": "https://www.letifly.com/search?q=portia+glass+table+lamp",
+      "kind": "retail",
+      "displayedPrice": 178,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Price from a shopping result. Free delivery over $45, 14-day returns.",
+      "available": null,
+      "confidence": "likely",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-24T16:40:00Z"
+    }
+  ],
+  "names": [
+    { "source": "elegalight", "name": "Pop Glass Table Lamp", "likely": false },
+    { "source": "Ember Lamps", "name": "Oria Cordless Glass Table Lamp", "likely": false },
+    { "source": "Pinlighting", "name": "Marxel Layered Cordless Table Lamp", "likely": true },
+    { "source": "Docos", "name": "Zaviera Table Lamp", "likely": true },
+    { "source": "Letifly", "name": "Portia Glass Table Lamp", "likely": true },
+    { "source": "Lucia Living", "name": "Sorcha Modern Bauble Touch Table Lamp", "likely": true },
+    { "source": "At Ease", "name": "Calie Memphis Glass Bauble Touch Table Lamp", "likely": true },
+    { "source": "Homebaa", "name": "Glass Mushroom LED Table Lamp", "likely": true }
+  ],
+  "maker": {
+    "name": "unknown factory",
+    "paragraphs": [
+      "No seller names the manufacturer. The same product photos, specs and color options across stores in the US, UK and elsewhere suggest one or a few overseas factories supplying many small online brands, which each rename and reprice the lamp.",
+      "elegalight, the store you found it on, is an online shop listing a Covent Garden, London address. Its page shows an impossible stock count and two different contact emails, so read its return terms before buying."
+    ],
+    "timeline": []
+  },
+  "photo": null,
+  "sources": [
+    { "title": "elegalight: Pop Glass Table Lamp", "url": "https://elegalight.com/products/pop-glass-table-lamp" },
+    { "title": "Ember Lamps: Oria Cordless Glass Table Lamp", "url": "https://emberlamps.com/products/oria-glass-table-lamp" },
+    { "title": "Pinlighting: Marxel Layered Cordless Table Lamp", "url": "https://pinlighting.com/products/marxel-layered-cordless-table-lamp" }
+  ]
+}

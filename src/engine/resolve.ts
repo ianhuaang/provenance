@@ -14,7 +14,7 @@ export interface BrowserAdapter {
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36";
 
-const TRACKING_PARAMS = /^(utm_|ranMID$|ranEAID$|ranSiteID$|irclickid$|irgwc$|clickid$|affid$|aff_|ref$|ref_$|gclid$|fbclid$|mc_)/i;
+const TRACKING_PARAMS = /^(utm_|ranMID$|ranEAID$|ranSiteID$|irclickid$|irgwc$|clickid$|affid$|aff_|ref$|ref_$|gclid$|fbclid$|mc_|epik$)/i;
 
 /** Strip affiliate and analytics parameters so the stored link is clean. */
 export function cleanUrl(raw: string): string {

@@ -45,6 +45,7 @@ function flags(r: PricedListing): string {
   if (r.confidence === "likely") f.push("Likely match");
   if (r.priceSource !== "product-page") f.push("Unverified price");
   if (r.kind === "resale") f.push("Resale");
+  if (r.available === false) f.push("Sold out");
   if (r.isInputLink) f.push("Your link");
   return f.map((x) => `<span class="flag">${esc(x)}</span>`).join("");
 }
@@ -54,8 +55,16 @@ export function renderProfile(rec: ProfileRecord, now: Date = new Date()): strin
   const id = rec.identity;
   const cls = rec.classification;
   const renamed = cls.renamedByRetailer;
-  const title = renamed ? `${rec.input.listingName} is the ${id.shortName}` : id.canonicalName;
-  const sub = renamed
+  const generic = cls.tier === "generic";
+  const nameCount = rec.names.length;
+  const title = generic
+    ? `${rec.input.listingName} is a generic design`
+    : renamed
+      ? `${rec.input.listingName} is the ${id.shortName}`
+      : id.canonicalName;
+  const sub = generic
+    ? `Sold under at least ${nameCount} names · No maker or model number found`
+    : renamed
     ? `${esc(possessive(rec.input.retailer))} name for ${esc(id.canonicalName)}${id.modelNumber ? ` · Model <b>${esc(id.modelNumber)}</b>` : ""}`
     : `${id.modelNumber ? `Model <b>${esc(id.modelNumber)}</b>` : "No model number found"}${id.listPrice ? ` · List price <b>${formatUsd(id.listPrice)}</b>` : ""}`;
   const max = Math.max(...s.rows.map((r) => Math.max(r.displayedPrice ?? 0, r.youPay ?? 0)), 1) * 1.08;
@@ -76,9 +85,16 @@ export function renderProfile(rec: ProfileRecord, now: Date = new Date()): strin
         s.runnerUp && s.runnerUp.youPay !== null && best.youPay !== null
           ? `About ${formatUsd(Math.round(s.runnerUp.youPay - best.youPay))} below ${esc(s.runnerUp.retailer)}. `
           : ""
-      }${
-        s.inputRow && s.inputRow.retailer !== best.retailer && s.inputRow.youPay !== null
-          ? `Your link costs ${formatUsd(s.inputRow.youPay)} at ${esc(s.inputRow.retailer)}.`
+      }${(() => {
+        const lead = s.rows.find((r) => r.youPay !== null && best.youPay !== null && r.youPay < best.youPay && r.available !== false && r.kind !== "resale");
+        return lead ? `${esc(lead.retailer)} lists it for ${formatUsd(lead.youPay)}, but that price or match isn't confirmed yet. ` : "";
+      })()}${
+        s.inputRow && s.inputRow.retailer !== best.retailer
+          ? s.inputRow.available === false
+            ? `The store you found it at, ${esc(s.inputRow.retailer)}, shows it sold out.`
+            : s.inputRow.youPay !== null
+              ? `Your link costs ${formatUsd(s.inputRow.youPay)} at ${esc(s.inputRow.retailer)}.`
+              : ""
           : ""
       }</p></div>`
     : `<div class="best"><p><b>No verified price yet.</b> Prices below come from search results and need checking on the retailer's page.</p></div>`;
@@ -182,7 +198,9 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
     <div class="photo">${
       rec.photo
         ? `<img src="${esc(rec.photo.url)}" alt="${esc(id.canonicalName)}">`
-        : `<div class="tag"><div class="mk">${esc(id.maker)}</div><div class="model">${esc(id.modelNumber ?? id.shortName)}</div><div>${esc(id.canonicalName)}</div><small>Photo pending</small></div>`
+        : generic
+          ? `<div class="tag"><div class="mk">One lamp, many listings</div><div class="model">${nameCount} names</div><div>${esc(rec.names.map((n) => n.name).slice(0, 4).join(" · "))}${nameCount > 4 ? " …" : ""}</div><small>Photo pending</small></div>`
+          : `<div class="tag"><div class="mk">${esc(id.maker)}</div><div class="model">${esc(id.modelNumber ?? id.shortName)}</div><div>${esc(id.canonicalName)}</div><small>Photo pending</small></div>`
     }</div>
     <div class="side">
       <div class="card"><dl>${card.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl></div>
@@ -212,7 +230,11 @@ table{border-collapse:collapse;width:100%}.match th,.match td{text-align:left;pa
 </div></section>
 
 <section class="band" style="padding-top:0"><div class="wrap two">
-  <div><h2>Names it goes by</h2><p>Search for the model number${id.modelNumber ? ` ${esc(id.modelNumber)}` : ""}, not the name. Retailers rename products freely.</p>
+  <div><h2>Names it goes by</h2><p>${
+    id.modelNumber
+      ? `Search for the model number ${esc(id.modelNumber)}, not the name. Retailers rename products freely.`
+      : "There's no model number, so listings are matched on exact size, specs and photos. Names marked likely haven't been checked spec by spec."
+  }</p>
   <ul class="names">${rec.names.map((n) => `<li><span>${esc(n.source)}</span><span>${esc(n.name)}${n.likely ? " (likely)" : ""}</span></li>`).join("")}</ul></div>
   <div><h2>What you're paying for</h2>${rec.quality.map((q) => `<p>${esc(q)}</p>`).join("")}</div>
 </div></section>

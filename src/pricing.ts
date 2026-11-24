@@ -40,6 +40,7 @@ export function priceListing(listing: RetailerListing): PricedListing {
 
   let ineligibleReason: string | null = null;
   if (youPay === null) ineligibleReason = "No price found";
+  else if (listing.available === false) ineligibleReason = "Sold out";
   else if (listing.kind === "resale") ineligibleReason = "Resale, shown separately";
   else if (listing.confidence !== "confirmed") ineligibleReason = "Likely match, not confirmed";
   else if (listing.priceSource !== "product-page") ineligibleReason = "Price not read from the product page";

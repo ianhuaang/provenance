@@ -16,8 +16,14 @@
     "makerLocation": "New York City",
     "modelNumber": "3932-12",
     "otherModelNumbers": [
-      { "model": "3932-01", "note": "Black wood finish" },
-      { "model": "3931-12", "note": "Matching 28\" table lamp" }
+      {
+        "model": "3932-01",
+        "note": "Black wood finish"
+      },
+      {
+        "model": "3931-12",
+        "note": "Matching 28\" table lamp"
+      }
     ],
     "upc": "798919393220",
     "listPrice": 350
@@ -27,30 +33,90 @@
     "verdict": "Brand-designed, renamed",
     "verdictNote": "Designed by Adesso, a New York lighting brand. Urban Outfitters sells it under its own name.",
     "summary": "A real, original design from an established lighting brand, with no credited individual designer. Urban Outfitters renamed it rather than copying it, so the Otto is the genuine article. No replica concerns.",
-    "designer": { "name": null, "credited": false, "note": "None credited; Adesso's in-house design team" },
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; Adesso's in-house design team"
+    },
     "renamedByRetailer": true,
     "originalIfReplica": null
   },
   "specs": [
-    { "label": "Height", "value": "62 in" },
-    { "label": "Shade", "value": "18.5 in dia × 10.5 in h, cream linen drum" },
-    { "label": "Base", "value": "10 in dia, round wood" },
-    { "label": "Stem", "value": "Stacked wood balls" },
-    { "label": "Weight", "value": "10.7 lb" },
-    { "label": "Bulb", "value": "One E26, 150W max, 3-way rotary switch; not included" },
-    { "label": "Made in", "value": "Imported" }
+    {
+      "label": "Height",
+      "value": "62 in"
+    },
+    {
+      "label": "Shade",
+      "value": "18.5 in dia × 10.5 in h, cream linen drum"
+    },
+    {
+      "label": "Base",
+      "value": "10 in dia, round wood"
+    },
+    {
+      "label": "Stem",
+      "value": "Stacked wood balls"
+    },
+    {
+      "label": "Weight",
+      "value": "10.7 lb"
+    },
+    {
+      "label": "Bulb",
+      "value": "One E26, 150W max, 3-way rotary switch; not included"
+    },
+    {
+      "label": "Made in",
+      "value": "Imported"
+    }
   ],
   "match": {
     "confidence": "confirmed",
     "basis": "All 7 listed specs match Adesso's listing",
     "rows": [
-      { "spec": "Height", "listing": "62\"", "canonical": "62\"", "matches": true },
-      { "spec": "Shade", "listing": "18.5\" dia × 10.5\" h", "canonical": "18.5\" w × 10.5\" h, cream linen", "matches": true },
-      { "spec": "Base", "listing": "10\" dia", "canonical": "10\" wide, round", "matches": true },
-      { "spec": "Weight", "listing": "10.7 lb", "canonical": "10.67 lb", "matches": true },
-      { "spec": "Switch", "listing": "3-way rotary", "canonical": "3-way rotary", "matches": true },
-      { "spec": "Bulb", "listing": "E26, 150W max", "canonical": "150W max, 3-way", "matches": true },
-      { "spec": "Stem", "listing": "\"Pillar bubbled\"", "canonical": "Stacked wood balls", "matches": true }
+      {
+        "spec": "Height",
+        "listing": "62\"",
+        "canonical": "62\"",
+        "matches": true
+      },
+      {
+        "spec": "Shade",
+        "listing": "18.5\" dia × 10.5\" h",
+        "canonical": "18.5\" w × 10.5\" h, cream linen",
+        "matches": true
+      },
+      {
+        "spec": "Base",
+        "listing": "10\" dia",
+        "canonical": "10\" wide, round",
+        "matches": true
+      },
+      {
+        "spec": "Weight",
+        "listing": "10.7 lb",
+        "canonical": "10.67 lb",
+        "matches": true
+      },
+      {
+        "spec": "Switch",
+        "listing": "3-way rotary",
+        "canonical": "3-way rotary",
+        "matches": true
+      },
+      {
+        "spec": "Bulb",
+        "listing": "E26, 150W max",
+        "canonical": "150W max, 3-way",
+        "matches": true
+      },
+      {
+        "spec": "Stem",
+        "listing": "\"Pillar bubbled\"",
+        "canonical": "Stacked wood balls",
+        "matches": true
+      }
     ]
   },
   "quality": [
@@ -76,6 +142,7 @@
       "exclusions": null,
       "shippingCost": 0,
       "notes": "Pre-order, expected to ship by Nov 27. Free shipping over $50.",
+      "available": true,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -92,6 +159,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "No promo listed on the page. Returns to any Target store.",
+      "available": true,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -108,6 +176,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "Special order; manufacturer stock shown as available.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": false,
@@ -124,6 +193,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "Advertises price matching, which could bring it to Target's price. Listing may be stale.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": false,
@@ -140,6 +210,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "Identical specs, but the page doesn't show the base. No sale price shown for this lamp.",
+      "available": null,
       "confidence": "likely",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -148,11 +219,31 @@
     }
   ],
   "names": [
-    { "source": "Adesso", "name": "Orchard Floor Lamp, Natural Wood (3932-12)", "likely": false },
-    { "source": "Urban Outfitters", "name": "Otto Floor Lamp", "likely": false },
-    { "source": "Target", "name": "Adesso Orchard Floor Lamp Natural: Stacked Ball Design", "likely": false },
-    { "source": "Lamps Plus", "name": "Orchard Natural Stacked Balls Wood Floor Lamp", "likely": false },
-    { "source": "Birch Lane", "name": "Levy 62\" Dimmable Floor Lamp", "likely": true }
+    {
+      "source": "Adesso",
+      "name": "Orchard Floor Lamp, Natural Wood (3932-12)",
+      "likely": false
+    },
+    {
+      "source": "Urban Outfitters",
+      "name": "Otto Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Target",
+      "name": "Adesso Orchard Floor Lamp Natural: Stacked Ball Design",
+      "likely": false
+    },
+    {
+      "source": "Lamps Plus",
+      "name": "Orchard Natural Stacked Balls Wood Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Birch Lane",
+      "name": "Levy 62\" Dimmable Floor Lamp",
+      "likely": true
+    }
   ],
   "maker": {
     "name": "Adesso",
@@ -161,19 +252,49 @@
       "Adesso rarely credits individual designers on its everyday lines, though its ADS360 studio collaborates with outside designers on select pieces. The Orchard collection appears in retailer listings from around spring 2023."
     ],
     "timeline": [
-      { "when": "1994", "what": "Founded in New York City" },
-      { "when": "2003", "what": "Early to ship portable LED lamps in the US" },
-      { "when": "~2023", "what": "Orchard collection appears" },
-      { "when": "Today", "what": "Sold widely, sometimes under retailer names" }
+      {
+        "when": "1994",
+        "what": "Founded in New York City"
+      },
+      {
+        "when": "2003",
+        "what": "Early to ship portable LED lamps in the US"
+      },
+      {
+        "when": "~2023",
+        "what": "Orchard collection appears"
+      },
+      {
+        "when": "Today",
+        "what": "Sold widely, sometimes under retailer names"
+      }
     ]
   },
   "photo": null,
   "sources": [
-    { "title": "Urban Outfitters: Otto Floor Lamp", "url": "https://www.urbanoutfitters.com/shop/otto-floor-lamp" },
-    { "title": "Lamps Plus: Orchard Natural Stacked Balls Wood Floor Lamp", "url": "https://www.lampsplus.com/p/orchard-natural-stacked-balls-wood-floor-lamp__341x8/" },
-    { "title": "Houzz: Adesso Orchard Floor Lamp 3932-12", "url": "https://www.houzz.com/products/orchard-floor-lamp-prvw-vr~200363117" },
-    { "title": "High Point Market: Adesso Inc.", "url": "https://www.highpointmarket.org/exhibitor/496" },
-    { "title": "Lumens: Adesso", "url": "https://www.lumens.com/adesso/" },
-    { "title": "Architonic: ADS360", "url": "https://www.architonic.com/en/b/ads360/3104987" }
+    {
+      "title": "Urban Outfitters: Otto Floor Lamp",
+      "url": "https://www.urbanoutfitters.com/shop/otto-floor-lamp"
+    },
+    {
+      "title": "Lamps Plus: Orchard Natural Stacked Balls Wood Floor Lamp",
+      "url": "https://www.lampsplus.com/p/orchard-natural-stacked-balls-wood-floor-lamp__341x8/"
+    },
+    {
+      "title": "Houzz: Adesso Orchard Floor Lamp 3932-12",
+      "url": "https://www.houzz.com/products/orchard-floor-lamp-prvw-vr~200363117"
+    },
+    {
+      "title": "High Point Market: Adesso Inc.",
+      "url": "https://www.highpointmarket.org/exhibitor/496"
+    },
+    {
+      "title": "Lumens: Adesso",
+      "url": "https://www.lumens.com/adesso/"
+    },
+    {
+      "title": "Architonic: ADS360",
+      "url": "https://www.architonic.com/en/b/ads360/3104987"
+    }
   ]
 }

@@ -52,6 +52,7 @@ Time of check: ${nowIso}
    - promo: any extra discount beyond that price, with what it requires (free membership, code, paid membership, credit card, minimum spend), whether it only shows in cart, and its end date if stated. Sitewide banners count when they apply to this item.
    - exclusions: quote fine print that blocks discounts for this item.
    - shippingCost when the page states it (0 for free shipping on this item).
+   - available: false if the page shows sold out or unavailable for every option, true if it can be ordered, null if unclear.
    - notes: stock, pre-order dates, price matching, returns, anything a shopper should know.
 3. Set priceSource to "product-page" only when you read the price on the product page. Use "snippet" for prices seen only in search results, and say so in notes.
 4. Set confidence "likely" for listings that match on specs but not on model number or name.
@@ -60,6 +61,6 @@ Time of check: ${nowIso}
 7. Do not compute discounted prices yourself; report the facts and the site computes "you pay".
 8. Mark the user's own listing with isInputLink true. Use "${nowIso}" for checkedAt.`;
 
-export const REFRESH = (listingsJson: string, nowIso: string) => `Re-check prices for these known product pages. Open each URL and report the current facts in the same shape, keeping retailer, label, url, kind and confidence unless the page shows they changed. Update displayedPrice, promo, exclusions, shippingCost, notes and priceSource. If a page is gone or the item is unavailable, keep the row with displayedPrice null and say why in notes. Use "${nowIso}" for checkedAt.
+export const REFRESH = (listingsJson: string, nowIso: string) => `Re-check prices for these known product pages. Open each URL and report the current facts in the same shape, keeping retailer, label, url, kind and confidence unless the page shows they changed. Update displayedPrice, promo, exclusions, shippingCost, available, notes and priceSource. If a page is gone or the item is unavailable, keep the row with displayedPrice null and say why in notes. Use "${nowIso}" for checkedAt.
 
 ${listingsJson}`;

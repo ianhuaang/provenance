@@ -24,18 +24,43 @@
     "verdict": "Brand-designed, mass-market",
     "verdictNote": "No credited designer. Every listing below is the same factory product.",
     "summary": "A real, original product from a known brand, designed by an internal team rather than a named designer. There are no replicas to watch for, since there's no protected original to copy.",
-    "designer": { "name": null, "credited": false, "note": "None credited; Crosley in-house product team" },
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; Crosley in-house product team"
+    },
     "renamedByRetailer": false,
     "originalIfReplica": null
   },
   "specs": [
-    { "label": "Size", "value": "58.13 in W × 15 in D × 30 in H" },
-    { "label": "Weight", "value": "80.3 lb" },
-    { "label": "Materials", "value": "MDF, melamine, rubberwood. The burl is a surface finish, not solid burl." },
-    { "label": "Storage", "value": "2 doors, 2 adjustable shelves (15 lb each), cord cutouts" },
-    { "label": "Made in", "value": "Imported" },
-    { "label": "Warranty", "value": "90-day limited" },
-    { "label": "Assembly", "value": "Required" }
+    {
+      "label": "Size",
+      "value": "58.13 in W × 15 in D × 30 in H"
+    },
+    {
+      "label": "Weight",
+      "value": "80.3 lb"
+    },
+    {
+      "label": "Materials",
+      "value": "MDF, melamine, rubberwood. The burl is a surface finish, not solid burl."
+    },
+    {
+      "label": "Storage",
+      "value": "2 doors, 2 adjustable shelves (15 lb each), cord cutouts"
+    },
+    {
+      "label": "Made in",
+      "value": "Imported"
+    },
+    {
+      "label": "Warranty",
+      "value": "90-day limited"
+    },
+    {
+      "label": "Assembly",
+      "value": "Required"
+    }
   ],
   "match": null,
   "quality": [
@@ -61,6 +86,7 @@
       "exclusions": "Price as Marked. Discounts Do Not Apply.",
       "shippingCost": 0,
       "notes": "Reached through a ShopMy affiliate link, which pays the person who shared it.",
+      "available": true,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -77,6 +103,7 @@
       "exclusions": null,
       "shippingCost": 0,
       "notes": "In stock, ships in 1 to 2 business days. Free shipping over $300.",
+      "available": true,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -93,6 +120,7 @@
       "exclusions": null,
       "shippingCost": 0,
       "notes": "Free FedEx shipping, ships in 1 to 2 business days.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -109,6 +137,7 @@
       "exclusions": "This product is not eligible for coupons.",
       "shippingCost": null,
       "notes": "Sale price, regular $489.99. Earns Kohl's Cash.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "product-page",
       "isSearchLink": false,
@@ -125,6 +154,7 @@
       "exclusions": null,
       "shippingCost": 0,
       "notes": "Black Friday sale price. Free shipping over $49.99.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": false,
@@ -141,6 +171,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "Store returns.",
+      "available": true,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": false,
@@ -157,6 +188,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "Prices across listings ranged $314 to $345 and the seller varies.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": true,
@@ -173,6 +205,7 @@
       "exclusions": null,
       "shippingCost": null,
       "notes": "One unit from an individual seller.",
+      "available": null,
       "confidence": "confirmed",
       "priceSource": "snippet",
       "isSearchLink": false,
@@ -181,12 +214,36 @@
     }
   ],
   "names": [
-    { "source": "Crosley", "name": "Levi Sideboard in Maple, CF4229-ML", "likely": false },
-    { "source": "Urban Outfitters", "name": "Crosley Levi Burl Tone Storage Sideboard", "likely": false },
-    { "source": "Target", "name": "Levi Sideboard - Maple", "likely": false },
-    { "source": "Kohl's", "name": "Crosley Levi Sideboard with Storage Cabinets", "likely": false },
-    { "source": "Overstock", "name": "Crosley Levi Sideboard", "likely": false },
-    { "source": "Walmart", "name": "Crosley Furniture Levi Sideboard In Maple", "likely": false }
+    {
+      "source": "Crosley",
+      "name": "Levi Sideboard in Maple, CF4229-ML",
+      "likely": false
+    },
+    {
+      "source": "Urban Outfitters",
+      "name": "Crosley Levi Burl Tone Storage Sideboard",
+      "likely": false
+    },
+    {
+      "source": "Target",
+      "name": "Levi Sideboard - Maple",
+      "likely": false
+    },
+    {
+      "source": "Kohl's",
+      "name": "Crosley Levi Sideboard with Storage Cabinets",
+      "likely": false
+    },
+    {
+      "source": "Overstock",
+      "name": "Crosley Levi Sideboard",
+      "likely": false
+    },
+    {
+      "source": "Walmart",
+      "name": "Crosley Furniture Levi Sideboard In Maple",
+      "likely": false
+    }
   ],
   "maker": {
     "name": "Crosley",
@@ -195,18 +252,45 @@
       "The name traces to Powel Crosley's Cincinnati radio company of the 1920s. Today two separate companies sell under the Crosley name: Crosley Brands in Louisville (record players and this furniture) and the Crosley Corporation in North Carolina."
     ],
     "timeline": [
-      { "when": "1921", "what": "Crosley Radio founded" },
-      { "when": "2009", "what": "Crosley Furniture launched" },
-      { "when": "2018", "what": "Senior product development lead hired" },
-      { "when": "Today", "what": "Sold mainly through big-box retailers" }
+      {
+        "when": "1921",
+        "what": "Crosley Radio founded"
+      },
+      {
+        "when": "2009",
+        "what": "Crosley Furniture launched"
+      },
+      {
+        "when": "2018",
+        "what": "Senior product development lead hired"
+      },
+      {
+        "when": "Today",
+        "what": "Sold mainly through big-box retailers"
+      }
     ]
   },
   "photo": null,
   "sources": [
-    { "title": "Kohl's: Crosley Levi Sideboard", "url": "https://www.kohls.com/product/prd-8273812/crosley-levi-sideboard-with-storage-cabinets.jsp" },
-    { "title": "Overstock: Crosley Levi Sideboard", "url": "https://www.overstock.com/Home-Garden/Levi-Sideboard/43357429/product.html" },
-    { "title": "Home News Now: Crosley Furniture debuts at High Point", "url": "https://homenewsnow.com/?p=34027" },
-    { "title": "Cincinnati Magazine: The Crosley brand", "url": "https://www.cincinnatimagazine.com/article/the-crosley-brand-will-be-with-us-for-years-to-come/" },
-    { "title": "Furniture World: Crosley Brands adds Kim Elonich", "url": "https://www.furninfo.com/furniture-industry-news/9673" }
+    {
+      "title": "Kohl's: Crosley Levi Sideboard",
+      "url": "https://www.kohls.com/product/prd-8273812/crosley-levi-sideboard-with-storage-cabinets.jsp"
+    },
+    {
+      "title": "Overstock: Crosley Levi Sideboard",
+      "url": "https://www.overstock.com/Home-Garden/Levi-Sideboard/43357429/product.html"
+    },
+    {
+      "title": "Home News Now: Crosley Furniture debuts at High Point",
+      "url": "https://homenewsnow.com/?p=34027"
+    },
+    {
+      "title": "Cincinnati Magazine: The Crosley brand",
+      "url": "https://www.cincinnatimagazine.com/article/the-crosley-brand-will-be-with-us-for-years-to-come/"
+    },
+    {
+      "title": "Furniture World: Crosley Brands adds Kim Elonich",
+      "url": "https://www.furninfo.com/furniture-industry-news/9673"
+    }
   ]
 }
