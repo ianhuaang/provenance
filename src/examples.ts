@@ -10,8 +10,9 @@ import luna from "../fixtures/luna.json";
 import nomi from "../fixtures/uo-nomi.json";
 import scallop from "../fixtures/uo-scallop.json";
 import zaraCordless from "../fixtures/zara-cordless.json";
+import zaraCone from "../fixtures/zara-cone.json";
 
 /** Hand-checked profiles shown on the home page and used to seed the library. */
-export const EXAMPLES: ProfileRecord[] = [luna, nomi, scallop, zaraCordless, wren, zara, emma, otto, keira, pop, levi].map((r) => ProfileRecord.parse(r));
+export const EXAMPLES: ProfileRecord[] = [zaraCone, luna, nomi, scallop, zaraCordless, wren, zara, emma, otto, keira, pop, levi].map((r) => ProfileRecord.parse(r));
 
 export const exampleById = (id: string) => EXAMPLES.find((r) => r.id === id) ?? null;

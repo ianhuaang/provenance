@@ -1,0 +1,170 @@
+{
+  "id": "zara-home-7113-047-605",
+  "version": 1,
+  "createdAt": "2026-11-25T18:55:00Z",
+  "checkedAt": "2026-11-25T18:55:00Z",
+  "input": {
+    "url": "https://www.zarahome.com/us/cordless-metal-table-lamp-l47113047?pelement=507779236&colorId=605",
+    "resolvedUrl": "https://www.zarahome.com/us/cordless-metal-table-lamp-l47113047?colorId=605",
+    "retailer": "Zara Home",
+    "listingName": "Cordless Metal Table Lamp (Maroon)"
+  },
+  "identity": {
+    "canonicalName": "Zara Home Cordless Metal Table Lamp, Maroon",
+    "shortName": "Zara Home Cone Lamp",
+    "maker": "Zara Home (Inditex)",
+    "makerLocation": "A Coruña, Spain",
+    "modelNumber": "7113/047/605",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 55.9
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Zara's take on a popular shape",
+    "verdictNote": "Zara's own version of the cordless cone lamp. A reverse image search found it only at Zara Home and Zara.",
+    "summary": "A small cordless lamp from Zara Home with no credited designer. A reverse image search found this exact lamp only at Zara Home and Zara, so it isn't a relabeled factory item, but glossy cone-shade lamps are a broad trend right now. The best-known high-end version is In Common With's Eave table lamp ($850), which is much taller; Zara's is a 4.7-inch mini, not a copy of it.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; Zara Home's in-house team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "4.7 in H × 6.3 in W × 6.3 in D"
+    },
+    {
+      "label": "Material",
+      "value": "Iron base and shade, glossy maroon finish"
+    },
+    {
+      "label": "Weight",
+      "value": "570 g (1.3 lb)"
+    },
+    {
+      "label": "Light",
+      "value": "Built-in 1W LED, 120 lumens, 3000K; not replaceable"
+    },
+    {
+      "label": "Battery",
+      "value": "Rechargeable Li-ion, about 8 hours per charge, 4 hours to charge, USB-A to USB-C cable included"
+    },
+    {
+      "label": "Made in",
+      "value": "China"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A tiny glossy iron lamp: a cone shade on a short stem over a flat disc base, all in a deep maroon enamel. At 4.7 inches tall it's a shelf or tabletop accent, not something to read by.",
+    "120 lumens is very dim, about a fifth of a standard bulb, so think candle substitute. The LED and battery are built in and can't be replaced, which limits how long it lasts."
+  ],
+  "retailers": [
+    {
+      "retailer": "Zara Home",
+      "label": "Your link",
+      "url": "https://www.zarahome.com/us/cordless-metal-table-lamp-l47113047?colorId=605",
+      "kind": "retail",
+      "displayedPrice": 55.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "No promo on the page. Also comes in other colors.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-25T18:55:00Z"
+    },
+    {
+      "retailer": "Zara",
+      "label": "Same lamp on zara.com",
+      "url": "https://www.zara.com/us/en/search?searchTerm=cordless%20metal%20table%20lamp",
+      "kind": "retail",
+      "displayedPrice": 55.9,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 4.95,
+      "notes": "Shopping result showed $55.90 (gold shown), in stock, $4.95 delivery, 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "shopping-feed",
+      "isSearchLink": true,
+      "isInputLink": false,
+      "checkedAt": "2026-11-25T18:55:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Zara Home",
+      "name": "Cordless Metal Table Lamp (ref. 7113/047/605)",
+      "likely": false
+    },
+    {
+      "source": "Zara",
+      "name": "Cordless Metal Table Lamp",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Zara Home",
+    "paragraphs": [
+      "Zara Home is the home decor chain of Inditex, the Spanish group behind Zara. It launched in 2003, is based in A Coruña, Spain, and sells bedding, tableware, furniture and decor through its own stores and website.",
+      "Like Zara, it follows fast-moving trends with frequent new collections, and many pieces come from the same factories that supply other brands. It doesn't credit designers on most items."
+    ],
+    "timeline": [
+      {
+        "when": "2003",
+        "what": "Zara Home launched by Inditex"
+      },
+      {
+        "when": "2007",
+        "what": "Online store opens"
+      },
+      {
+        "when": "2012",
+        "what": "US online store launches"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/zara-home-7113-047-605.jpg",
+    "credit": "Zara Home product photo",
+    "sourceUrl": "https://www.zarahome.com/us/cordless-metal-table-lamp-l47113047?colorId=605"
+  },
+  "sources": [
+    {
+      "title": "Zara Home: Cordless Metal Table Lamp",
+      "url": "https://www.zarahome.com/us/cordless-metal-table-lamp-l47113047?colorId=605"
+    },
+    {
+      "title": "In Common With: Eave Series",
+      "url": "https://www.incommonwith.com/collections/eave"
+    },
+    {
+      "title": "Wikipedia: Zara Home",
+      "url": "https://en.wikipedia.org/wiki/Zara_Home"
+    }
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Only as a mood light: a cute glossy accent for $56, but too dim to light a room.",
+    "price": {
+      "score": 2,
+      "note": "Same $55.90 at Zara Home and Zara, the only places selling it."
+    },
+    "design": {
+      "score": 1,
+      "note": "Zara's own take on the cone-shade lamp trend, not a copy of a specific design."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Solid iron with a glossy enamel finish, but only 120 lumens and a battery you can't replace."
+    }
+  }
+}
