@@ -67,6 +67,31 @@ function worthSection(w: NonNullable<ProfileRecord["worth"]>): string {
 </div></section>`;
 }
 
+const SLOT_LABEL = { original: "The original", better: "Better made", less: "Same look, for less" } as const;
+function similarSection(sim: NonNullable<ProfileRecord["similar"]>, selfId: string): string {
+  const order = ["original", "better", "less"] as const;
+  const items = [...sim.items].sort((a, b) => order.indexOf(a.slot) - order.indexOf(b.slot));
+  const card = (it: (typeof items)[number]) => `<div class="sim">
+    <div class="slot">${SLOT_LABEL[it.slot]}</div>
+    <h3>${esc(it.name)}</h3>
+    <p class="by">${esc(it.maker)}</p>
+    <p class="sp"><b>${it.price != null ? esc(formatUsd(it.price)) : ""}</b>${it.price != null && it.priceNote ? " · " : ""}${esc(it.priceNote)}</p>
+    <p>${esc(it.why)}</p>
+    <div class="simlinks"><a href="${esc(it.url)}" target="_blank" rel="noopener">View</a>${
+      it.libraryId
+        ? ` <a href="${esc(it.libraryId)}.html">Profile</a> <a href="../index.html?compare=${encodeURIComponent(selfId)},${encodeURIComponent(it.libraryId)}#compare">Compare</a>`
+        : ""
+    }</div>
+  </div>`;
+  return `<section class="band" style="padding-top:0"><div class="wrap">
+  <h2>Similar products</h2>
+  <p>Different products with a similar look, not the same item. Replicas are never listed.</p>
+  ${items.length ? `<div class="sims">${items.map(card).join("")}</div>` : ""}
+  ${sim.note ? `<p class="checked">${esc(sim.note)}</p>` : ""}
+  <p class="checked">Checked ${esc(day(sim.checkedAt))}.</p>
+</div></section>`;
+}
+
 export function renderProfile(rec: ProfileRecord, now: Date = new Date(), opts: RenderOptions = {}): string {
   const photoUrl = rec.photo
     ? /^(https:|data:)/.test(rec.photo.url)
@@ -199,6 +224,11 @@ table{border-collapse:collapse;width:100%}
 .go.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .checked{font-size:14px;color:var(--mute);margin-top:16px}.checked.stale{color:var(--ink);font-weight:600}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px}
+.sims{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:14px;margin-top:12px}
+.sim{border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.sim .slot{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.sim h3{margin:2px 0 0;font-size:17px}.sim p{margin:0;font-size:15px}.sim .by{color:var(--mute);font-size:14px}
+.sim .sp{font-size:14px}.simlinks{display:flex;gap:14px;margin-top:auto;padding-top:8px}.simlinks a{font-weight:600;font-size:14px}
 .worthline{font-size:18px;margin:10px 0 16px;max-width:none}
 .wv{display:inline-block;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 10px;border-radius:12px;margin-right:6px;vertical-align:2px}
 .wv.yes{background:#dcebd6;color:#25501a}.wv.depends{background:#f3e3bf;color:#6a4a0c}.wv.no{background:#f2d6d2;color:#7a1f16}
@@ -258,6 +288,7 @@ table{border-collapse:collapse;width:100%}
 </div></section>
 
 ${rec.worth ? worthSection(rec.worth) : ""}
+${rec.similar ? similarSection(rec.similar, rec.id) : ""}
 <section class="band" style="padding-top:0"><div class="wrap two">
   <div><h2>Names it goes by</h2><p>${
     id.modelNumber

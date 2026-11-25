@@ -86,3 +86,14 @@ describe("worth section", () => {
     expect(html).not.toContain("Worth it?");
   });
 });
+
+describe("similar products", () => {
+  it("renders labeled alternatives and the note", () => {
+    const rec = ProfileRecord.parse(JSON.parse(readFileSync("fixtures/otto.json", "utf8")));
+    const html = renderProfile(rec, new Date(rec.checkedAt));
+    expect(html).toContain("Similar products");
+    expect(html).toContain("The original");
+    expect(html).toContain("Same look, for less");
+    expect(html).toContain("not the same item");
+  });
+});

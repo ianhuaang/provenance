@@ -122,6 +122,24 @@ export const Worth = z
   .describe("Claude's opinion on whether it's worth buying. Resale value is not considered.");
 export type Worth = z.infer<typeof Worth>;
 
+export const SimilarItem = z.object({
+  slot: z.enum(["original", "better", "less"]).describe("original: the designer piece or source the look comes from; better: better made, at any price (say the price); less: a cheaper option of decent quality, never a replica"),
+  name: z.string(),
+  maker: z.string(),
+  price: z.number().nullable().describe("USD price read on the product page, or null"),
+  priceNote: z.string().describe("e.g. 'Vintage listings run about $1,800 to $4,800' or 'UK site, bases from £165'"),
+  url: z.url(),
+  why: z.string().describe("One or two plain sentences: how it compares to the profiled item"),
+  libraryId: z.string().nullable().describe("Profile id if this item is already in the library"),
+});
+export const Similar = z
+  .object({
+    items: z.array(SimilarItem).max(3),
+    note: z.string().nullable().describe("Shown when slots are empty, e.g. why nothing better was found"),
+    checkedAt: z.iso.datetime(),
+  })
+  .describe("Different products with a similar look. Never the same product; never a replica.");
+
 export const ProfileRecord = z.object({
   id: z.string().describe("Stable slug, e.g. 'adesso-3932-12'"),
   version: z.literal(1),
@@ -151,5 +169,6 @@ export const ProfileRecord = z.object({
   photo: Photo.nullable(),
   sources: z.array(Source),
   worth: Worth.optional(),
+  similar: Similar.optional(),
 });
 export type ProfileRecord = z.infer<typeof ProfileRecord>;

@@ -38,8 +38,9 @@ Work out what this product really is, then submit.
 5. Write a short maker profile: founding, location, what they make and for which market, how they sell, plus up to 4 timeline points. Only facts you found.
 6. Write 1 to 3 short paragraphs on what the buyer is paying for: construction, materials, quality tier, variants. Plain and honest.
 7. Give your opinion in \`worth\`: score the buyer's link against other stores, the design's originality, and materials for the price (0 to 2 each, one plain sentence each), then a verdict (yes, depends, no) and a one-sentence bottom line. Ignore resale value.
-8. List every name you saw the same product sold under, by source. Mark names on likely-but-unconfirmed matches.
-9. List the sources you actually opened.`;
+8. In \`similar\`, list up to 3 different products with a similar look: the original it comes from (if any), one that's better made, and one that costs less. Never the same product and never a replica. Leave a slot out rather than padding it, and say why in \`note\`.
+9. List every name you saw the same product sold under, by source. Mark names on likely-but-unconfirmed matches.
+10. List the sources you actually opened.`;
 
 export const PRICE = (identityJson: string, inputUrl: string, nowIso: string) => `Find where this exact product can be bought new today, and what each place charges.
 Product:

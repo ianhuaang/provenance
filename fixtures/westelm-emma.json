@@ -164,5 +164,21 @@
       "score": 0,
       "note": "3.1 lb of steel and linen with a small E12 candelabra bulb. Light build for $159."
     }
+  },
+  "similar": {
+    "items": [
+      {
+        "slot": "original",
+        "name": "MG&Co. (Matilda Goad & Co.) scalloped lamps",
+        "maker": "MG&Co., London",
+        "price": null,
+        "priceNote": "UK site; lamp bases from £165, shades sold separately",
+        "url": "https://mgco.com/collections/lamps",
+        "why": "The brand that started the scalloped-shade wave in 2016. Its lamps are heavier and more crafted than the West Elm lamp, but you buy from the UK in pounds, and its Anthropologie collaboration lamp is sold out.",
+        "libraryId": null
+      }
+    ],
+    "note": "I didn't find a cheaper scalloped lamp with red trim that's decent quality; most matches were either more expensive or a different look.",
+    "checkedAt": "2026-11-25T20:10:00Z"
   }
 }

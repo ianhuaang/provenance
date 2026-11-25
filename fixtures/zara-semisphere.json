@@ -158,5 +158,21 @@
       "score": 2,
       "note": "Polished steel sphere with the bulb included. Good for the price."
     }
+  },
+  "similar": {
+    "items": [
+      {
+        "slot": "original",
+        "name": "Goffredo Reggiani eyeball lamps (1960s to 1970s)",
+        "maker": "Reggiani, Italy (vintage)",
+        "price": null,
+        "priceNote": "Vintage pieces from about £230 (around $300) on Vinterior; more on 1stDibs",
+        "url": "https://vinterior.co/lighting/wall-lights/vintage-1960s-reggiani-chrome-eyeball-lamp-mid-century-modern-lighting-iconic-space-age-wall-or-table-light-sku98702650",
+        "why": "The chrome sphere with a cut-away face that Zara's lamp echoes. Real Reggiani pieces are adjustable and made in Italy, but vintage condition varies, so check the wiring and chrome.",
+        "libraryId": null
+      }
+    ],
+    "note": "No new lamp turned up that's clearly better made or cheaper with this exact look; at $99.90 Zara's is already the low-cost way in.",
+    "checkedAt": "2026-11-25T20:10:00Z"
   }
 }

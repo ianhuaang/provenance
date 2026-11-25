@@ -219,7 +219,12 @@ function view() {
 const removedView = () => location.hash === "#removed";
 const brandsView = () => location.hash === "#brands";
 const compareView = () => location.hash === "#compare";
-let compareIds = (() => { try { return JSON.parse(localStorage.getItem("compare") || "[]").filter((x) => typeof x === "string").slice(0, 3); } catch { return []; } })();
+let compareIds = (() => {
+  // A profile page can open a comparison with ?compare=a,b#compare.
+  const q = new URLSearchParams(location.search).get("compare");
+  if (q) return q.split(",").filter((x) => /^[a-z0-9-]+$/.test(x)).slice(0, 3);
+  try { return JSON.parse(localStorage.getItem("compare") || "[]").filter((x) => typeof x === "string").slice(0, 3); } catch { return []; }
+})();
 function setCompare(ids) {
   compareIds = ids.slice(0, 3);
   try { localStorage.setItem("compare", JSON.stringify(compareIds)); } catch {}

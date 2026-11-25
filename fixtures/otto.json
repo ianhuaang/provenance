@@ -316,5 +316,31 @@
       "score": 2,
       "note": "Natural wood stem and base, linen shade, 10.7 lb. Solid for the money."
     }
+  },
+  "similar": {
+    "items": [
+      {
+        "slot": "original",
+        "name": "Vintage French bobbin floor lamps (1940s)",
+        "maker": "Various French workshops",
+        "price": null,
+        "priceNote": "Vintage listings run about $1,800 to $4,800",
+        "url": "https://www.1stdibs.com/furniture/lighting/floor-lamps/1940s-french-bobbin-wood-floor-lamp/id-f_46436982",
+        "why": "The stacked, lathe-turned bobbin stem comes from traditional French and Spanish woodturning. No single designer owns it; the Orchard is a modern factory version of that tradition.",
+        "libraryId": null
+      },
+      {
+        "slot": "less",
+        "name": "Mid Tone Wood Floor Lamp",
+        "maker": "Threshold (Target's in-house brand)",
+        "price": 85,
+        "priceNote": "Pickup only right now; Target showed 1 left at Jersey City",
+        "url": "https://www.target.com/p/-/A-94249792",
+        "why": "A turned-wood spindle stem with a drum shade and a 3-way switch for $184 less. The turning is simpler than the Orchard's stacked balls, and reviewers rate it 3.5 of 5, with quality the weakest score.",
+        "libraryId": null
+      }
+    ],
+    "note": "I didn't find a solid-wood bobbin floor lamp that's clearly better made at a reasonable price. RH's oak Alden has the look but is a $1,075 table lamp.",
+    "checkedAt": "2026-11-25T20:10:00Z"
   }
 }
