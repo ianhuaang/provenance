@@ -1,0 +1,140 @@
+{
+  "id": "wall-of-art-met-70x100-gold",
+  "version": 1,
+  "createdAt": "2026-11-25T19:45:00Z",
+  "checkedAt": "2026-11-25T19:45:00Z",
+  "input": {
+    "url": "https://wallofart.com/products/metal-frame-gold?variant=42541564592374",
+    "resolvedUrl": "https://wallofart.com/products/metal-frame-gold?variant=42541564592374",
+    "retailer": "Wall of Art",
+    "listingName": "Metal frame Gold (70x100 cm / 28x40 in)"
+  },
+  "identity": {
+    "canonicalName": "Wall of Art Metal Frame, Gold, 70x100 cm",
+    "shortName": "Wall of Art Gold Frame",
+    "maker": "Wall of Art",
+    "makerLocation": "Stockholm, Sweden",
+    "modelNumber": "MET-70X100-GOLD",
+    "otherModelNumbers": [],
+    "upc": null,
+    "listPrice": 99
+  },
+  "classification": {
+    "tier": "generic",
+    "verdict": "Standard poster frame, store-branded",
+    "verdictNote": "A thin gold metal poster frame, the same basic product Scandinavian print shops all sell under their own names.",
+    "summary": "Wall of Art is a Stockholm print shop, and this is its house frame for its posters. Thin gold aluminum-style frames with plexiglass in European poster sizes are a commodity: Desenio, Poster Store and others sell near-identical frames under their own names, with small differences in profile width. There's no design story here; what matters is size, finish and price.",
+    "designer": {
+      "name": null,
+      "credited": false,
+      "note": "None credited; a standard frame profile"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "Fits a 70 × 100 cm print (27.6 × 39.4 in); listed as 28x40 in on the US site"
+    },
+    {
+      "label": "Frame profile",
+      "value": "12 mm wide, 20 mm deep"
+    },
+    {
+      "label": "Material",
+      "value": "Gold-finish metal frame"
+    },
+    {
+      "label": "Front",
+      "value": "1.5 mm plexiglass"
+    },
+    {
+      "label": "Reference",
+      "value": "SKU MET-70X100-GOLD"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A slim gold metal frame with a plexiglass front, sized for European 70 × 100 cm posters. It's light and shatterproof, which matters at this size, but plexiglass scratches more easily than glass and a 1.5 mm sheet this large can flex slightly.",
+    "Check your print size: a standard US 24 × 36 in poster is smaller than 70 × 100 cm and will float with gaps unless you add a mat. Desenio's comparable gold frame in the same size is $95.20 on sale ($119 regular), so Wall of Art's sale price is the better deal."
+  ],
+  "retailers": [
+    {
+      "retailer": "Wall of Art",
+      "label": "Your link",
+      "url": "https://wallofart.com/products/metal-frame-gold?variant=42541564592374",
+      "kind": "retail",
+      "displayedPrice": 69,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Black Friday price, 30% off the regular $99. Free shipping from $199; shipping cost below that isn't shown until checkout. 2 to 6 business days, 14-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-25T19:45:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Wall of Art",
+      "name": "Metal frame Gold",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Wall of Art",
+    "paragraphs": [
+      "Wall of Art is a Stockholm online shop for art prints, founded in 2017 by Annika Hultgren and Nicklas Claesson. It sells prints by emerging artists, many exclusive to it, plus the frames to hang them.",
+      "It's one of several Swedish poster shops selling affordable framed art online, alongside Desenio and Poster Store."
+    ],
+    "timeline": [
+      {
+        "when": "2017",
+        "what": "Founded in Stockholm; first collection of 100 prints"
+      },
+      {
+        "when": "Today",
+        "what": "Sells prints and frames internationally, including the US"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/wall-of-art-met-70x100-gold.jpg",
+    "credit": "Wall of Art product photo (frame corner)",
+    "sourceUrl": "https://wallofart.com/products/metal-frame-gold?variant=42541564592374"
+  },
+  "sources": [
+    {
+      "title": "Wall of Art: Metal frame Gold",
+      "url": "https://wallofart.com/products/metal-frame-gold?variant=42541564592374"
+    },
+    {
+      "title": "Wall of Art: Our story",
+      "url": "https://wallofart.com/blogs/journal/our-story"
+    },
+    {
+      "title": "Desenio: Gold picture frame 28 x 39 in",
+      "url": "https://desenio.com/p/frames/metal-frames/gold-frames/picture-frame-gold-28-x-39-in/"
+    }
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes at $69 on sale, if shipping is reasonable and your print is 70 × 100 cm.",
+    "price": {
+      "score": 2,
+      "note": "$69 on sale beats Desenio's comparable gold frame at $95.20; check shipping at checkout since free shipping starts at $199."
+    },
+    "design": {
+      "score": 0,
+      "note": "A standard thin poster frame sold by many shops under their own names."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Metal frame with light, shatterproof plexiglass; plexi scratches more easily than glass."
+    }
+  }
+}
