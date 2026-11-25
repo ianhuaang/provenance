@@ -216,6 +216,40 @@
       "isSearchLink": false,
       "isInputLink": false,
       "checkedAt": "2026-11-24T16:05:00Z"
+    },
+    {
+      "retailer": "World Market",
+      "label": "As \"Orchard Natural Wood Bobbin and Linen Floor Lamp\"",
+      "url": "https://www.worldmarket.com/p/orchard-natural-wood-bobbin-and-linen-floor-lamp-57013124.html",
+      "kind": "retail",
+      "displayedPrice": 244.99,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "On sale from $349.99. Same name and identical size (62 in tall, 18.5 × 10.5 in shade). Ships only, no store pickup; shipping cost shown at checkout.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-25T20:20:00Z"
+    },
+    {
+      "retailer": "Pottery Barn Teen",
+      "label": "As \"Orchard Floor Lamp (62\")\"",
+      "url": "https://www.pbteen.com/products/orchard-floor-lamp/",
+      "kind": "retail",
+      "displayedPrice": 399,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Same name and height; specs not checked line by line.",
+      "available": true,
+      "confidence": "likely",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-25T20:20:00Z"
     }
   ],
   "names": [
@@ -242,6 +276,16 @@
     {
       "source": "Birch Lane",
       "name": "Levy 62\" Dimmable Floor Lamp",
+      "likely": true
+    },
+    {
+      "source": "World Market",
+      "name": "Orchard Natural Wood Bobbin and Linen Floor Lamp",
+      "likely": false
+    },
+    {
+      "source": "Pottery Barn Teen",
+      "name": "Orchard Floor Lamp (62\")",
       "likely": true
     }
   ],
@@ -303,10 +347,10 @@
   ],
   "worth": {
     "verdict": "yes",
-    "line": "Yes, at UO with the free Rewards discount: solid wood and linen for $269.",
+    "line": "Yes, at the lowest price: solid wood and linen for about $245 at World Market.",
     "price": {
-      "score": 2,
-      "note": "Your UO link with free UO Rewards ($269.40) beats Target ($320.99) for the same Adesso lamp."
+      "score": 1,
+      "note": "World Market has the same lamp for $244.99, about $24 less than your UO link even with UO Rewards ($269.40). Check World Market's shipping cost first."
     },
     "design": {
       "score": 1,
@@ -341,7 +385,7 @@
       }
     ],
     "note": "I didn't find a solid-wood bobbin floor lamp that's clearly better made at a reasonable price. RH's oak Alden has the look but is a $1,075 table lamp.",
-    "checkedAt": "2026-11-25T20:10:00Z",
+    "checkedAt": "2026-11-25T20:20:00Z",
     "seen": [
       {
         "name": "JONATHAN Y Wren 61.5\" bobbin floor lamp",
@@ -349,34 +393,25 @@
         "price": 141.21,
         "priceSource": "product-page",
         "url": "https://www.overstock.com/Lighting-Ceiling-Fans/Wren-61.5-Pleated-Paper-Shade-Resin-LED-Floor-Lamp/43368573/product.html",
-        "note": "Same bobbin look in resin printed to look like wood; paper shade",
+        "note": "Same stacked-bobbin look in resin printed to look like wood; paper shade",
         "libraryId": "jonathan-y-wren-61-5-floor-lamp"
       },
       {
-        "name": "Wood Mid Tone Floor Lamp with Cotton Pleated Shade",
-        "store": "Target (Hearth & Hand with Magnolia)",
-        "price": 119.99,
+        "name": "Stacked Orb Floor Lamp 62\", natural rubberwood",
+        "store": "Living Spaces",
+        "price": 275,
         "priceSource": "search-result",
-        "url": "https://www.target.com/p/-/A-94688263",
-        "note": "Turned wood stem, pleated empire shade; simpler shape",
+        "url": "https://www.livingspaces.com/search?q=stacked%20orb%20floor%20lamp",
+        "note": "Very close look: stacked wood balls, linen drum shade, same height",
         "libraryId": null
       },
       {
-        "name": "Brodie 60\" natural wood floor lamp",
-        "store": "Target (third-party seller)",
-        "price": 132.99,
+        "name": "Nathan Wood Floor Lamp",
+        "store": "One Kings Lane",
+        "price": 297,
         "priceSource": "search-result",
-        "url": "https://www.target.com/p/-/A-90594076",
-        "note": "Wood and cotton, on sale from $192; not a bobbin stem",
-        "libraryId": null
-      },
-      {
-        "name": "Adesso Jackson Floor Lamp, natural wood",
-        "store": "Target",
-        "price": 300.99,
-        "priceSource": "search-result",
-        "url": "https://www.target.com/p/product/-/A-87848063",
-        "note": "Same maker as the Orchard, plainer wood stem",
+        "url": "https://www.onekingslane.com/p-nathan-wood-floor-lamp-P111137240",
+        "note": "Stacked wood bobbin stem with a white drum shade",
         "libraryId": null
       }
     ]

@@ -179,42 +179,33 @@
       }
     ],
     "note": "I didn't find a cheaper scalloped lamp with red trim that's decent quality; most matches were either more expensive or a different look.",
-    "checkedAt": "2026-11-25T20:10:00Z",
+    "checkedAt": "2026-11-25T20:20:00Z",
     "seen": [
       {
-        "name": "Oval Table Lamp with Pleated Shade, red",
-        "store": "Target (Threshold designed with Studio McGee)",
-        "price": 85,
-        "priceSource": "search-result",
-        "url": "https://www.target.com/p/-/A-81646068",
-        "note": "Red base with a pleated shade; bulb included; no scallop",
+        "name": "Home Decor Collection 12.5\" ceramic table lamp",
+        "store": "Walmart",
+        "price": 29.97,
+        "priceSource": "product-page",
+        "url": "https://www.walmart.com/ip/Home-D-cor-Collection-Black-Ribbed-Table-Lamp/15059072055",
+        "note": "Same scalloped pleated shade shape, no red trim, on a black ribbed ceramic base",
         "libraryId": null
       },
       {
-        "name": "JONATHAN Y Louisa 22.5\" pleated shade lamp",
-        "store": "Target",
-        "price": 92.99,
-        "priceSource": "search-result",
-        "url": "https://www.target.com/p/-/A-90410634",
-        "note": "Chrome and smoke glass base, white pleated shade, bulb included",
+        "name": "Handmade pleated fabric lampshade with red trim",
+        "store": "Etsy (DuzyDesigns)",
+        "price": 172.74,
+        "priceSource": "product-page",
+        "url": "https://www.etsy.com/listing/1110891955/handmade-beige-fabric-lampshade-with-red",
+        "note": "Nearly the same shade, red scalloped trim; sold as a pendant shade only, 17.7 in",
         "libraryId": null
       },
       {
-        "name": "Tamara Day Matilda 18\" table lamp, burgundy",
-        "store": "Lamps Plus",
-        "price": 129.99,
-        "priceSource": "search-result",
-        "url": "https://www.lampsplus.com/products/2884R",
-        "note": "Burgundy ceramic base with off-white shade; standard bulb",
-        "libraryId": null
-      },
-      {
-        "name": "Solenne Metal Table Lamp with Pleated Fabric Shade 25.5\"",
-        "store": "Crate & Barrel",
-        "price": 299,
-        "priceSource": "search-result",
-        "url": "https://www.crateandbarrel.com/solenne-metal-table-lamp-with-pleated-fabric-shade-25.5/s132445",
-        "note": "Larger metal lamp with a pleated shade; store exclusive",
+        "name": "Edgeform Tafta table lamp, black/off-white",
+        "store": "AndLight (Denmark)",
+        "price": null,
+        "priceSource": "product-page",
+        "url": "https://www.andlight.com/en/p/tafta-table-lamp-black-off-white_442375/",
+        "note": "Cone fabric shade with a contrast edge on a slim stem; €223.64, ships from the EU",
         "libraryId": null
       }
     ]

@@ -12,8 +12,8 @@ describe("renderProfile", () => {
     expect(html).toContain("Otto Floor Lamp is the Adesso Orchard");
     expect(html).toContain("Urban Outfitters&#39; name for");
     expect(html).not.toContain("How we know it");
-    expect(html).toContain("$269.40");
-    expect(html).toContain("About $52 below Target");
+    expect(html).toContain("$244.99");
+    expect(html).toContain("Cheapest right now: World Market");
     expect(html).not.toMatch(/undefined|NaN|\[object/);
   });
 

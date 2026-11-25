@@ -80,11 +80,11 @@ describe("priceListing", () => {
 });
 
 describe("summarizePrices on the prototypes", () => {
-  it("Otto: cheapest is Urban Outfitters with free UO Rewards, ahead of Target", () => {
+  it("Otto: World Market is cheapest, ahead of Urban Outfitters with free UO Rewards", () => {
     const s = summarizePrices(load("otto"));
-    expect(s.best?.retailer).toBe("Urban Outfitters");
-    expect(s.best?.youPay).toBe(269.4);
-    expect(s.runnerUp?.retailer).toBe("Target");
+    expect(s.best?.retailer).toBe("World Market");
+    expect(s.best?.youPay).toBe(244.99);
+    expect(s.runnerUp?.retailer).toBe("Urban Outfitters");
     expect(s.inputRow?.youPay).toBe(269.4);
   });
 
