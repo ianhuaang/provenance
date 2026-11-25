@@ -173,6 +173,35 @@
       }
     ],
     "note": "No new lamp turned up that's clearly better made or cheaper with this exact look; at $99.90 Zara's is already the low-cost way in.",
-    "checkedAt": "2026-11-25T20:10:00Z"
+    "checkedAt": "2026-11-25T20:10:00Z",
+    "seen": [
+      {
+        "name": "Lalia Home Elipse 8\" chrome orb accent lamp",
+        "store": "Lamps Plus",
+        "price": 77.99,
+        "priceSource": "search-result",
+        "url": "https://www.lampsplus.com/products/lalia-home-elipse-8-high-chrome-orb-accent-table-lamp__620p5.html",
+        "note": "Chrome orb of the same size, but a glam crystal-filled look",
+        "libraryId": null
+      },
+      {
+        "name": "Same Lalia Home Elipse 8\" lamp",
+        "store": "Walmart",
+        "price": 49.99,
+        "priceSource": "search-result",
+        "url": "https://www.walmart.com/ip/Lalia-Home-Elipse-Medium-8-Contemporary-Metal-Crystal-Round-Sphere-Glamourous-Orb-Table-Lamp-Living-Room-Bedroom-Entryway-Office-Foyer-Home-D-cor-Chr/1221857502",
+        "note": "Cheaper here, but showed out of stock in chrome",
+        "libraryId": null
+      },
+      {
+        "name": "Vintage chrome eyeball lamps (Sonneman and Kovacs styles)",
+        "store": "1stDibs (vintage)",
+        "price": null,
+        "priceSource": "search-result",
+        "url": "https://www.1stdibs.com/buy/vintage-chrome-eyeball-lamp",
+        "note": "American 1960s to 70s takes on the same idea; prices vary by piece",
+        "libraryId": null
+      }
+    ]
   }
 }

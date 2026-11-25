@@ -136,6 +136,21 @@ export const Similar = z
   .object({
     items: z.array(SimilarItem).max(3),
     note: z.string().nullable().describe("Shown when slots are empty, e.g. why nothing better was found"),
+    seen: z
+      .array(
+        z.object({
+          name: z.string(),
+          store: z.string(),
+          price: z.number().nullable(),
+          priceSource: z.enum(["product-page", "search-result"]),
+          url: z.url(),
+          note: z.string().describe("Short: how it differs, e.g. 'Wood, wider beaded profile'"),
+          libraryId: z.string().nullable(),
+        }),
+      )
+      .max(8)
+      .default([])
+      .describe("Comparable products checked while shopping around, to show the market; not recommendations"),
     checkedAt: z.iso.datetime(),
   })
   .describe("Different products with a similar look. Never the same product; never a replica.");

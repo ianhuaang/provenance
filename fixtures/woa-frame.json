@@ -139,7 +139,45 @@
   },
   "similar": {
     "items": [],
-    "note": "Nothing to add: there's no original behind a standard poster frame, and Wall of Art's $69 sale price was the cheapest I found for a 70 × 100 cm gold metal frame. Desenio's comparable frame is $95.20, and ready-made 28 × 40 in gold frames on Walmart run about $100 to $130.",
-    "checkedAt": "2026-11-25T20:10:00Z"
+    "note": "No original, better-made or cheaper pick: a standard poster frame has no original, and Wall of Art's $69 sale price was the lowest I found for this size and finish.",
+    "checkedAt": "2026-11-25T20:10:00Z",
+    "seen": [
+      {
+        "name": "Picture frame gold, 28\" x 39\" (70 × 100 cm)",
+        "store": "Desenio",
+        "price": 95.2,
+        "priceSource": "product-page",
+        "url": "https://desenio.com/p/frames/metal-frames/gold-frames/picture-frame-gold-28-x-39-in/",
+        "note": "Same kind of thin gold aluminum frame; $119 regular, on sale",
+        "libraryId": null
+      },
+      {
+        "name": "ArtToFrames 28x40 Gold Square with Beads",
+        "store": "Walmart (sold by ArtToFrames)",
+        "price": 109.97,
+        "priceSource": "search-result",
+        "url": "https://www.walmart.com/search?q=ArtToFrames+28x40+gold+picture+frame",
+        "note": "Wood, wider beaded profile; fits US 28 × 40 in. Price seen in Walmart listings",
+        "libraryId": null
+      },
+      {
+        "name": "ArtToFrames 28x40 Dark Gold Picture Frame",
+        "store": "Walmart (sold by ArtToFrames)",
+        "price": 129.14,
+        "priceSource": "search-result",
+        "url": "https://www.walmart.com/ip/2692904285",
+        "note": "Wood with plexi; more traditional profile",
+        "libraryId": null
+      },
+      {
+        "name": "LOMVIKEN frame, gold",
+        "store": "IKEA US",
+        "price": null,
+        "priceSource": "product-page",
+        "url": "https://www.ikea.com/us/en/search/?q=lomviken%20gold",
+        "note": "IKEA's US site showed LOMVIKEN gold only in smaller sizes; the 24 × 35¾ in came up in black ($44.99)",
+        "libraryId": null
+      }
+    ]
   }
 }

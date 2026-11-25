@@ -38,7 +38,7 @@ Work out what this product really is, then submit.
 5. Write a short maker profile: founding, location, what they make and for which market, how they sell, plus up to 4 timeline points. Only facts you found.
 6. Write 1 to 3 short paragraphs on what the buyer is paying for: construction, materials, quality tier, variants. Plain and honest.
 7. Give your opinion in \`worth\`: score the buyer's link against other stores, the design's originality, and materials for the price (0 to 2 each, one plain sentence each), then a verdict (yes, depends, no) and a one-sentence bottom line. Ignore resale value.
-8. In \`similar\`, list up to 3 different products with a similar look: the original it comes from (if any), one that's better made, and one that costs less. Never the same product and never a replica. Leave a slot out rather than padding it, and say why in \`note\`.
+8. In \`similar\`, list up to 3 different products with a similar look: the original it comes from (if any), one that's better made, and one that costs less. Never the same product and never a replica. Leave a slot out rather than padding it, and say why in \`note\`. Also list 3 to 6 comparable products you checked while shopping around in \`seen\`, with store, price and a short note on how each differs, so the reader can see the market.
 9. List every name you saw the same product sold under, by source. Mark names on likely-but-unconfirmed matches.
 10. List the sources you actually opened.`;
 

@@ -341,6 +341,44 @@
       }
     ],
     "note": "I didn't find a solid-wood bobbin floor lamp that's clearly better made at a reasonable price. RH's oak Alden has the look but is a $1,075 table lamp.",
-    "checkedAt": "2026-11-25T20:10:00Z"
+    "checkedAt": "2026-11-25T20:10:00Z",
+    "seen": [
+      {
+        "name": "JONATHAN Y Wren 61.5\" bobbin floor lamp",
+        "store": "Overstock",
+        "price": 141.21,
+        "priceSource": "product-page",
+        "url": "https://www.overstock.com/Lighting-Ceiling-Fans/Wren-61.5-Pleated-Paper-Shade-Resin-LED-Floor-Lamp/43368573/product.html",
+        "note": "Same bobbin look in resin printed to look like wood; paper shade",
+        "libraryId": "jonathan-y-wren-61-5-floor-lamp"
+      },
+      {
+        "name": "Wood Mid Tone Floor Lamp with Cotton Pleated Shade",
+        "store": "Target (Hearth & Hand with Magnolia)",
+        "price": 119.99,
+        "priceSource": "search-result",
+        "url": "https://www.target.com/p/-/A-94688263",
+        "note": "Turned wood stem, pleated empire shade; simpler shape",
+        "libraryId": null
+      },
+      {
+        "name": "Brodie 60\" natural wood floor lamp",
+        "store": "Target (third-party seller)",
+        "price": 132.99,
+        "priceSource": "search-result",
+        "url": "https://www.target.com/p/-/A-90594076",
+        "note": "Wood and cotton, on sale from $192; not a bobbin stem",
+        "libraryId": null
+      },
+      {
+        "name": "Adesso Jackson Floor Lamp, natural wood",
+        "store": "Target",
+        "price": 300.99,
+        "priceSource": "search-result",
+        "url": "https://www.target.com/p/product/-/A-87848063",
+        "note": "Same maker as the Orchard, plainer wood stem",
+        "libraryId": null
+      }
+    ]
   }
 }

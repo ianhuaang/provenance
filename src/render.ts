@@ -67,6 +67,19 @@ function worthSection(w: NonNullable<ProfileRecord["worth"]>): string {
 </div></section>`;
 }
 
+function seenTable(seen: NonNullable<ProfileRecord["similar"]>["seen"]): string {
+  if (!seen.length) return "";
+  const prices = seen.map((x) => x.price).filter((x): x is number => x != null);
+  const range = prices.length >= 2 ? ` Prices ran ${formatUsd(Math.min(...prices))} to ${formatUsd(Math.max(...prices))}.` : "";
+  return `<h3 class="seenh">Also looked at</h3>
+  <p class="checked" style="margin-top:0">Comparable items found while shopping around, to show what else is out there.${range}</p>
+  <div class="seen">${seen
+    .map(
+      (x) => `<div class="seenrow"><div><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a>${x.libraryId ? ` <a class="lib" href="${esc(x.libraryId)}.html">In your library</a>` : ""}<span>${esc(x.store)} · ${esc(x.note)}</span></div><div class="seenp">${x.price != null ? esc(formatUsd(x.price)) : "—"}${x.priceSource === "search-result" && x.price != null ? `<small>search result</small>` : ""}</div></div>`,
+    )
+    .join("")}</div>`;
+}
+
 const SLOT_LABEL = { original: "The original", better: "Better made", less: "Same look, for less" } as const;
 function similarSection(sim: NonNullable<ProfileRecord["similar"]>, selfId: string): string {
   const order = ["original", "better", "less"] as const;
@@ -88,6 +101,7 @@ function similarSection(sim: NonNullable<ProfileRecord["similar"]>, selfId: stri
   <p>Different products with a similar look, not the same item. Replicas are never listed.</p>
   ${items.length ? `<div class="sims">${items.map(card).join("")}</div>` : ""}
   ${sim.note ? `<p class="checked">${esc(sim.note)}</p>` : ""}
+  ${seenTable(sim.seen ?? [])}
   <p class="checked">Checked ${esc(day(sim.checkedAt))}.</p>
 </div></section>`;
 }
@@ -224,6 +238,12 @@ table{border-collapse:collapse;width:100%}
 .go.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
 .checked{font-size:14px;color:var(--mute);margin-top:16px}.checked.stale{color:var(--ink);font-weight:600}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:36px}
+.seenh{margin:26px 0 4px;font-size:18px}
+.seen{border-top:1px solid var(--rule)}
+.seenrow{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.seenrow a{font-weight:600}.seenrow span{display:block;font-size:14px;color:var(--mute)}
+.seenrow .lib{font-size:12px;font-weight:700;margin-left:6px}
+.seenp{text-align:right;font-weight:600;white-space:nowrap}.seenp small{display:block;font-size:11px;font-weight:500;color:var(--mute)}
 .sims{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:14px;margin-top:12px}
 .sim{border:1px solid var(--rule);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
 .sim .slot{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
