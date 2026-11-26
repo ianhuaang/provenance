@@ -12,8 +12,9 @@ import scallop from "../fixtures/uo-scallop.json";
 import zaraCordless from "../fixtures/zara-cordless.json";
 import zaraCone from "../fixtures/zara-cone.json";
 import woaFrame from "../fixtures/woa-frame.json";
+import ph11 from "../fixtures/lp-ph11.json";
 
 /** Hand-checked profiles shown on the home page and used to seed the library. */
-export const EXAMPLES: ProfileRecord[] = [woaFrame, zaraCone, luna, nomi, scallop, zaraCordless, wren, zara, emma, otto, keira, pop, levi].map((r) => ProfileRecord.parse(r));
+export const EXAMPLES: ProfileRecord[] = [ph11, woaFrame, zaraCone, luna, nomi, scallop, zaraCordless, wren, zara, emma, otto, keira, pop, levi].map((r) => ProfileRecord.parse(r));
 
 export const exampleById = (id: string) => EXAMPLES.find((r) => r.id === id) ?? null;

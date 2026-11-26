@@ -1,0 +1,311 @@
+{
+  "id": "louis-poulsen-5744173418",
+  "version": 1,
+  "createdAt": "2026-11-26T18:50:00Z",
+  "checkedAt": "2026-11-26T18:50:00Z",
+  "input": {
+    "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-11-portable-lamp?v=92021-5744173418-01",
+    "resolvedUrl": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-11-portable-lamp?v=92021-5744173418-01",
+    "retailer": "Louis Poulsen",
+    "listingName": "PH 1/1 Portable Lamp, High Lustre Chrome Plated"
+  },
+  "identity": {
+    "canonicalName": "Louis Poulsen PH 1/1 Portable Lamp, High Lustre Chrome Plated",
+    "shortName": "Louis Poulsen PH 1/1 Portable",
+    "maker": "Louis Poulsen",
+    "makerLocation": "Copenhagen, Denmark",
+    "modelNumber": "5744173418",
+    "otherModelNumbers": [
+      {
+        "model": "5744173405",
+        "note": "Brass metallised finish"
+      }
+    ],
+    "upc": null,
+    "listPrice": 1120
+  },
+  "classification": {
+    "tier": "designer",
+    "verdict": "Authentic designer piece",
+    "verdictNote": "Poul Henningsen's three-shade PH design, made by Louis Poulsen, the only licensed maker. Sold by Louis Poulsen and its authorized dealers.",
+    "summary": "The real thing: a cordless, rechargeable version of Poul Henningsen's PH 2/1-style table lamp, launched by Louis Poulsen in 2026 as the smallest size in the PH family. Henningsen designed the three-shade PH system in 1926, and Louis Poulsen has made it ever since. PH lamps are heavily copied, so buy from Louis Poulsen or an authorized dealer like the ones listed here.",
+    "designer": {
+      "name": "Poul Henningsen",
+      "credited": true,
+      "note": "Three-shade PH system, 1926; portable version 2026"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "6.3 in W × 11.5 in H (16 × 29 cm)"
+    },
+    {
+      "label": "Shades",
+      "value": "Hand-blown three-layer opal glass, sandblasted inside"
+    },
+    {
+      "label": "Body",
+      "value": "Aluminum, high-lustre chrome plated"
+    },
+    {
+      "label": "Weight",
+      "value": "1.8 lb per Louis Poulsen; 0.8 kg per Finnish Design Shop"
+    },
+    {
+      "label": "Light",
+      "value": "Built-in 2.5W LED, dim-to-warm 1800 to 2700K, stepless or 4-step dimming"
+    },
+    {
+      "label": "Battery",
+      "value": "Replaceable LiPo; about 5 hours at full brightness, up to about 60 hours dimmed; charges by USB-C or Qi wireless (adapter not included)"
+    },
+    {
+      "label": "Rating",
+      "value": "IP44, usable outdoors"
+    },
+    {
+      "label": "Made in",
+      "value": "China, per DWR and Lumens"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "A small, cordless PH lamp: the same three hand-blown opal glass shades that make the full-size PH lamps glare-free, on a chrome stem you can carry from a shelf to a table to a balcony. The glass and plating are the real Louis Poulsen build, and the battery and LED can be replaced as spare parts rather than retiring the lamp.",
+    "It's a mood and accent light, not a reading lamp: 2.5W gives a soft glow, and the battery lasts about five hours at full brightness. Most of the price is the design and the hand-blown glass. The brass finish costs more ($1,054 on sale versus $952 for chrome)."
+  ],
+  "retailers": [
+    {
+      "retailer": "Louis Poulsen",
+      "label": "Your link (maker's own store)",
+      "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-11-portable-lamp?v=92021-5744173418-01",
+      "kind": "retail",
+      "displayedPrice": 952,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Sale from $1,120. Free shipping and free returns; about 1 week to deliver.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    },
+    {
+      "retailer": "Lumens",
+      "label": "Authorized dealer",
+      "url": "https://www.lumens.com/ph-1-1-led-portable-lamp-by-louis-poulsen-LPL2757224.html",
+      "kind": "dealer",
+      "displayedPrice": 952,
+      "promo": {
+        "description": "10% off with code FLASH10, shown on the product page",
+        "percentOff": 10,
+        "amountOff": null,
+        "requires": "code",
+        "code": "FLASH10",
+        "inCart": false,
+        "endsAt": null
+      },
+      "exclusions": null,
+      "shippingCost": 0,
+      "notes": "Sale from $1,120. Ships free in 1 to 2 business days. 30-day returns and price matching. Confirm the code applies to Louis Poulsen in the cart.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    },
+    {
+      "retailer": "Danish Design Store",
+      "label": "Authorized dealer",
+      "url": "https://www.danishdesignstore.com/products/ph-1-1-portable-lamp-louis-poulsen",
+      "kind": "dealer",
+      "displayedPrice": 952,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Chrome on sale from $1,120; brass $1,054.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    },
+    {
+      "retailer": "2Modern",
+      "label": "Authorized dealer",
+      "url": "https://www.2modern.com/products/ph-1-1-mini-portable-table-lamp",
+      "kind": "dealer",
+      "displayedPrice": 1054,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Price seen in a shopping result; may be the brass finish or pre-sale. Check the finish on the page.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "shopping-feed",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    },
+    {
+      "retailer": "Finnish Design Shop",
+      "label": "Authorized dealer, ships from Finland",
+      "url": "https://www.finnishdesignshop.com/en-us/product/ph-11-portable-table-lamp-chrome-plated",
+      "kind": "dealer",
+      "displayedPrice": 1118,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Duties and tariffs covered for US orders; free 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    },
+    {
+      "retailer": "Design Within Reach",
+      "label": "Authorized dealer",
+      "url": "https://www.dwr.com/lighting-portable-lamps/ph-1%2F1-portable-lamp/2612233.html?lang=en_US",
+      "kind": "dealer",
+      "displayedPrice": 1240,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Listed at $1,240, which may be the brass finish's regular price. 30-day returns.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "snippet",
+      "isSearchLink": false,
+      "isInputLink": false,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Louis Poulsen",
+      "name": "PH 1/1 Portable Lamp",
+      "likely": false
+    },
+    {
+      "source": "Lumens",
+      "name": "PH 1/1 LED Portable Lamp",
+      "likely": false
+    },
+    {
+      "source": "2Modern",
+      "name": "PH 1/1 Mini Portable Table Lamp",
+      "likely": false
+    },
+    {
+      "source": "Finnish Design Shop",
+      "name": "PH 1/1 Portable table lamp, chrome plated",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Louis Poulsen",
+    "paragraphs": [
+      "Louis Poulsen is a Danish lighting company based in Copenhagen and the licensed maker of Poul Henningsen's PH lamps. Its partnership with Henningsen began in 1925, and the PH three-shade system followed in 1926; it still anchors the catalog.",
+      "Today it's part of Design Holding, alongside Flos, and sells through its own store and authorized dealers such as Lumens, DWR and Finnish Design Shop. Henningsen (1894 to 1967) trained as an architect and spent his career on glare-free light."
+    ],
+    "timeline": [
+      {
+        "when": "1925",
+        "what": "Collaboration with Poul Henningsen begins"
+      },
+      {
+        "when": "1926",
+        "what": "PH three-shade system introduced"
+      },
+      {
+        "when": "2026",
+        "what": "PH 1/1 Portable launched"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/louis-poulsen-5744173418.jpg",
+    "credit": "Louis Poulsen product image",
+    "sourceUrl": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-11-portable-lamp?v=92021-5744173418-01"
+  },
+  "sources": [
+    {
+      "title": "Louis Poulsen: PH 1/1 Portable Lamp",
+      "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-11-portable-lamp?v=92021-5744173418-01"
+    },
+    {
+      "title": "Lumens: PH 1/1 LED Portable Lamp",
+      "url": "https://www.lumens.com/ph-1-1-led-portable-lamp-by-louis-poulsen-LPL2757224.html"
+    },
+    {
+      "title": "Finnish Design Shop: PH 1/1 Portable",
+      "url": "https://www.finnishdesignshop.com/en-us/product/ph-11-portable-table-lamp-chrome-plated"
+    },
+    {
+      "title": "Design Within Reach: PH 1/1 Portable Lamp",
+      "url": "https://www.dwr.com/lighting-portable-lamps/ph-1%2F1-portable-lamp/2612233.html?lang=en_US"
+    },
+    {
+      "title": "Danish Design Store: PH 1/1 Portable Lamp",
+      "url": "https://www.danishdesignstore.com/products/ph-1-1-portable-lamp-louis-poulsen"
+    }
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes, if you want a real PH lamp: buy at Lumens with code FLASH10 for about $857.",
+    "price": {
+      "score": 1,
+      "note": "Your link's $952 sale price matches the dealers, but Lumens' FLASH10 code takes it to about $857."
+    },
+    "design": {
+      "score": 2,
+      "note": "Poul Henningsen's 1926 three-shade design, made by its licensed maker."
+    },
+    "materials": {
+      "score": 2,
+      "note": "Hand-blown opal glass, chrome-plated aluminum, and a replaceable battery and LED."
+    }
+  },
+  "similar": {
+    "items": [],
+    "note": "No cheaper option worth listing: lookalike PH lamps are replicas, which this tool doesn't recommend. Every photo match was another Louis Poulsen PH model.",
+    "checkedAt": "2026-11-26T18:50:00Z",
+    "seen": [
+      {
+        "name": "PH 2/1 Portable Lamp",
+        "store": "Louis Poulsen",
+        "price": 1385.5,
+        "priceSource": "search-result",
+        "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/portable-lamps/ph-21-portable-lamp?v=91890-5744170437-01",
+        "note": "The next size up, also cordless; same three-shade look, a little larger",
+        "libraryId": null
+      },
+      {
+        "name": "PH 2/1 Table Lamp (corded)",
+        "store": "Louis Poulsen",
+        "price": 1122,
+        "priceSource": "search-result",
+        "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/table-lamps/ph-21-table-lamp",
+        "note": "Plug-in version of the look; brighter and no battery to wear out",
+        "libraryId": null
+      },
+      {
+        "name": "PH 3½-2½ Table Lamp",
+        "store": "Louis Poulsen",
+        "price": 1712.75,
+        "priceSource": "search-result",
+        "url": "https://www.louispoulsen.com/en-us/c/indoor-lighting/table-lamps/ph-3-2-table-lamp",
+        "note": "The classic full-size PH table lamp in glass and chrome",
+        "libraryId": null
+      }
+    ]
+  }
+}
