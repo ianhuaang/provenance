@@ -1,0 +1,192 @@
+{
+  "id": "saetter-7-walnut",
+  "version": 1,
+  "createdAt": "2026-11-28T13:10:00Z",
+  "checkedAt": "2026-11-28T13:10:00Z",
+  "input": {
+    "url": "https://saetter.dk/en/products/saetter-7-valnod-kopreol-saettekasse",
+    "resolvedUrl": "https://saetter.dk/en/products/saetter-7-valnod-kopreol-saettekasse",
+    "retailer": "Sætter Copenhagen",
+    "listingName": "SÆTTER 7 - Walnut"
+  },
+  "identity": {
+    "canonicalName": "Sætter Copenhagen SÆTTER 7 Cup Shelf, Walnut",
+    "shortName": "SÆTTER 7, walnut",
+    "maker": "Sætter Copenhagen",
+    "makerLocation": "North of Copenhagen, Denmark",
+    "modelNumber": "SÆTTER 7",
+    "otherModelNumbers": [
+      {
+        "model": "SÆTTER 5",
+        "note": "Shorter version; $640 in walnut"
+      },
+      {
+        "model": "SÆTTER 3",
+        "note": "Smallest; $480 in walnut, sold out on Nov 26"
+      }
+    ],
+    "upc": null,
+    "listPrice": 760
+  },
+  "classification": {
+    "tier": "designer",
+    "verdict": "Original designer piece",
+    "verdictNote": "Designed by Caroline Birk Bahrenscheer, who founded Sætter Copenhagen to make it. Sold direct from Denmark.",
+    "summary": "The original Sætter cup shelf: a wall-hung type case with 28 cubbies and little pegs between them, made from solid walnut and built by hand in Denmark. Sætter's founder designed it after a flea-market printer's tray, and the shape is now widely copied on Etsy, Amazon and Wayfair. Sold only through Sætter's own store.",
+    "designer": {
+      "name": "Caroline Birk Bahrenscheer",
+      "credited": true,
+      "note": "Founder of Sætter Copenhagen, 2020"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "45.5 W × 92.4 H × 11.2 D cm (about 17.9 × 36.4 × 4.4 in)"
+    },
+    {
+      "label": "Compartments",
+      "value": "28 (4 across × 7 down), each 10 W × 12 H × 10 D cm"
+    },
+    {
+      "label": "Material",
+      "value": "Solid walnut; knots and grain vary piece to piece"
+    },
+    {
+      "label": "Made in",
+      "value": "Denmark, built by hand"
+    },
+    {
+      "label": "Other finishes",
+      "value": "Oiled oak or nature $580, smoked oak $650"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "Solid walnut throughout, hand-built in Denmark, by the person who designed it. The pegs between cubbies are the signature detail: they hold the dividers and give the grid its rhythm.",
+    "Your mugs need to fit a 10 cm wide by 12 cm tall cubby, which suits espresso and standard coffee cups but not wide latte bowls. US orders pay duties and taxes on delivery on top of the $760, so budget extra."
+  ],
+  "retailers": [
+    {
+      "retailer": "Sætter Copenhagen",
+      "label": "Maker's own store",
+      "url": "https://saetter.dk/en/products/saetter-7-valnod-kopreol-saettekasse",
+      "kind": "retail",
+      "displayedPrice": 760,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "In stock on Nov 26. Price excludes US duties and taxes, which are collected on delivery.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-26T18:50:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Sætter Copenhagen",
+      "name": "SÆTTER 7 - Walnut",
+      "likely": false
+    },
+    {
+      "source": "Common name",
+      "name": "Cup shelf / type case",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Sætter Copenhagen",
+    "paragraphs": [
+      "A small Danish furniture brand based north of Copenhagen, founded in 2020 by Caroline Birk Bahrenscheer, an interiors stylist. She bought a worn printer's type tray at a flea market, posted it on Instagram, and was flooded with requests for one; the cup shelf grew from that.",
+      "The name means \"sets\". Sætter designs and produces its shelves in Denmark and sells them from its own store, in oak and walnut, in vertical and horizontal versions."
+    ],
+    "timeline": [
+      {
+        "when": "2020",
+        "what": "Sætter Copenhagen founded"
+      },
+      {
+        "when": "2025",
+        "what": "Featured on Remodelista"
+      }
+    ]
+  },
+  "photo": {
+    "url": "img/saetter-7-walnut.jpg",
+    "credit": "Photo you sent",
+    "sourceUrl": "https://saetter.dk/en/products/saetter-7-valnod-kopreol-saettekasse"
+  },
+  "sources": [
+    {
+      "title": "Sætter Copenhagen: SÆTTER 7 Walnut",
+      "url": "https://saetter.dk/en/products/saetter-7-valnod-kopreol-saettekasse"
+    },
+    {
+      "title": "3 Days of Design: Sætter Copenhagen",
+      "url": "https://www.3daysofdesign.dk/exhibition/saetter-copenhagen"
+    },
+    {
+      "title": "Remodelista: Sætter cup shelves",
+      "url": "https://www.remodelista.com/posts/saetter-cup-shelves-copenhagen/"
+    },
+    {
+      "title": "Remodelista: SÆTTER 5 oiled oak (produced in Denmark)",
+      "url": "https://www.remodelista.com/products/saetter-5-oiled-oak/"
+    }
+  ],
+  "worth": {
+    "verdict": "yes",
+    "line": "Yes: the original, in solid walnut and made in Denmark. Plan for duties on top of $760.",
+    "price": {
+      "score": 1,
+      "note": "Lookalikes cost less, but none checked is the same size in solid walnut for much under $760."
+    },
+    "design": {
+      "score": 2,
+      "note": "The original design, credited to its founder and widely copied."
+    },
+    "materials": {
+      "score": 2,
+      "note": "Solid walnut, hand-built in Denmark."
+    }
+  },
+  "similar": {
+    "items": [],
+    "note": "No 'for less' pick: the cheaper peg-style shelves copy Sætter's design. Ferm Living's Tilem is its own design but costs about the same.",
+    "checkedAt": "2026-11-26T18:50:00Z",
+    "seen": [
+      {
+        "name": "BO-HA Leif cup shelf, solid walnut",
+        "store": "BO-HA",
+        "price": 499.95,
+        "priceSource": "product-page",
+        "url": "https://bo-ha.com/products/leif-solid-walnut-wall-mounted-cup-shelf-display-shelf-with-compartments",
+        "note": "Same peg layout, but smaller: 3 × 5 cubbies, 37 × 61 cm",
+        "libraryId": null
+      },
+      {
+        "name": "Ferm Living Tilem Shelf 4x6, dark stained oak",
+        "store": "Ferm Living",
+        "price": 735,
+        "priceSource": "search-result",
+        "url": "https://fermliving.us/products/tilem-shelf-4x6-dark-stained-oak",
+        "note": "Its own grid design in stained oak, similar size",
+        "libraryId": null
+      },
+      {
+        "name": "Wooden cup organizer mug shelf",
+        "store": "Etsy",
+        "price": 216,
+        "priceSource": "search-result",
+        "url": "https://www.etsy.com/listing/4467593966/wooden-cup-organizer-mug-shelf-for",
+        "note": "Handmade open grid with no pegs; lighter wood",
+        "libraryId": null
+      }
+    ]
+  }
+}

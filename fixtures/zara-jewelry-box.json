@@ -1,0 +1,144 @@
+{
+  "id": "zara-home-6179-452-700",
+  "version": 1,
+  "createdAt": "2026-11-28T13:10:00Z",
+  "checkedAt": "2026-11-28T13:10:00Z",
+  "input": {
+    "url": "https://www.zarahome.com/us/medium-wooden-jewelry-box-l46179452",
+    "resolvedUrl": "https://www.zarahome.com/us/medium-wooden-jewelry-box-l46179452",
+    "retailer": "Zara Home",
+    "listingName": "Medium Wooden Jewelry Box"
+  },
+  "identity": {
+    "canonicalName": "Zara Home Medium Wooden Jewelry Box, Brown",
+    "shortName": "Zara Home wooden jewelry box",
+    "maker": "Zara Home (Inditex)",
+    "makerLocation": "Arteixo, Spain",
+    "modelNumber": "6179/452/700",
+    "otherModelNumbers": [
+      {
+        "model": "p46179452",
+        "note": "Same item on zara.com"
+      }
+    ],
+    "upc": null,
+    "listPrice": 129
+  },
+  "classification": {
+    "tier": "brand-designed",
+    "verdict": "Brand-designed by Zara Home",
+    "verdictNote": "Zara Home's own in-house design, sold under its reference number. No individual designer credited.",
+    "summary": "A Zara Home original: a rubberwood box with a glass lid over linen-lined compartments for rings, earrings and watches, plus drawers underneath. Zara Home designs in-house and doesn't credit designers. The same reference is also sold on zara.com.",
+    "designer": {
+      "name": "None credited",
+      "credited": false,
+      "note": "Zara Home in-house design team"
+    },
+    "renamedByRetailer": false,
+    "originalIfReplica": null
+  },
+  "specs": [
+    {
+      "label": "Size",
+      "value": "3.9 H × 12.2 W × 9.1 D in (10 × 31 × 23 cm)"
+    },
+    {
+      "label": "Material",
+      "value": "85% rubberwood, 10% glass, 5% linen (per zara.com)"
+    },
+    {
+      "label": "Storage",
+      "value": "Compartments for jewelry, rings and watches under a glass lid; drawer storage below"
+    },
+    {
+      "label": "Color",
+      "value": "Brown"
+    }
+  ],
+  "match": null,
+  "quality": [
+    "Rubberwood is a plantation hardwood: solid and stable, a step below oak or walnut, and usually stained to look darker. The glass lid lets you see everything without opening it.",
+    "Small drawer detail to check: the US page says one drawer, while zara.com describes two. Same reference number, so it's likely one physical drawer front split inside, but look at the photos before buying."
+  ],
+  "retailers": [
+    {
+      "retailer": "Zara Home",
+      "label": "Your link",
+      "url": "https://www.zarahome.com/us/medium-wooden-jewelry-box-l46179452",
+      "kind": "retail",
+      "displayedPrice": 129,
+      "promo": null,
+      "exclusions": null,
+      "shippingCost": null,
+      "notes": "Add button active on Nov 28.",
+      "available": true,
+      "confidence": "confirmed",
+      "priceSource": "product-page",
+      "isSearchLink": false,
+      "isInputLink": true,
+      "checkedAt": "2026-11-28T13:10:00Z"
+    }
+  ],
+  "names": [
+    {
+      "source": "Zara Home",
+      "name": "Medium Wooden Jewelry Box",
+      "likely": false
+    },
+    {
+      "source": "Zara (UK)",
+      "name": "Medium Wooden Jewellery Box",
+      "likely": false
+    }
+  ],
+  "maker": {
+    "name": "Zara Home",
+    "paragraphs": [
+      "Zara Home is the homewares chain of Inditex, the Spanish group behind Zara, founded in 2003. It designs its products in-house and sells them through its own stores and site, with no outside dealers.",
+      "Its jewelry boxes come in wood, lacquer, metal and mirror finishes; this one sits in the mid-size wooden line next to a smaller watch box ($79.90)."
+    ],
+    "timeline": [
+      {
+        "when": "2003",
+        "what": "Zara Home launched by Inditex"
+      }
+    ]
+  },
+  "photo": null,
+  "sources": [
+    {
+      "title": "Zara Home US: Medium Wooden Jewelry Box",
+      "url": "https://www.zarahome.com/us/medium-wooden-jewelry-box-l46179452"
+    },
+    {
+      "title": "Zara UK: Medium Wooden Jewellery Box",
+      "url": "https://www.zara.com/uk/en/medium-wooden-jewellery-box-p46179452.html"
+    },
+    {
+      "title": "Zara Home IE: dimensions",
+      "url": "https://www.zarahome.com/ie/medium-wooden-jewellery-box-l46179452"
+    }
+  ],
+  "worth": {
+    "verdict": "depends",
+    "line": "Fair at $129 if you like the glass lid; check the drawer count before buying.",
+    "price": {
+      "score": 1,
+      "note": "Middle of the range for a wooden glass-top box this size. Other stores not yet checked by photo."
+    },
+    "design": {
+      "score": 1,
+      "note": "Clean Zara Home design, no designer behind it."
+    },
+    "materials": {
+      "score": 1,
+      "note": "Rubberwood with glass and linen: solid, but not a premium wood."
+    }
+  },
+  "similar": {
+    "items": [],
+    "note": "Comparables still need a visual check: the browser wasn't reachable on Nov 28.",
+    "checkedAt": "2026-11-28T13:10:00Z",
+    "seen": []
+  }
+}
